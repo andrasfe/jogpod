@@ -1,0 +1,276 @@
+name: iOS CI
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  XCODE_VERSION: '15.4'
+  SIMULATOR_DEVICE: 'iPhone 15'
+  SIMULATOR_OS: 'iOS 17.5'
+  PROJECT_NAME: 'JogPod'
+  SCHEME: 'JogPod'
+
+jobs:
+  lint:
+    name: SwiftLint
+    runs-on: macos-14
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install SwiftLint
+        run: brew install swiftlint
+
+      - name: Run SwiftLint
+        run: |
+          if [ -f ".swiftlint.yml" ]; then
+            swiftlint lint --reporter github-actions-logging
+          else
+            echo "No .swiftlint.yml found, skipping lint"
+          fi
+
+  build:
+    name: Build & Test
+    runs-on: macos-14
+    needs: lint
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Select Xcode
+        run: sudo xcode-select -s /Applications/Xcode_${{ env.XCODE_VERSION }}.app/Contents/Developer
+
+      - name: Show Xcode Version
+        run: xcodebuild -version
+
+      - name: Cache SPM Dependencies
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/Library/Developer/Xcode/DerivedData/**/SourcePackages
+            .build
+          key: ${{ runner.os }}-spm-${{ hashFiles('**/Package.resolved') }}
+          restore-keys: |
+            ${{ runner.os }}-spm-
+
+      - name: List Available Simulators
+        run: xcrun simctl list devices available
+
+      - name: Create Simulator
+        run: |
+          DEVICE_ID=$(xcrun simctl create "CI_${{ env.SIMULATOR_DEVICE }}" "${{ env.SIMULATOR_DEVICE }}" "${{ env.SIMULATOR_OS }}" 2>/dev/null || true)
+          if [ -z "$DEVICE_ID" ]; then
+            DEVICE_ID=$(xcrun simctl list devices | grep -w "${{ env.SIMULATOR_DEVICE }}" | head -1 | grep -oE '[A-F0-9-]{36}')
+          fi
+          echo "SIMULATOR_DEVICE_ID=$DEVICE_ID" >> $GITHUB_ENV
+          echo "Using simulator: $DEVICE_ID"
+
+      - name: Boot Simulator
+        run: |
+          xcrun simctl boot ${{ env.SIMULATOR_DEVICE_ID }} || true
+          xcrun simctl bootstatus ${{ env.SIMULATOR_DEVICE_ID }} -b
+
+      - name: Resolve Package Dependencies
+        run: |
+          if [ -f "Package.swift" ]; then
+            xcodebuild -resolvePackageDependencies \
+              -scheme ${{ env.SCHEME }} \
+              -clonedSourcePackagesDirPath SourcePackages
+          fi
+
+      - name: Build for Testing
+        run: |
+          if [ -d "${{ env.PROJECT_NAME }}.xcodeproj" ]; then
+            xcodebuild build-for-testing \
+              -project ${{ env.PROJECT_NAME }}.xcodeproj \
+              -scheme ${{ env.SCHEME }} \
+              -destination "platform=iOS Simulator,id=${{ env.SIMULATOR_DEVICE_ID }}" \
+              -derivedDataPath DerivedData \
+              -enableCodeCoverage YES \
+              CODE_SIGN_IDENTITY="" \
+              CODE_SIGNING_REQUIRED=NO \
+              CODE_SIGNING_ALLOWED=NO \
+              | xcpretty --color
+          elif [ -d "${{ env.PROJECT_NAME }}.xcworkspace" ]; then
+            xcodebuild build-for-testing \
+              -workspace ${{ env.PROJECT_NAME }}.xcworkspace \
+              -scheme ${{ env.SCHEME }} \
+              -destination "platform=iOS Simulator,id=${{ env.SIMULATOR_DEVICE_ID }}" \
+              -derivedDataPath DerivedData \
+              -enableCodeCoverage YES \
+              CODE_SIGN_IDENTITY="" \
+              CODE_SIGNING_REQUIRED=NO \
+              CODE_SIGNING_ALLOWED=NO \
+              | xcpretty --color
+          else
+            echo "No Xcode project or workspace found. Skipping build."
+            exit 0
+          fi
+
+      - name: Run Unit Tests
+        run: |
+          if [ -d "${{ env.PROJECT_NAME }}.xcodeproj" ]; then
+            xcodebuild test-without-building \
+              -project ${{ env.PROJECT_NAME }}.xcodeproj \
+              -scheme ${{ env.SCHEME }} \
+              -destination "platform=iOS Simulator,id=${{ env.SIMULATOR_DEVICE_ID }}" \
+              -derivedDataPath DerivedData \
+              -enableCodeCoverage YES \
+              -resultBundlePath TestResults.xcresult \
+              | xcpretty --color --report junit --output test-results.xml
+          elif [ -d "${{ env.PROJECT_NAME }}.xcworkspace" ]; then
+            xcodebuild test-without-building \
+              -workspace ${{ env.PROJECT_NAME }}.xcworkspace \
+              -scheme ${{ env.SCHEME }} \
+              -destination "platform=iOS Simulator,id=${{ env.SIMULATOR_DEVICE_ID }}" \
+              -derivedDataPath DerivedData \
+              -enableCodeCoverage YES \
+              -resultBundlePath TestResults.xcresult \
+              | xcpretty --color --report junit --output test-results.xml
+          else
+            echo "No Xcode project or workspace found. Skipping tests."
+            exit 0
+          fi
+
+      - name: Generate Code Coverage Report
+        if: always()
+        run: |
+          if [ -d "DerivedData/Build/ProfileData" ]; then
+            xcrun xccov view --report --json DerivedData/Build/ProfileData/*/*.xcovarchive > coverage.json || true
+          fi
+
+      - name: Upload Test Results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: test-results
+          path: |
+            test-results.xml
+            TestResults.xcresult
+            coverage.json
+          retention-days: 30
+
+      - name: Upload Test Result Summary
+        uses: test-summary/action@v2
+        if: always()
+        with:
+          paths: test-results.xml
+
+      - name: Shutdown Simulator
+        if: always()
+        run: xcrun simctl shutdown ${{ env.SIMULATOR_DEVICE_ID }} || true
+
+  ui-tests:
+    name: UI Tests
+    runs-on: macos-14
+    needs: build
+    if: github.event_name == 'pull_request' || github.ref == 'refs/heads/main'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Select Xcode
+        run: sudo xcode-select -s /Applications/Xcode_${{ env.XCODE_VERSION }}.app/Contents/Developer
+
+      - name: Cache SPM Dependencies
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/Library/Developer/Xcode/DerivedData/**/SourcePackages
+            .build
+          key: ${{ runner.os }}-spm-${{ hashFiles('**/Package.resolved') }}
+          restore-keys: |
+            ${{ runner.os }}-spm-
+
+      - name: Create Simulator for UI Tests
+        run: |
+          DEVICE_ID=$(xcrun simctl create "CI_UI_${{ env.SIMULATOR_DEVICE }}" "${{ env.SIMULATOR_DEVICE }}" "${{ env.SIMULATOR_OS }}" 2>/dev/null || true)
+          if [ -z "$DEVICE_ID" ]; then
+            DEVICE_ID=$(xcrun simctl list devices | grep -w "${{ env.SIMULATOR_DEVICE }}" | head -1 | grep -oE '[A-F0-9-]{36}')
+          fi
+          echo "SIMULATOR_DEVICE_ID=$DEVICE_ID" >> $GITHUB_ENV
+
+      - name: Boot Simulator
+        run: |
+          xcrun simctl boot ${{ env.SIMULATOR_DEVICE_ID }} || true
+          xcrun simctl bootstatus ${{ env.SIMULATOR_DEVICE_ID }} -b
+
+      - name: Run UI Tests
+        run: |
+          if [ -d "${{ env.PROJECT_NAME }}.xcodeproj" ]; then
+            # Check if UI test target exists
+            if xcodebuild -project ${{ env.PROJECT_NAME }}.xcodeproj -list 2>/dev/null | grep -q "UITests"; then
+              xcodebuild test \
+                -project ${{ env.PROJECT_NAME }}.xcodeproj \
+                -scheme ${{ env.SCHEME }}UITests \
+                -destination "platform=iOS Simulator,id=${{ env.SIMULATOR_DEVICE_ID }}" \
+                -derivedDataPath DerivedData \
+                -resultBundlePath UITestResults.xcresult \
+                CODE_SIGN_IDENTITY="" \
+                CODE_SIGNING_REQUIRED=NO \
+                CODE_SIGNING_ALLOWED=NO \
+                | xcpretty --color --report junit --output ui-test-results.xml
+            else
+              echo "No UI test target found. Skipping UI tests."
+            fi
+          else
+            echo "No Xcode project found. Skipping UI tests."
+          fi
+
+      - name: Upload UI Test Results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ui-test-results
+          path: |
+            ui-test-results.xml
+            UITestResults.xcresult
+          retention-days: 30
+
+      - name: Shutdown Simulator
+        if: always()
+        run: xcrun simctl shutdown ${{ env.SIMULATOR_DEVICE_ID }} || true
+
+  analyze:
+    name: Static Analysis
+    runs-on: macos-14
+    needs: lint
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Select Xcode
+        run: sudo xcode-select -s /Applications/Xcode_${{ env.XCODE_VERSION }}.app/Contents/Developer
+
+      - name: Run Xcode Static Analyzer
+        run: |
+          if [ -d "${{ env.PROJECT_NAME }}.xcodeproj" ]; then
+            xcodebuild analyze \
+              -project ${{ env.PROJECT_NAME }}.xcodeproj \
+              -scheme ${{ env.SCHEME }} \
+              -destination "generic/platform=iOS Simulator" \
+              -derivedDataPath DerivedData \
+              CODE_SIGN_IDENTITY="" \
+              CODE_SIGNING_REQUIRED=NO \
+              CODE_SIGNING_ALLOWED=NO \
+              CLANG_ANALYZER_OUTPUT=plist-html \
+              CLANG_ANALYZER_OUTPUT_DIR=AnalysisResults \
+              | xcpretty --color
+          else
+            echo "No Xcode project found. Skipping analysis."
+          fi
+
+      - name: Upload Analysis Results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: analysis-results
+          path: AnalysisResults/
+          retention-days: 14
