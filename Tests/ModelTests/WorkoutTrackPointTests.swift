@@ -6,6 +6,7 @@ import CoreLocation
 
 /// Tests for the WorkoutTrackPoint SwiftData model.
 @Suite("WorkoutTrackPoint Model Tests")
+@MainActor
 struct WorkoutTrackPointTests {
 
     // MARK: - Setup

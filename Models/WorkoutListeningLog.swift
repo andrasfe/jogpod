@@ -9,7 +9,7 @@ import SwiftData
 ///
 /// Each log entry represents a point in time when a specific episode was being played.
 @Model
-final class WorkoutListeningLog {
+public final class WorkoutListeningLog {
 
     // MARK: - Attributes
 

@@ -1,0 +1,64 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/andraslferenczi/JogPod-revived/build/Debug-iphoneos/JogPodUITests-Runner.app/PlugIns/JogPodUITests.xctest/JogPodUITests'
+relocations:
+  - { offset: 0x57F67, size: 0x8, addend: 0x0, symName: '_$s13JogPodUITestsAAC14setUpWithErroryyKF', symObjAddr: 0x0, symBinAddr: 0x4000, symSize: 0x70 }
+  - { offset: 0x58154, size: 0x8, addend: 0x0, symName: ___swift_instantiateConcreteTypeFromMangledNameV2, symObjAddr: 0x17C, symBinAddr: 0x417C, symSize: 0x68 }
+  - { offset: 0x58168, size: 0x8, addend: 0x0, symName: '_$sSo15XCUIApplicationCMa', symObjAddr: 0x400, symBinAddr: 0x4400, symSize: 0x60 }
+  - { offset: 0x5817C, size: 0x8, addend: 0x0, symName: '_$s13JogPodUITestsAAC15testAppLaunchesyyKFSbyKXEfu_TA', symObjAddr: 0x4C4, symBinAddr: 0x44C4, symSize: 0x28 }
+  - { offset: 0x58190, size: 0x8, addend: 0x0, symName: '_$s13JogPodUITestsAAC20testMainViewDisplaysyyKFSbyKXEfu_TA', symObjAddr: 0x804, symBinAddr: 0x4804, symSize: 0x28 }
+  - { offset: 0x581A4, size: 0x8, addend: 0x0, symName: '_$s13JogPodUITestsAACMa', symObjAddr: 0xC3C, symBinAddr: 0x4C3C, symSize: 0x24 }
+  - { offset: 0x581B8, size: 0x8, addend: 0x0, symName: '_$s6XCTest13XCTAssertTrue__4file4lineySbyKXK_SSyXKs12StaticStringVSutFfA0_SSycfu_', symObjAddr: 0xC80, symBinAddr: 0x4C80, symSize: 0x28 }
+  - { offset: 0x58229, size: 0x8, addend: 0x0, symName: '_$s13JogPodUITestsAAC14setUpWithErroryyKF', symObjAddr: 0x0, symBinAddr: 0x4000, symSize: 0x70 }
+  - { offset: 0x5826F, size: 0x8, addend: 0x0, symName: '_$s13JogPodUITestsAAC14setUpWithErroryyKFTo', symObjAddr: 0x70, symBinAddr: 0x4070, symSize: 0x10C }
+  - { offset: 0x58283, size: 0x8, addend: 0x0, symName: '_$s13JogPodUITestsAAC17tearDownWithErroryyKF', symObjAddr: 0x1E4, symBinAddr: 0x41E4, symSize: 0x14 }
+  - { offset: 0x582A7, size: 0x8, addend: 0x0, symName: '_$s13JogPodUITestsAAC17tearDownWithErroryyKFTo', symObjAddr: 0x1F8, symBinAddr: 0x41F8, symSize: 0x10C }
+  - { offset: 0x582BB, size: 0x8, addend: 0x0, symName: '_$s13JogPodUITestsAAC15testAppLaunchesyyKF', symObjAddr: 0x304, symBinAddr: 0x4304, symSize: 0xFC }
+  - { offset: 0x582FC, size: 0x8, addend: 0x0, symName: '_$s13JogPodUITestsAAC15testAppLaunchesyyKFSbyKXEfu_', symObjAddr: 0x48C, symBinAddr: 0x448C, symSize: 0x38 }
+  - { offset: 0x58371, size: 0x8, addend: 0x0, symName: '_$sSo15XCUIApplicationCABycfC', symObjAddr: 0x460, symBinAddr: 0x4460, symSize: 0x2C }
+  - { offset: 0x58393, size: 0x8, addend: 0x0, symName: '_$s6XCTest13XCTAssertTrue__4file4lineySbyKXK_SSyXKs12StaticStringVSutFfA0_', symObjAddr: 0x4EC, symBinAddr: 0x44EC, symSize: 0x10 }
+  - { offset: 0x583B0, size: 0x8, addend: 0x0, symName: '_$s13JogPodUITestsAAC15testAppLaunchesyyKFTo', symObjAddr: 0x4FC, symBinAddr: 0x44FC, symSize: 0x10C }
+  - { offset: 0x583C4, size: 0x8, addend: 0x0, symName: '_$s13JogPodUITestsAAC20testMainViewDisplaysyyKF', symObjAddr: 0x608, symBinAddr: 0x4608, symSize: 0x1CC }
+  - { offset: 0x5841B, size: 0x8, addend: 0x0, symName: '_$s13JogPodUITestsAAC20testMainViewDisplaysyyKFSbyKXEfu_', symObjAddr: 0x7D4, symBinAddr: 0x47D4, symSize: 0x30 }
+  - { offset: 0x5843B, size: 0x8, addend: 0x0, symName: '_$s13JogPodUITestsAAC20testMainViewDisplaysyyKFTo', symObjAddr: 0x82C, symBinAddr: 0x482C, symSize: 0x10C }
+  - { offset: 0x58456, size: 0x8, addend: 0x0, symName: '_$s13JogPodUITestsAAC10invocationABSo12NSInvocationCSg_tcfC', symObjAddr: 0x938, symBinAddr: 0x4938, symSize: 0x50 }
+  - { offset: 0x5846A, size: 0x8, addend: 0x0, symName: '_$s13JogPodUITestsAAC10invocationABSo12NSInvocationCSg_tcfc', symObjAddr: 0x988, symBinAddr: 0x4988, symSize: 0x94 }
+  - { offset: 0x584B8, size: 0x8, addend: 0x0, symName: '_$s13JogPodUITestsAAC10invocationABSo12NSInvocationCSg_tcfcTo', symObjAddr: 0xA1C, symBinAddr: 0x4A1C, symSize: 0x40 }
+  - { offset: 0x584CC, size: 0x8, addend: 0x0, symName: '_$s13JogPodUITestsAAC8selectorAB10ObjectiveC8SelectorV_tcfC', symObjAddr: 0xA5C, symBinAddr: 0x4A5C, symSize: 0x34 }
+  - { offset: 0x584E0, size: 0x8, addend: 0x0, symName: '_$s13JogPodUITestsAAC8selectorAB10ObjectiveC8SelectorV_tcfc', symObjAddr: 0xA90, symBinAddr: 0x4A90, symSize: 0x88 }
+  - { offset: 0x58511, size: 0x8, addend: 0x0, symName: '_$s13JogPodUITestsAAC8selectorAB10ObjectiveC8SelectorV_tcfcTo', symObjAddr: 0xB18, symBinAddr: 0x4B18, symSize: 0x24 }
+  - { offset: 0x58525, size: 0x8, addend: 0x0, symName: '_$s13JogPodUITestsAACABycfC', symObjAddr: 0xB3C, symBinAddr: 0x4B3C, symSize: 0x24 }
+  - { offset: 0x58539, size: 0x8, addend: 0x0, symName: '_$s13JogPodUITestsAACABycfc', symObjAddr: 0xB60, symBinAddr: 0x4B60, symSize: 0x74 }
+  - { offset: 0x5855D, size: 0x8, addend: 0x0, symName: '_$s13JogPodUITestsAACABycfcTo', symObjAddr: 0xBD4, symBinAddr: 0x4BD4, symSize: 0x20 }
+  - { offset: 0x58571, size: 0x8, addend: 0x0, symName: '_$s13JogPodUITestsAACfD', symObjAddr: 0xBF4, symBinAddr: 0x4BF4, symSize: 0x48 }
+  - { offset: 0x58595, size: 0x8, addend: 0x0, symName: '_$sSo15XCUIApplicationCABycfcTO', symObjAddr: 0xC60, symBinAddr: 0x4C60, symSize: 0x20 }
+  - { offset: 0x58656, size: 0x8, addend: 0x0, symName: '_$s13JogPodUITests0abC11LaunchTestsC43runsForEachTargetApplicationUIConfigurationSbvgZTo', symObjAddr: 0x0, symBinAddr: 0x4CA8, symSize: 0x44 }
+  - { offset: 0x58807, size: 0x8, addend: 0x0, symName: '_$sSo26XCTApplicationLaunchMetricCMa', symObjAddr: 0x3FC, symBinAddr: 0x503C, symSize: 0x60 }
+  - { offset: 0x5881B, size: 0x8, addend: 0x0, symName: '_$sIg_Ieg_TR', symObjAddr: 0x544, symBinAddr: 0x5158, symSize: 0x20 }
+  - { offset: 0x58833, size: 0x8, addend: 0x0, symName: '_$sIg_Ieg_TRTA', symObjAddr: 0x58C, symBinAddr: 0x51A0, symSize: 0xC }
+  - { offset: 0x58847, size: 0x8, addend: 0x0, symName: '_$sIeg_IyB_TR', symObjAddr: 0x598, symBinAddr: 0x51AC, symSize: 0x24 }
+  - { offset: 0x5885F, size: 0x8, addend: 0x0, symName: _block_copy_helper, symObjAddr: 0x5BC, symBinAddr: 0x51D0, symSize: 0x44 }
+  - { offset: 0x58873, size: 0x8, addend: 0x0, symName: _block_destroy_helper, symObjAddr: 0x600, symBinAddr: 0x5214, symSize: 0x18 }
+  - { offset: 0x58887, size: 0x8, addend: 0x0, symName: '_$s13JogPodUITests0abC11LaunchTestsCMa', symObjAddr: 0xA28, symBinAddr: 0x563C, symSize: 0x24 }
+  - { offset: 0x5889B, size: 0x8, addend: 0x0, symName: '_$sSa12_endMutationyyF', symObjAddr: 0xAEC, symBinAddr: 0x5680, symSize: 0xC }
+  - { offset: 0x588D1, size: 0x8, addend: 0x0, symName: '_$s13JogPodUITests0abC11LaunchTestsC43runsForEachTargetApplicationUIConfigurationSbvgZTo', symObjAddr: 0x0, symBinAddr: 0x4CA8, symSize: 0x44 }
+  - { offset: 0x58901, size: 0x8, addend: 0x0, symName: '_$ss27_finalizeUninitializedArrayySayxGABnlF', symObjAddr: 0x488, symBinAddr: 0x50C8, symSize: 0x40 }
+  - { offset: 0x58960, size: 0x8, addend: 0x0, symName: '_$s13JogPodUITests0abC11LaunchTestsC43runsForEachTargetApplicationUIConfigurationSbvgZ', symObjAddr: 0x44, symBinAddr: 0x4CEC, symSize: 0x1C }
+  - { offset: 0x5898B, size: 0x8, addend: 0x0, symName: '_$s13JogPodUITests0abC11LaunchTestsC14setUpWithErroryyKF', symObjAddr: 0x60, symBinAddr: 0x4D08, symSize: 0x70 }
+  - { offset: 0x589AF, size: 0x8, addend: 0x0, symName: '_$s13JogPodUITests0abC11LaunchTestsC14setUpWithErroryyKFTo', symObjAddr: 0xD0, symBinAddr: 0x4D78, symSize: 0x10C }
+  - { offset: 0x589CA, size: 0x8, addend: 0x0, symName: '_$s13JogPodUITests0abC11LaunchTestsC04testD11PerformanceyyKF', symObjAddr: 0x244, symBinAddr: 0x4E84, symSize: 0x1B8 }
+  - { offset: 0x58A02, size: 0x8, addend: 0x0, symName: '_$s13JogPodUITests0abC11LaunchTestsC04testD11PerformanceyyKFyyXEfU_', symObjAddr: 0x4C8, symBinAddr: 0x5108, symSize: 0x50 }
+  - { offset: 0x58A62, size: 0x8, addend: 0x0, symName: '_$sSo26XCTApplicationLaunchMetricCABycfC', symObjAddr: 0x45C, symBinAddr: 0x509C, symSize: 0x2C }
+  - { offset: 0x58A76, size: 0x8, addend: 0x0, symName: '_$s13JogPodUITests0abC11LaunchTestsC04testD11PerformanceyyKFTo', symObjAddr: 0x618, symBinAddr: 0x522C, symSize: 0x10C }
+  - { offset: 0x58A8A, size: 0x8, addend: 0x0, symName: '_$s13JogPodUITests0abC11LaunchTestsC10invocationACSo12NSInvocationCSg_tcfC', symObjAddr: 0x724, symBinAddr: 0x5338, symSize: 0x50 }
+  - { offset: 0x58A9E, size: 0x8, addend: 0x0, symName: '_$s13JogPodUITests0abC11LaunchTestsC10invocationACSo12NSInvocationCSg_tcfc', symObjAddr: 0x774, symBinAddr: 0x5388, symSize: 0x94 }
+  - { offset: 0x58AEC, size: 0x8, addend: 0x0, symName: '_$s13JogPodUITests0abC11LaunchTestsC10invocationACSo12NSInvocationCSg_tcfcTo', symObjAddr: 0x808, symBinAddr: 0x541C, symSize: 0x40 }
+  - { offset: 0x58B00, size: 0x8, addend: 0x0, symName: '_$s13JogPodUITests0abC11LaunchTestsC8selectorAC10ObjectiveC8SelectorV_tcfC', symObjAddr: 0x848, symBinAddr: 0x545C, symSize: 0x34 }
+  - { offset: 0x58B14, size: 0x8, addend: 0x0, symName: '_$s13JogPodUITests0abC11LaunchTestsC8selectorAC10ObjectiveC8SelectorV_tcfc', symObjAddr: 0x87C, symBinAddr: 0x5490, symSize: 0x88 }
+  - { offset: 0x58B45, size: 0x8, addend: 0x0, symName: '_$s13JogPodUITests0abC11LaunchTestsC8selectorAC10ObjectiveC8SelectorV_tcfcTo', symObjAddr: 0x904, symBinAddr: 0x5518, symSize: 0x24 }
+  - { offset: 0x58B59, size: 0x8, addend: 0x0, symName: '_$s13JogPodUITests0abC11LaunchTestsCACycfC', symObjAddr: 0x928, symBinAddr: 0x553C, symSize: 0x24 }
+  - { offset: 0x58B6D, size: 0x8, addend: 0x0, symName: '_$s13JogPodUITests0abC11LaunchTestsCACycfc', symObjAddr: 0x94C, symBinAddr: 0x5560, symSize: 0x74 }
+  - { offset: 0x58B91, size: 0x8, addend: 0x0, symName: '_$s13JogPodUITests0abC11LaunchTestsCACycfcTo', symObjAddr: 0x9C0, symBinAddr: 0x55D4, symSize: 0x20 }
+  - { offset: 0x58BA5, size: 0x8, addend: 0x0, symName: '_$s13JogPodUITests0abC11LaunchTestsCfD', symObjAddr: 0x9E0, symBinAddr: 0x55F4, symSize: 0x48 }
+  - { offset: 0x58BC9, size: 0x8, addend: 0x0, symName: '_$sSo26XCTApplicationLaunchMetricCABycfcTO', symObjAddr: 0xAAC, symBinAddr: 0x5660, symSize: 0x20 }
+...

@@ -1,0 +1,171 @@
+{
+  "" : {
+    "const-values" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/JogPodTests-primary.swiftconstvalues",
+    "dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/JogPodTests-primary.d",
+    "diagnostics" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/JogPodTests-primary.dia",
+    "emit-module-dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/JogPodTests-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/JogPodTests-primary-emit-module.dia",
+    "pch" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/JogPodTests-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/JogPodTests-primary.swiftdeps"
+  },
+  "/Users/andraslferenczi/JogPod-revived/JogPodTests/JogPodTestsLauncher.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/JogPodTestsLauncher.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/JogPodTestsLauncher.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/JogPodTestsLauncher.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Tests/AudioEquivalenceTests/AudioPlaybackEquivalenceTests.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/AudioPlaybackEquivalenceTests.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/AudioPlaybackEquivalenceTests.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/AudioPlaybackEquivalenceTests.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Tests/AudioTests/AudioPlayerErrorTests.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/AudioPlayerErrorTests.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/AudioPlayerErrorTests.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/AudioPlayerErrorTests.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Tests/AudioTests/AudioPlayerServiceTests.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/AudioPlayerServiceTests.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/AudioPlayerServiceTests.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/AudioPlayerServiceTests.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Tests/AudioTests/NowPlayingManagerTests.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/NowPlayingManagerTests.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/NowPlayingManagerTests.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/NowPlayingManagerTests.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Tests/MigrationTests/CoreDataImporterTests.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/CoreDataImporterTests.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/CoreDataImporterTests.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/CoreDataImporterTests.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Tests/MigrationTests/DataMigrationManagerTests.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/DataMigrationManagerTests.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/DataMigrationManagerTests.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/DataMigrationManagerTests.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Tests/MigrationTests/MigrationErrorTests.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/MigrationErrorTests.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/MigrationErrorTests.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/MigrationErrorTests.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Tests/ModelTests/JogPodSchemaTests.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/JogPodSchemaTests.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/JogPodSchemaTests.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/JogPodSchemaTests.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Tests/ModelTests/PodcastEpisodeTests.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/PodcastEpisodeTests.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/PodcastEpisodeTests.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/PodcastEpisodeTests.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Tests/ModelTests/PodcastFeedTests.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/PodcastFeedTests.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/PodcastFeedTests.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/PodcastFeedTests.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Tests/ModelTests/PreferenceTests.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/PreferenceTests.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/PreferenceTests.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/PreferenceTests.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Tests/ModelTests/WorkoutListeningLogTests.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/WorkoutListeningLogTests.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/WorkoutListeningLogTests.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/WorkoutListeningLogTests.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Tests/ModelTests/WorkoutSessionTests.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/WorkoutSessionTests.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/WorkoutSessionTests.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/WorkoutSessionTests.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Tests/ModelTests/WorkoutTrackPointTests.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/WorkoutTrackPointTests.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/WorkoutTrackPointTests.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/WorkoutTrackPointTests.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Tests/OAuthTests/FitbitOAuthProviderTests.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/FitbitOAuthProviderTests.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/FitbitOAuthProviderTests.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/FitbitOAuthProviderTests.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Tests/OAuthTests/OAuthConfigurationTests.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/OAuthConfigurationTests.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/OAuthConfigurationTests.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/OAuthConfigurationTests.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Tests/OAuthTests/OAuthErrorTests.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/OAuthErrorTests.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/OAuthErrorTests.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/OAuthErrorTests.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Tests/OAuthTests/OAuthServiceTests.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/OAuthServiceTests.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/OAuthServiceTests.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/OAuthServiceTests.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Tests/OAuthTests/OAuthTokenTests.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/OAuthTokenTests.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/OAuthTokenTests.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/OAuthTokenTests.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Tests/PersistenceEquivalenceTests/DataPersistenceEquivalenceTests.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/DataPersistenceEquivalenceTests.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/DataPersistenceEquivalenceTests.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/DataPersistenceEquivalenceTests.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Tests/PersistenceTests/PersistenceErrorTests.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/PersistenceErrorTests.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/PersistenceErrorTests.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/PersistenceErrorTests.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Tests/PersistenceTests/PersistenceManagerTests.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/PersistenceManagerTests.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/PersistenceManagerTests.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/PersistenceManagerTests.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Tests/SecurityTests/CredentialsBootstrapTests.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/CredentialsBootstrapTests.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/CredentialsBootstrapTests.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/CredentialsBootstrapTests.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Tests/SecurityTests/CredentialsServiceTests.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/CredentialsServiceTests.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/CredentialsServiceTests.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/CredentialsServiceTests.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Tests/SecurityTests/KeychainManagerTests.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/KeychainManagerTests.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/KeychainManagerTests.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/KeychainManagerTests.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Tests/SecurityTests/OAuthTokenMigrationTests.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/OAuthTokenMigrationTests.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/OAuthTokenMigrationTests.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/OAuthTokenMigrationTests.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Tests/WorkoutEquivalenceTests/WorkoutTrackingEquivalenceTests.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/WorkoutTrackingEquivalenceTests.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/WorkoutTrackingEquivalenceTests.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/WorkoutTrackingEquivalenceTests.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Tests/WorkoutTests/LocationServiceTests.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/LocationServiceTests.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/LocationServiceTests.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/LocationServiceTests.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Tests/WorkoutTests/WorkoutErrorTests.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/WorkoutErrorTests.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/WorkoutErrorTests.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/WorkoutErrorTests.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Tests/WorkoutTests/WorkoutMetricsTests.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/WorkoutMetricsTests.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/WorkoutMetricsTests.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/WorkoutMetricsTests.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Tests/WorkoutTests/WorkoutServiceTests.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/WorkoutServiceTests.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/WorkoutServiceTests.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/WorkoutServiceTests.o"
+  }
+}

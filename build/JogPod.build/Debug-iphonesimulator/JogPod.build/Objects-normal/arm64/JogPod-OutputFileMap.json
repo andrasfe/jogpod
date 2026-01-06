@@ -1,0 +1,569 @@
+{
+  "" : {
+    "diagnostics" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/JogPod-primary.dia",
+    "emit-module-dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/JogPod-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/JogPod-primary-emit-module.dia",
+    "pch" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/JogPod-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/JogPod-primary.swiftdeps"
+  },
+  "/Users/andraslferenczi/JogPod-revived/JogPod/App/AppDependencies.swift" : {
+    "const-values" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/AppDependencies.swiftconstvalues",
+    "dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/AppDependencies.d",
+    "diagnostics" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/AppDependencies.dia",
+    "index-unit-output-path" : "/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/AppDependencies.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/AppDependencies.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/AppDependencies.o",
+    "swift-dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/AppDependencies.swiftdeps",
+    "swiftmodule" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/AppDependencies~partial.swiftmodule"
+  },
+  "/Users/andraslferenczi/JogPod-revived/JogPod/App/MainTabView.swift" : {
+    "const-values" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/MainTabView.swiftconstvalues",
+    "dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/MainTabView.d",
+    "diagnostics" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/MainTabView.dia",
+    "index-unit-output-path" : "/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/MainTabView.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/MainTabView.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/MainTabView.o",
+    "swift-dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/MainTabView.swiftdeps",
+    "swiftmodule" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/MainTabView~partial.swiftmodule"
+  },
+  "/Users/andraslferenczi/JogPod-revived/JogPod/ContentView.swift" : {
+    "const-values" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/ContentView.swiftconstvalues",
+    "dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/ContentView.d",
+    "diagnostics" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/ContentView.dia",
+    "index-unit-output-path" : "/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/ContentView.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/ContentView.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/ContentView.o",
+    "swift-dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/ContentView.swiftdeps",
+    "swiftmodule" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/ContentView~partial.swiftmodule"
+  },
+  "/Users/andraslferenczi/JogPod-revived/JogPod/JogPodApp.swift" : {
+    "const-values" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/JogPodApp.swiftconstvalues",
+    "dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/JogPodApp.d",
+    "diagnostics" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/JogPodApp.dia",
+    "index-unit-output-path" : "/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/JogPodApp.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/JogPodApp.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/JogPodApp.o",
+    "swift-dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/JogPodApp.swiftdeps",
+    "swiftmodule" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/JogPodApp~partial.swiftmodule"
+  },
+  "/Users/andraslferenczi/JogPod-revived/JogPod/Views/Dashboard/DashboardView.swift" : {
+    "const-values" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/DashboardView.swiftconstvalues",
+    "dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/DashboardView.d",
+    "diagnostics" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/DashboardView.dia",
+    "index-unit-output-path" : "/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/DashboardView.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/DashboardView.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/DashboardView.o",
+    "swift-dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/DashboardView.swiftdeps",
+    "swiftmodule" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/DashboardView~partial.swiftmodule"
+  },
+  "/Users/andraslferenczi/JogPod-revived/JogPod/Views/Podcast/PlaylistView.swift" : {
+    "const-values" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/PlaylistView.swiftconstvalues",
+    "dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/PlaylistView.d",
+    "diagnostics" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/PlaylistView.dia",
+    "index-unit-output-path" : "/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/PlaylistView.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/PlaylistView.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/PlaylistView.o",
+    "swift-dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/PlaylistView.swiftdeps",
+    "swiftmodule" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/PlaylistView~partial.swiftmodule"
+  },
+  "/Users/andraslferenczi/JogPod-revived/JogPod/Views/Settings/SettingsView.swift" : {
+    "const-values" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/SettingsView.swiftconstvalues",
+    "dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/SettingsView.d",
+    "diagnostics" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/SettingsView.dia",
+    "index-unit-output-path" : "/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/SettingsView.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/SettingsView.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/SettingsView.o",
+    "swift-dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/SettingsView.swiftdeps",
+    "swiftmodule" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/SettingsView~partial.swiftmodule"
+  },
+  "/Users/andraslferenczi/JogPod-revived/JogPod/Views/Stats/StatsView.swift" : {
+    "const-values" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/StatsView.swiftconstvalues",
+    "dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/StatsView.d",
+    "diagnostics" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/StatsView.dia",
+    "index-unit-output-path" : "/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/StatsView.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/StatsView.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/StatsView.o",
+    "swift-dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/StatsView.swiftdeps",
+    "swiftmodule" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/StatsView~partial.swiftmodule"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Models/ModelConfiguration.swift" : {
+    "const-values" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/ModelConfiguration.swiftconstvalues",
+    "dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/ModelConfiguration.d",
+    "diagnostics" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/ModelConfiguration.dia",
+    "index-unit-output-path" : "/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/ModelConfiguration.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/ModelConfiguration.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/ModelConfiguration.o",
+    "swift-dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/ModelConfiguration.swiftdeps",
+    "swiftmodule" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/ModelConfiguration~partial.swiftmodule"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Models/PodcastEpisode.swift" : {
+    "const-values" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/PodcastEpisode.swiftconstvalues",
+    "dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/PodcastEpisode.d",
+    "diagnostics" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/PodcastEpisode.dia",
+    "index-unit-output-path" : "/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/PodcastEpisode.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/PodcastEpisode.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/PodcastEpisode.o",
+    "swift-dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/PodcastEpisode.swiftdeps",
+    "swiftmodule" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/PodcastEpisode~partial.swiftmodule"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Models/PodcastFeed.swift" : {
+    "const-values" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/PodcastFeed.swiftconstvalues",
+    "dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/PodcastFeed.d",
+    "diagnostics" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/PodcastFeed.dia",
+    "index-unit-output-path" : "/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/PodcastFeed.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/PodcastFeed.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/PodcastFeed.o",
+    "swift-dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/PodcastFeed.swiftdeps",
+    "swiftmodule" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/PodcastFeed~partial.swiftmodule"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Models/Preference.swift" : {
+    "const-values" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/Preference.swiftconstvalues",
+    "dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/Preference.d",
+    "diagnostics" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/Preference.dia",
+    "index-unit-output-path" : "/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/Preference.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/Preference.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/Preference.o",
+    "swift-dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/Preference.swiftdeps",
+    "swiftmodule" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/Preference~partial.swiftmodule"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Models/WorkoutListeningLog.swift" : {
+    "const-values" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/WorkoutListeningLog.swiftconstvalues",
+    "dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/WorkoutListeningLog.d",
+    "diagnostics" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/WorkoutListeningLog.dia",
+    "index-unit-output-path" : "/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/WorkoutListeningLog.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/WorkoutListeningLog.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/WorkoutListeningLog.o",
+    "swift-dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/WorkoutListeningLog.swiftdeps",
+    "swiftmodule" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/WorkoutListeningLog~partial.swiftmodule"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Models/WorkoutSession.swift" : {
+    "const-values" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/WorkoutSession.swiftconstvalues",
+    "dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/WorkoutSession.d",
+    "diagnostics" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/WorkoutSession.dia",
+    "index-unit-output-path" : "/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/WorkoutSession.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/WorkoutSession.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/WorkoutSession.o",
+    "swift-dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/WorkoutSession.swiftdeps",
+    "swiftmodule" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/WorkoutSession~partial.swiftmodule"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Models/WorkoutTrackPoint.swift" : {
+    "const-values" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/WorkoutTrackPoint.swiftconstvalues",
+    "dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/WorkoutTrackPoint.d",
+    "diagnostics" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/WorkoutTrackPoint.dia",
+    "index-unit-output-path" : "/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/WorkoutTrackPoint.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/WorkoutTrackPoint.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/WorkoutTrackPoint.o",
+    "swift-dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/WorkoutTrackPoint.swiftdeps",
+    "swiftmodule" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/WorkoutTrackPoint~partial.swiftmodule"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Sources/Services/Audio/AudioPlayerError.swift" : {
+    "const-values" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/AudioPlayerError.swiftconstvalues",
+    "dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/AudioPlayerError.d",
+    "diagnostics" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/AudioPlayerError.dia",
+    "index-unit-output-path" : "/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/AudioPlayerError.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/AudioPlayerError.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/AudioPlayerError.o",
+    "swift-dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/AudioPlayerError.swiftdeps",
+    "swiftmodule" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/AudioPlayerError~partial.swiftmodule"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Sources/Services/Audio/AudioPlayerService.swift" : {
+    "const-values" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/AudioPlayerService.swiftconstvalues",
+    "dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/AudioPlayerService.d",
+    "diagnostics" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/AudioPlayerService.dia",
+    "index-unit-output-path" : "/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/AudioPlayerService.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/AudioPlayerService.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/AudioPlayerService.o",
+    "swift-dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/AudioPlayerService.swiftdeps",
+    "swiftmodule" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/AudioPlayerService~partial.swiftmodule"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Sources/Services/Audio/NowPlayingManager.swift" : {
+    "const-values" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/NowPlayingManager.swiftconstvalues",
+    "dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/NowPlayingManager.d",
+    "diagnostics" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/NowPlayingManager.dia",
+    "index-unit-output-path" : "/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/NowPlayingManager.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/NowPlayingManager.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/NowPlayingManager.o",
+    "swift-dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/NowPlayingManager.swiftdeps",
+    "swiftmodule" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/NowPlayingManager~partial.swiftmodule"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Sources/Services/Feed/FeedModels.swift" : {
+    "const-values" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/FeedModels.swiftconstvalues",
+    "dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/FeedModels.d",
+    "diagnostics" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/FeedModels.dia",
+    "index-unit-output-path" : "/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/FeedModels.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/FeedModels.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/FeedModels.o",
+    "swift-dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/FeedModels.swiftdeps",
+    "swiftmodule" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/FeedModels~partial.swiftmodule"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Sources/Services/Feed/FeedParsingError.swift" : {
+    "const-values" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/FeedParsingError.swiftconstvalues",
+    "dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/FeedParsingError.d",
+    "diagnostics" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/FeedParsingError.dia",
+    "index-unit-output-path" : "/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/FeedParsingError.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/FeedParsingError.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/FeedParsingError.o",
+    "swift-dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/FeedParsingError.swiftdeps",
+    "swiftmodule" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/FeedParsingError~partial.swiftmodule"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Sources/Services/Feed/FeedService.swift" : {
+    "const-values" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/FeedService.swiftconstvalues",
+    "dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/FeedService.d",
+    "diagnostics" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/FeedService.dia",
+    "index-unit-output-path" : "/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/FeedService.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/FeedService.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/FeedService.o",
+    "swift-dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/FeedService.swiftdeps",
+    "swiftmodule" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/FeedService~partial.swiftmodule"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Sources/Services/HealthKit/HealthKitError.swift" : {
+    "const-values" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/HealthKitError.swiftconstvalues",
+    "dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/HealthKitError.d",
+    "diagnostics" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/HealthKitError.dia",
+    "index-unit-output-path" : "/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/HealthKitError.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/HealthKitError.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/HealthKitError.o",
+    "swift-dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/HealthKitError.swiftdeps",
+    "swiftmodule" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/HealthKitError~partial.swiftmodule"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Sources/Services/HealthKit/HealthKitService.swift" : {
+    "const-values" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/HealthKitService.swiftconstvalues",
+    "dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/HealthKitService.d",
+    "diagnostics" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/HealthKitService.dia",
+    "index-unit-output-path" : "/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/HealthKitService.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/HealthKitService.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/HealthKitService.o",
+    "swift-dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/HealthKitService.swiftdeps",
+    "swiftmodule" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/HealthKitService~partial.swiftmodule"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Sources/Services/HealthKit/HealthKitWorkoutData.swift" : {
+    "const-values" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/HealthKitWorkoutData.swiftconstvalues",
+    "dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/HealthKitWorkoutData.d",
+    "diagnostics" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/HealthKitWorkoutData.dia",
+    "index-unit-output-path" : "/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/HealthKitWorkoutData.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/HealthKitWorkoutData.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/HealthKitWorkoutData.o",
+    "swift-dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/HealthKitWorkoutData.swiftdeps",
+    "swiftmodule" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/HealthKitWorkoutData~partial.swiftmodule"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Sources/Services/MediaCache/DownloadProgress.swift" : {
+    "const-values" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/DownloadProgress.swiftconstvalues",
+    "dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/DownloadProgress.d",
+    "diagnostics" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/DownloadProgress.dia",
+    "index-unit-output-path" : "/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/DownloadProgress.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/DownloadProgress.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/DownloadProgress.o",
+    "swift-dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/DownloadProgress.swiftdeps",
+    "swiftmodule" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/DownloadProgress~partial.swiftmodule"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Sources/Services/MediaCache/MediaCacheError.swift" : {
+    "const-values" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/MediaCacheError.swiftconstvalues",
+    "dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/MediaCacheError.d",
+    "diagnostics" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/MediaCacheError.dia",
+    "index-unit-output-path" : "/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/MediaCacheError.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/MediaCacheError.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/MediaCacheError.o",
+    "swift-dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/MediaCacheError.swiftdeps",
+    "swiftmodule" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/MediaCacheError~partial.swiftmodule"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Sources/Services/MediaCache/MediaCacheService.swift" : {
+    "const-values" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/MediaCacheService.swiftconstvalues",
+    "dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/MediaCacheService.d",
+    "diagnostics" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/MediaCacheService.dia",
+    "index-unit-output-path" : "/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/MediaCacheService.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/MediaCacheService.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/MediaCacheService.o",
+    "swift-dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/MediaCacheService.swiftdeps",
+    "swiftmodule" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/MediaCacheService~partial.swiftmodule"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Sources/Services/Migration/CoreDataImporter.swift" : {
+    "const-values" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/CoreDataImporter.swiftconstvalues",
+    "dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/CoreDataImporter.d",
+    "diagnostics" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/CoreDataImporter.dia",
+    "index-unit-output-path" : "/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/CoreDataImporter.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/CoreDataImporter.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/CoreDataImporter.o",
+    "swift-dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/CoreDataImporter.swiftdeps",
+    "swiftmodule" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/CoreDataImporter~partial.swiftmodule"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Sources/Services/Migration/DataMigrationManager.swift" : {
+    "const-values" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/DataMigrationManager.swiftconstvalues",
+    "dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/DataMigrationManager.d",
+    "diagnostics" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/DataMigrationManager.dia",
+    "index-unit-output-path" : "/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/DataMigrationManager.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/DataMigrationManager.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/DataMigrationManager.o",
+    "swift-dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/DataMigrationManager.swiftdeps",
+    "swiftmodule" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/DataMigrationManager~partial.swiftmodule"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Sources/Services/Migration/MigrationError.swift" : {
+    "const-values" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/MigrationError.swiftconstvalues",
+    "dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/MigrationError.d",
+    "diagnostics" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/MigrationError.dia",
+    "index-unit-output-path" : "/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/MigrationError.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/MigrationError.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/MigrationError.o",
+    "swift-dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/MigrationError.swiftdeps",
+    "swiftmodule" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/MigrationError~partial.swiftmodule"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Sources/Services/Migration/MigrationProgress.swift" : {
+    "const-values" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/MigrationProgress.swiftconstvalues",
+    "dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/MigrationProgress.d",
+    "diagnostics" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/MigrationProgress.dia",
+    "index-unit-output-path" : "/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/MigrationProgress.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/MigrationProgress.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/MigrationProgress.o",
+    "swift-dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/MigrationProgress.swiftdeps",
+    "swiftmodule" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/MigrationProgress~partial.swiftmodule"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Sources/Services/OAuth/FitbitOAuthProvider.swift" : {
+    "const-values" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/FitbitOAuthProvider.swiftconstvalues",
+    "dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/FitbitOAuthProvider.d",
+    "diagnostics" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/FitbitOAuthProvider.dia",
+    "index-unit-output-path" : "/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/FitbitOAuthProvider.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/FitbitOAuthProvider.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/FitbitOAuthProvider.o",
+    "swift-dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/FitbitOAuthProvider.swiftdeps",
+    "swiftmodule" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/FitbitOAuthProvider~partial.swiftmodule"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Sources/Services/OAuth/OAuthError.swift" : {
+    "const-values" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/OAuthError.swiftconstvalues",
+    "dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/OAuthError.d",
+    "diagnostics" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/OAuthError.dia",
+    "index-unit-output-path" : "/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/OAuthError.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/OAuthError.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/OAuthError.o",
+    "swift-dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/OAuthError.swiftdeps",
+    "swiftmodule" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/OAuthError~partial.swiftmodule"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Sources/Services/OAuth/OAuthService.swift" : {
+    "const-values" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/OAuthService.swiftconstvalues",
+    "dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/OAuthService.d",
+    "diagnostics" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/OAuthService.dia",
+    "index-unit-output-path" : "/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/OAuthService.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/OAuthService.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/OAuthService.o",
+    "swift-dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/OAuthService.swiftdeps",
+    "swiftmodule" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/OAuthService~partial.swiftmodule"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Sources/Services/Persistence/PersistenceError.swift" : {
+    "const-values" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/PersistenceError.swiftconstvalues",
+    "dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/PersistenceError.d",
+    "diagnostics" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/PersistenceError.dia",
+    "index-unit-output-path" : "/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/PersistenceError.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/PersistenceError.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/PersistenceError.o",
+    "swift-dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/PersistenceError.swiftdeps",
+    "swiftmodule" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/PersistenceError~partial.swiftmodule"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Sources/Services/Persistence/PersistenceManager.swift" : {
+    "const-values" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/PersistenceManager.swiftconstvalues",
+    "dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/PersistenceManager.d",
+    "diagnostics" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/PersistenceManager.dia",
+    "index-unit-output-path" : "/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/PersistenceManager.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/PersistenceManager.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/PersistenceManager.o",
+    "swift-dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/PersistenceManager.swiftdeps",
+    "swiftmodule" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/PersistenceManager~partial.swiftmodule"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Sources/Services/Security/CredentialsBootstrap.swift" : {
+    "const-values" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/CredentialsBootstrap.swiftconstvalues",
+    "dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/CredentialsBootstrap.d",
+    "diagnostics" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/CredentialsBootstrap.dia",
+    "index-unit-output-path" : "/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/CredentialsBootstrap.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/CredentialsBootstrap.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/CredentialsBootstrap.o",
+    "swift-dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/CredentialsBootstrap.swiftdeps",
+    "swiftmodule" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/CredentialsBootstrap~partial.swiftmodule"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Sources/Services/Security/CredentialsService.swift" : {
+    "const-values" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/CredentialsService.swiftconstvalues",
+    "dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/CredentialsService.d",
+    "diagnostics" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/CredentialsService.dia",
+    "index-unit-output-path" : "/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/CredentialsService.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/CredentialsService.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/CredentialsService.o",
+    "swift-dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/CredentialsService.swiftdeps",
+    "swiftmodule" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/CredentialsService~partial.swiftmodule"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Sources/Services/Security/KeychainManager.swift" : {
+    "const-values" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/KeychainManager.swiftconstvalues",
+    "dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/KeychainManager.d",
+    "diagnostics" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/KeychainManager.dia",
+    "index-unit-output-path" : "/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/KeychainManager.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/KeychainManager.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/KeychainManager.o",
+    "swift-dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/KeychainManager.swiftdeps",
+    "swiftmodule" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/KeychainManager~partial.swiftmodule"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Sources/Services/Security/OAuthTokenMigration.swift" : {
+    "const-values" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/OAuthTokenMigration.swiftconstvalues",
+    "dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/OAuthTokenMigration.d",
+    "diagnostics" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/OAuthTokenMigration.dia",
+    "index-unit-output-path" : "/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/OAuthTokenMigration.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/OAuthTokenMigration.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/OAuthTokenMigration.o",
+    "swift-dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/OAuthTokenMigration.swiftdeps",
+    "swiftmodule" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/OAuthTokenMigration~partial.swiftmodule"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Sources/Services/Sensors/DiscoveredHeartRateSensor.swift" : {
+    "const-values" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/DiscoveredHeartRateSensor.swiftconstvalues",
+    "dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/DiscoveredHeartRateSensor.d",
+    "diagnostics" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/DiscoveredHeartRateSensor.dia",
+    "index-unit-output-path" : "/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/DiscoveredHeartRateSensor.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/DiscoveredHeartRateSensor.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/DiscoveredHeartRateSensor.o",
+    "swift-dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/DiscoveredHeartRateSensor.swiftdeps",
+    "swiftmodule" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/DiscoveredHeartRateSensor~partial.swiftmodule"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Sources/Services/Sensors/HeartRateMeasurement.swift" : {
+    "const-values" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/HeartRateMeasurement.swiftconstvalues",
+    "dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/HeartRateMeasurement.d",
+    "diagnostics" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/HeartRateMeasurement.dia",
+    "index-unit-output-path" : "/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/HeartRateMeasurement.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/HeartRateMeasurement.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/HeartRateMeasurement.o",
+    "swift-dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/HeartRateMeasurement.swiftdeps",
+    "swiftmodule" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/HeartRateMeasurement~partial.swiftmodule"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Sources/Services/Sensors/HeartRateSensorError.swift" : {
+    "const-values" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/HeartRateSensorError.swiftconstvalues",
+    "dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/HeartRateSensorError.d",
+    "diagnostics" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/HeartRateSensorError.dia",
+    "index-unit-output-path" : "/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/HeartRateSensorError.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/HeartRateSensorError.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/HeartRateSensorError.o",
+    "swift-dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/HeartRateSensorError.swiftdeps",
+    "swiftmodule" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/HeartRateSensorError~partial.swiftmodule"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Sources/Services/Sensors/HeartRateService.swift" : {
+    "const-values" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/HeartRateService.swiftconstvalues",
+    "dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/HeartRateService.d",
+    "diagnostics" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/HeartRateService.dia",
+    "index-unit-output-path" : "/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/HeartRateService.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/HeartRateService.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/HeartRateService.o",
+    "swift-dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/HeartRateService.swiftdeps",
+    "swiftmodule" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/HeartRateService~partial.swiftmodule"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Sources/Services/Speech/AnnouncementFormatter.swift" : {
+    "const-values" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/AnnouncementFormatter.swiftconstvalues",
+    "dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/AnnouncementFormatter.d",
+    "diagnostics" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/AnnouncementFormatter.dia",
+    "index-unit-output-path" : "/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/AnnouncementFormatter.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/AnnouncementFormatter.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/AnnouncementFormatter.o",
+    "swift-dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/AnnouncementFormatter.swiftdeps",
+    "swiftmodule" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/AnnouncementFormatter~partial.swiftmodule"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Sources/Services/Speech/SpeechConfiguration.swift" : {
+    "const-values" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/SpeechConfiguration.swiftconstvalues",
+    "dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/SpeechConfiguration.d",
+    "diagnostics" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/SpeechConfiguration.dia",
+    "index-unit-output-path" : "/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/SpeechConfiguration.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/SpeechConfiguration.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/SpeechConfiguration.o",
+    "swift-dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/SpeechConfiguration.swiftdeps",
+    "swiftmodule" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/SpeechConfiguration~partial.swiftmodule"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Sources/Services/Speech/SpeechError.swift" : {
+    "const-values" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/SpeechError.swiftconstvalues",
+    "dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/SpeechError.d",
+    "diagnostics" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/SpeechError.dia",
+    "index-unit-output-path" : "/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/SpeechError.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/SpeechError.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/SpeechError.o",
+    "swift-dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/SpeechError.swiftdeps",
+    "swiftmodule" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/SpeechError~partial.swiftmodule"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Sources/Services/Speech/SpeechService.swift" : {
+    "const-values" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/SpeechService.swiftconstvalues",
+    "dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/SpeechService.d",
+    "diagnostics" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/SpeechService.dia",
+    "index-unit-output-path" : "/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/SpeechService.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/SpeechService.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/SpeechService.o",
+    "swift-dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/SpeechService.swiftdeps",
+    "swiftmodule" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/SpeechService~partial.swiftmodule"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Sources/Services/Speech/WorkoutAnnouncementService.swift" : {
+    "const-values" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/WorkoutAnnouncementService.swiftconstvalues",
+    "dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/WorkoutAnnouncementService.d",
+    "diagnostics" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/WorkoutAnnouncementService.dia",
+    "index-unit-output-path" : "/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/WorkoutAnnouncementService.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/WorkoutAnnouncementService.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/WorkoutAnnouncementService.o",
+    "swift-dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/WorkoutAnnouncementService.swiftdeps",
+    "swiftmodule" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/WorkoutAnnouncementService~partial.swiftmodule"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Sources/Services/WatchConnectivity/WatchConnectivityService.swift" : {
+    "const-values" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/WatchConnectivityService.swiftconstvalues",
+    "dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/WatchConnectivityService.d",
+    "diagnostics" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/WatchConnectivityService.dia",
+    "index-unit-output-path" : "/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/WatchConnectivityService.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/WatchConnectivityService.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/WatchConnectivityService.o",
+    "swift-dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/WatchConnectivityService.swiftdeps",
+    "swiftmodule" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/WatchConnectivityService~partial.swiftmodule"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Sources/Services/WatchConnectivity/WatchMessage.swift" : {
+    "const-values" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/WatchMessage.swiftconstvalues",
+    "dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/WatchMessage.d",
+    "diagnostics" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/WatchMessage.dia",
+    "index-unit-output-path" : "/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/WatchMessage.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/WatchMessage.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/WatchMessage.o",
+    "swift-dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/WatchMessage.swiftdeps",
+    "swiftmodule" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/WatchMessage~partial.swiftmodule"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Sources/Services/WatchConnectivity/WatchMessageHandler.swift" : {
+    "const-values" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/WatchMessageHandler.swiftconstvalues",
+    "dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/WatchMessageHandler.d",
+    "diagnostics" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/WatchMessageHandler.dia",
+    "index-unit-output-path" : "/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/WatchMessageHandler.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/WatchMessageHandler.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/WatchMessageHandler.o",
+    "swift-dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/WatchMessageHandler.swiftdeps",
+    "swiftmodule" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/WatchMessageHandler~partial.swiftmodule"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Sources/Services/Workout/LocationService.swift" : {
+    "const-values" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/LocationService.swiftconstvalues",
+    "dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/LocationService.d",
+    "diagnostics" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/LocationService.dia",
+    "index-unit-output-path" : "/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/LocationService.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/LocationService.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/LocationService.o",
+    "swift-dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/LocationService.swiftdeps",
+    "swiftmodule" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/LocationService~partial.swiftmodule"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Sources/Services/Workout/WorkoutError.swift" : {
+    "const-values" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/WorkoutError.swiftconstvalues",
+    "dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/WorkoutError.d",
+    "diagnostics" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/WorkoutError.dia",
+    "index-unit-output-path" : "/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/WorkoutError.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/WorkoutError.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/WorkoutError.o",
+    "swift-dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/WorkoutError.swiftdeps",
+    "swiftmodule" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/WorkoutError~partial.swiftmodule"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Sources/Services/Workout/WorkoutMetrics.swift" : {
+    "const-values" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/WorkoutMetrics.swiftconstvalues",
+    "dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/WorkoutMetrics.d",
+    "diagnostics" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/WorkoutMetrics.dia",
+    "index-unit-output-path" : "/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/WorkoutMetrics.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/WorkoutMetrics.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/WorkoutMetrics.o",
+    "swift-dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/WorkoutMetrics.swiftdeps",
+    "swiftmodule" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/WorkoutMetrics~partial.swiftmodule"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Sources/Services/Workout/WorkoutService.swift" : {
+    "const-values" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/WorkoutService.swiftconstvalues",
+    "dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/WorkoutService.d",
+    "diagnostics" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/WorkoutService.dia",
+    "index-unit-output-path" : "/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/WorkoutService.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/WorkoutService.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/WorkoutService.o",
+    "swift-dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/WorkoutService.swiftdeps",
+    "swiftmodule" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPod.build/Objects-normal/arm64/WorkoutService~partial.swiftmodule"
+  }
+}

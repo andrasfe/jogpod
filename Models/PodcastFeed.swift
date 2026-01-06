@@ -10,7 +10,7 @@ import SwiftData
 /// - Note: The original Core Data model used `RSSEntity` as the class name. This has been
 ///   renamed to `PodcastFeed` for clarity and Swift naming conventions.
 @Model
-final class PodcastFeed {
+public final class PodcastFeed {
 
     // MARK: - Attributes
 

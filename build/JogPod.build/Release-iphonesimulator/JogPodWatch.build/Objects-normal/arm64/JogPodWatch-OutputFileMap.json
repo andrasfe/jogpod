@@ -1,0 +1,66 @@
+{
+  "" : {
+    "const-values" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodWatch.build/Objects-normal/arm64/JogPodWatch-primary.swiftconstvalues",
+    "dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodWatch.build/Objects-normal/arm64/JogPodWatch-primary.d",
+    "diagnostics" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodWatch.build/Objects-normal/arm64/JogPodWatch-primary.dia",
+    "emit-module-dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodWatch.build/Objects-normal/arm64/JogPodWatch-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodWatch.build/Objects-normal/arm64/JogPodWatch-primary-emit-module.dia",
+    "pch" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodWatch.build/Objects-normal/arm64/JogPodWatch-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodWatch.build/Objects-normal/arm64/JogPodWatch-primary.swiftdeps"
+  },
+  "/Users/andraslferenczi/JogPod-revived/JogPodWatch/App/JogPodWatchApp.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release-iphonesimulator/JogPodWatch.build/Objects-normal/arm64/JogPodWatchApp.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodWatch.build/Objects-normal/arm64/JogPodWatchApp.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodWatch.build/Objects-normal/arm64/JogPodWatchApp.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/JogPodWatch/Models/WatchState.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release-iphonesimulator/JogPodWatch.build/Objects-normal/arm64/WatchState.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodWatch.build/Objects-normal/arm64/WatchState.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodWatch.build/Objects-normal/arm64/WatchState.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/JogPodWatch/Services/WatchConnectivityManager.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release-iphonesimulator/JogPodWatch.build/Objects-normal/arm64/WatchConnectivityManager.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodWatch.build/Objects-normal/arm64/WatchConnectivityManager.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodWatch.build/Objects-normal/arm64/WatchConnectivityManager.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/JogPodWatch/Views/AlertView.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release-iphonesimulator/JogPodWatch.build/Objects-normal/arm64/AlertView.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodWatch.build/Objects-normal/arm64/AlertView.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodWatch.build/Objects-normal/arm64/AlertView.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/JogPodWatch/Views/DashboardView.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release-iphonesimulator/JogPodWatch.build/Objects-normal/arm64/DashboardView.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodWatch.build/Objects-normal/arm64/DashboardView.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodWatch.build/Objects-normal/arm64/DashboardView.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/JogPodWatch/Views/MapView.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release-iphonesimulator/JogPodWatch.build/Objects-normal/arm64/MapView.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodWatch.build/Objects-normal/arm64/MapView.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodWatch.build/Objects-normal/arm64/MapView.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/JogPodWatch/Views/PodcastPlayerView.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release-iphonesimulator/JogPodWatch.build/Objects-normal/arm64/PodcastPlayerView.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodWatch.build/Objects-normal/arm64/PodcastPlayerView.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodWatch.build/Objects-normal/arm64/PodcastPlayerView.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/JogPodWatch/Views/SettingsView.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release-iphonesimulator/JogPodWatch.build/Objects-normal/arm64/SettingsView.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodWatch.build/Objects-normal/arm64/SettingsView.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodWatch.build/Objects-normal/arm64/SettingsView.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/JogPodWatch/Views/StatsView.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release-iphonesimulator/JogPodWatch.build/Objects-normal/arm64/StatsView.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodWatch.build/Objects-normal/arm64/StatsView.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodWatch.build/Objects-normal/arm64/StatsView.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/JogPodWatch/Views/WorkoutMetricsView.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release-iphonesimulator/JogPodWatch.build/Objects-normal/arm64/WorkoutMetricsView.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodWatch.build/Objects-normal/arm64/WorkoutMetricsView.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodWatch.build/Objects-normal/arm64/WorkoutMetricsView.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodWatch.build/DerivedSources/GeneratedAssetSymbols.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release-iphonesimulator/JogPodWatch.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodWatch.build/Objects-normal/arm64/GeneratedAssetSymbols.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodWatch.build/Objects-normal/arm64/GeneratedAssetSymbols.o"
+  }
+}

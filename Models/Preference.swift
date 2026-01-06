@@ -16,7 +16,7 @@ import SwiftData
 ///
 /// - Important: The `name` attribute must be unique. Use `#Unique` macro to enforce this.
 @Model
-final class Preference {
+public final class Preference {
 
     // MARK: - Attributes
 

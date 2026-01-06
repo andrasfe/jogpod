@@ -50,6 +50,19 @@ jobs:
       - name: Show Xcode Version
         run: xcodebuild -version
 
+      - name: Install iOS Simulator Runtime
+        run: |
+          # Check if iOS simulator runtime is available
+          if ! xcrun simctl list runtimes | grep -q "iOS ${{ env.SIMULATOR_OS }}"; then
+            echo "iOS ${{ env.SIMULATOR_OS }} runtime not found. Installing..."
+            xcodebuild -downloadPlatform iOS
+            echo "Available runtimes after installation:"
+            xcrun simctl list runtimes
+          else
+            echo "iOS ${{ env.SIMULATOR_OS }} runtime already available"
+            xcrun simctl list runtimes
+          fi
+
       - name: Cache SPM Dependencies
         uses: actions/cache@v4
         with:
@@ -65,17 +78,57 @@ jobs:
 
       - name: Create Simulator
         run: |
+          # First, try to create a new simulator with the specified device and OS
           DEVICE_ID=$(xcrun simctl create "CI_${{ env.SIMULATOR_DEVICE }}" "${{ env.SIMULATOR_DEVICE }}" "${{ env.SIMULATOR_OS }}" 2>/dev/null || true)
+
+          # If creation failed, look for an existing compatible simulator
           if [ -z "$DEVICE_ID" ]; then
+            echo "Could not create simulator, looking for existing one..."
             DEVICE_ID=$(xcrun simctl list devices | grep -w "${{ env.SIMULATOR_DEVICE }}" | head -1 | grep -oE '[A-F0-9-]{36}')
           fi
+
+          # If still no device, try to find any available iPhone simulator
+          if [ -z "$DEVICE_ID" ]; then
+            echo "No matching simulator found. Looking for any available iPhone simulator..."
+            DEVICE_ID=$(xcrun simctl list devices available | grep "iPhone" | head -1 | grep -oE '[A-F0-9-]{36}')
+          fi
+
+          # Fail if no simulator is available
+          if [ -z "$DEVICE_ID" ]; then
+            echo "ERROR: No iOS simulator available. Please ensure iOS runtime is installed."
+            xcrun simctl list devices
+            exit 1
+          fi
+
           echo "SIMULATOR_DEVICE_ID=$DEVICE_ID" >> $GITHUB_ENV
           echo "Using simulator: $DEVICE_ID"
+          xcrun simctl list devices | grep "$DEVICE_ID" || true
 
       - name: Boot Simulator
         run: |
-          xcrun simctl boot ${{ env.SIMULATOR_DEVICE_ID }} || true
-          xcrun simctl bootstatus ${{ env.SIMULATOR_DEVICE_ID }} -b
+          # Boot simulator with retry logic for flaky boots
+          MAX_RETRIES=3
+          RETRY_COUNT=0
+          while [ $RETRY_COUNT -lt $MAX_RETRIES ]; do
+            xcrun simctl boot ${{ env.SIMULATOR_DEVICE_ID }} 2>/dev/null || true
+            # Wait for boot to complete
+            if xcrun simctl bootstatus ${{ env.SIMULATOR_DEVICE_ID }} -b 2>/dev/null; then
+              echo "Simulator booted successfully"
+              break
+            fi
+            RETRY_COUNT=$((RETRY_COUNT + 1))
+            if [ $RETRY_COUNT -lt $MAX_RETRIES ]; then
+              echo "Simulator boot attempt $RETRY_COUNT failed, retrying..."
+              xcrun simctl shutdown ${{ env.SIMULATOR_DEVICE_ID }} 2>/dev/null || true
+              sleep 5
+            fi
+          done
+
+          # Verify simulator is running
+          if ! xcrun simctl list devices booted | grep -q "${{ env.SIMULATOR_DEVICE_ID }}"; then
+            echo "WARNING: Simulator may not have booted correctly"
+            xcrun simctl list devices booted
+          fi
 
       - name: Resolve Package Dependencies
         run: |
@@ -179,6 +232,19 @@ jobs:
       - name: Select Xcode
         run: sudo xcode-select -s /Applications/Xcode_${{ env.XCODE_VERSION }}.app/Contents/Developer
 
+      - name: Install iOS Simulator Runtime
+        run: |
+          # Check if iOS simulator runtime is available
+          if ! xcrun simctl list runtimes | grep -q "iOS ${{ env.SIMULATOR_OS }}"; then
+            echo "iOS ${{ env.SIMULATOR_OS }} runtime not found. Installing..."
+            xcodebuild -downloadPlatform iOS
+            echo "Available runtimes after installation:"
+            xcrun simctl list runtimes
+          else
+            echo "iOS ${{ env.SIMULATOR_OS }} runtime already available"
+            xcrun simctl list runtimes
+          fi
+
       - name: Cache SPM Dependencies
         uses: actions/cache@v4
         with:
@@ -191,16 +257,56 @@ jobs:
 
       - name: Create Simulator for UI Tests
         run: |
+          # First, try to create a new simulator with the specified device and OS
           DEVICE_ID=$(xcrun simctl create "CI_UI_${{ env.SIMULATOR_DEVICE }}" "${{ env.SIMULATOR_DEVICE }}" "${{ env.SIMULATOR_OS }}" 2>/dev/null || true)
+
+          # If creation failed, look for an existing compatible simulator
           if [ -z "$DEVICE_ID" ]; then
+            echo "Could not create simulator, looking for existing one..."
             DEVICE_ID=$(xcrun simctl list devices | grep -w "${{ env.SIMULATOR_DEVICE }}" | head -1 | grep -oE '[A-F0-9-]{36}')
           fi
+
+          # If still no device, try to find any available iPhone simulator
+          if [ -z "$DEVICE_ID" ]; then
+            echo "No matching simulator found. Looking for any available iPhone simulator..."
+            DEVICE_ID=$(xcrun simctl list devices available | grep "iPhone" | head -1 | grep -oE '[A-F0-9-]{36}')
+          fi
+
+          # Fail if no simulator is available
+          if [ -z "$DEVICE_ID" ]; then
+            echo "ERROR: No iOS simulator available. Please ensure iOS runtime is installed."
+            xcrun simctl list devices
+            exit 1
+          fi
+
           echo "SIMULATOR_DEVICE_ID=$DEVICE_ID" >> $GITHUB_ENV
+          echo "Using simulator: $DEVICE_ID"
 
       - name: Boot Simulator
         run: |
-          xcrun simctl boot ${{ env.SIMULATOR_DEVICE_ID }} || true
-          xcrun simctl bootstatus ${{ env.SIMULATOR_DEVICE_ID }} -b
+          # Boot simulator with retry logic for flaky boots
+          MAX_RETRIES=3
+          RETRY_COUNT=0
+          while [ $RETRY_COUNT -lt $MAX_RETRIES ]; do
+            xcrun simctl boot ${{ env.SIMULATOR_DEVICE_ID }} 2>/dev/null || true
+            # Wait for boot to complete
+            if xcrun simctl bootstatus ${{ env.SIMULATOR_DEVICE_ID }} -b 2>/dev/null; then
+              echo "Simulator booted successfully"
+              break
+            fi
+            RETRY_COUNT=$((RETRY_COUNT + 1))
+            if [ $RETRY_COUNT -lt $MAX_RETRIES ]; then
+              echo "Simulator boot attempt $RETRY_COUNT failed, retrying..."
+              xcrun simctl shutdown ${{ env.SIMULATOR_DEVICE_ID }} 2>/dev/null || true
+              sleep 5
+            fi
+          done
+
+          # Verify simulator is running
+          if ! xcrun simctl list devices booted | grep -q "${{ env.SIMULATOR_DEVICE_ID }}"; then
+            echo "WARNING: Simulator may not have booted correctly"
+            xcrun simctl list devices booted
+          fi
 
       - name: Run UI Tests
         run: |

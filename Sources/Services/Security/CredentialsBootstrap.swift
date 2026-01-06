@@ -230,34 +230,67 @@ extension CredentialsBootstrap {
     /// The legacy app stored OAuth tokens in UserDefaults, which is insecure.
     /// This method migrates those credentials to secure Keychain storage.
     ///
+    /// - Important: This method is deprecated. Use `OAuthTokenMigration` directly
+    ///   for better error handling, logging, and idempotency guarantees.
+    ///
     /// - Parameter userDefaults: The UserDefaults instance to migrate from.
     /// - Returns: True if any credentials were migrated.
+    @available(*, deprecated, message: "Use OAuthTokenMigration.migrate() for improved security and error handling")
     @discardableResult
     public func migrateFromLegacyStorage(userDefaults: UserDefaults = .standard) throws -> Bool {
-        var migrated = false
+        let migration = OAuthTokenMigration(
+            credentialsService: credentialsService,
+            userDefaults: userDefaults
+        )
 
-        // Legacy keys from PersistenceDefaults.m
-        let legacyTokenKey = "fitbitAuthCode"
-        let legacySecretKey = "fitbitSecret"
+        let status = try migration.migrate()
 
-        // Migrate user OAuth token
-        if let legacyToken = userDefaults.string(forKey: legacyTokenKey),
-           !legacyToken.isEmpty,
-           !credentialsService.hasCredential(for: .fitbitUserToken) {
-            try credentialsService.setCredential(legacyToken, for: .fitbitUserToken)
-            userDefaults.removeObject(forKey: legacyTokenKey)
-            migrated = true
+        switch status {
+        case .migrated:
+            return true
+        case .noLegacyTokens, .alreadyMigrated, .skippedExistingTokens:
+            return false
         }
+    }
 
-        // Migrate user OAuth secret
-        if let legacySecret = userDefaults.string(forKey: legacySecretKey),
-           !legacySecret.isEmpty,
-           !credentialsService.hasCredential(for: .fitbitUserSecret) {
-            try credentialsService.setCredential(legacySecret, for: .fitbitUserSecret)
-            userDefaults.removeObject(forKey: legacySecretKey)
-            migrated = true
-        }
+    /// Performs secure OAuth token migration with full status reporting.
+    ///
+    /// This is the recommended method for migrating legacy OAuth tokens from
+    /// UserDefaults to Keychain. It provides:
+    /// - Idempotent operation (safe to call multiple times)
+    /// - Detailed status reporting
+    /// - Logging for debugging
+    /// - Verification of successful storage before cleanup
+    ///
+    /// Call this during app launch, before any Fitbit API calls:
+    ///
+    /// ```swift
+    /// let bootstrap = CredentialsBootstrap(credentialsService: credentialsService)
+    /// let status = try bootstrap.migrateOAuthTokens()
+    /// print("Migration result: \(status.description)")
+    /// ```
+    ///
+    /// - Parameter userDefaults: The UserDefaults instance to migrate from. Defaults to `.standard`.
+    /// - Returns: The migration status indicating what action was taken.
+    /// - Throws: `OAuthTokenMigrationError` if migration fails.
+    @discardableResult
+    public func migrateOAuthTokens(from userDefaults: UserDefaults = .standard) throws -> OAuthTokenMigrationStatus {
+        let migration = OAuthTokenMigration(
+            credentialsService: credentialsService,
+            userDefaults: userDefaults
+        )
+        return try migration.migrate()
+    }
 
-        return migrated
+    /// Checks whether OAuth token migration is needed.
+    ///
+    /// - Parameter userDefaults: The UserDefaults instance to check.
+    /// - Returns: `true` if there are legacy tokens that need migration.
+    public func needsOAuthTokenMigration(from userDefaults: UserDefaults = .standard) -> Bool {
+        let migration = OAuthTokenMigration(
+            credentialsService: credentialsService,
+            userDefaults: userDefaults
+        )
+        return migration.needsMigration()
     }
 }

@@ -1,0 +1,119 @@
+{
+  "" : {
+    "diagnostics" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/JogPodWatch-primary.dia",
+    "emit-module-dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/JogPodWatch-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/JogPodWatch-primary-emit-module.dia",
+    "pch" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/JogPodWatch-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/JogPodWatch-primary.swiftdeps"
+  },
+  "/Users/andraslferenczi/JogPod-revived/JogPodWatch/App/JogPodWatchApp.swift" : {
+    "const-values" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/JogPodWatchApp.swiftconstvalues",
+    "dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/JogPodWatchApp.d",
+    "diagnostics" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/JogPodWatchApp.dia",
+    "index-unit-output-path" : "/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/JogPodWatchApp.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/JogPodWatchApp.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/JogPodWatchApp.o",
+    "swift-dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/JogPodWatchApp.swiftdeps",
+    "swiftmodule" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/JogPodWatchApp~partial.swiftmodule"
+  },
+  "/Users/andraslferenczi/JogPod-revived/JogPodWatch/Models/WatchState.swift" : {
+    "const-values" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/WatchState.swiftconstvalues",
+    "dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/WatchState.d",
+    "diagnostics" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/WatchState.dia",
+    "index-unit-output-path" : "/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/WatchState.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/WatchState.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/WatchState.o",
+    "swift-dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/WatchState.swiftdeps",
+    "swiftmodule" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/WatchState~partial.swiftmodule"
+  },
+  "/Users/andraslferenczi/JogPod-revived/JogPodWatch/Services/WatchConnectivityManager.swift" : {
+    "const-values" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/WatchConnectivityManager.swiftconstvalues",
+    "dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/WatchConnectivityManager.d",
+    "diagnostics" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/WatchConnectivityManager.dia",
+    "index-unit-output-path" : "/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/WatchConnectivityManager.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/WatchConnectivityManager.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/WatchConnectivityManager.o",
+    "swift-dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/WatchConnectivityManager.swiftdeps",
+    "swiftmodule" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/WatchConnectivityManager~partial.swiftmodule"
+  },
+  "/Users/andraslferenczi/JogPod-revived/JogPodWatch/Views/AlertView.swift" : {
+    "const-values" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/AlertView.swiftconstvalues",
+    "dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/AlertView.d",
+    "diagnostics" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/AlertView.dia",
+    "index-unit-output-path" : "/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/AlertView.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/AlertView.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/AlertView.o",
+    "swift-dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/AlertView.swiftdeps",
+    "swiftmodule" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/AlertView~partial.swiftmodule"
+  },
+  "/Users/andraslferenczi/JogPod-revived/JogPodWatch/Views/DashboardView.swift" : {
+    "const-values" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/DashboardView.swiftconstvalues",
+    "dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/DashboardView.d",
+    "diagnostics" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/DashboardView.dia",
+    "index-unit-output-path" : "/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/DashboardView.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/DashboardView.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/DashboardView.o",
+    "swift-dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/DashboardView.swiftdeps",
+    "swiftmodule" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/DashboardView~partial.swiftmodule"
+  },
+  "/Users/andraslferenczi/JogPod-revived/JogPodWatch/Views/MapView.swift" : {
+    "const-values" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/MapView.swiftconstvalues",
+    "dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/MapView.d",
+    "diagnostics" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/MapView.dia",
+    "index-unit-output-path" : "/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/MapView.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/MapView.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/MapView.o",
+    "swift-dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/MapView.swiftdeps",
+    "swiftmodule" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/MapView~partial.swiftmodule"
+  },
+  "/Users/andraslferenczi/JogPod-revived/JogPodWatch/Views/PodcastPlayerView.swift" : {
+    "const-values" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/PodcastPlayerView.swiftconstvalues",
+    "dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/PodcastPlayerView.d",
+    "diagnostics" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/PodcastPlayerView.dia",
+    "index-unit-output-path" : "/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/PodcastPlayerView.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/PodcastPlayerView.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/PodcastPlayerView.o",
+    "swift-dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/PodcastPlayerView.swiftdeps",
+    "swiftmodule" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/PodcastPlayerView~partial.swiftmodule"
+  },
+  "/Users/andraslferenczi/JogPod-revived/JogPodWatch/Views/SettingsView.swift" : {
+    "const-values" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/SettingsView.swiftconstvalues",
+    "dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/SettingsView.d",
+    "diagnostics" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/SettingsView.dia",
+    "index-unit-output-path" : "/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/SettingsView.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/SettingsView.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/SettingsView.o",
+    "swift-dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/SettingsView.swiftdeps",
+    "swiftmodule" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/SettingsView~partial.swiftmodule"
+  },
+  "/Users/andraslferenczi/JogPod-revived/JogPodWatch/Views/StatsView.swift" : {
+    "const-values" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/StatsView.swiftconstvalues",
+    "dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/StatsView.d",
+    "diagnostics" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/StatsView.dia",
+    "index-unit-output-path" : "/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/StatsView.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/StatsView.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/StatsView.o",
+    "swift-dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/StatsView.swiftdeps",
+    "swiftmodule" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/StatsView~partial.swiftmodule"
+  },
+  "/Users/andraslferenczi/JogPod-revived/JogPodWatch/Views/WorkoutMetricsView.swift" : {
+    "const-values" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/WorkoutMetricsView.swiftconstvalues",
+    "dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/WorkoutMetricsView.d",
+    "diagnostics" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/WorkoutMetricsView.dia",
+    "index-unit-output-path" : "/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/WorkoutMetricsView.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/WorkoutMetricsView.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/WorkoutMetricsView.o",
+    "swift-dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/WorkoutMetricsView.swiftdeps",
+    "swiftmodule" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/WorkoutMetricsView~partial.swiftmodule"
+  },
+  "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/DerivedSources/GeneratedAssetSymbols.swift" : {
+    "const-values" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/GeneratedAssetSymbols.swiftconstvalues",
+    "dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/GeneratedAssetSymbols.d",
+    "diagnostics" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/GeneratedAssetSymbols.dia",
+    "index-unit-output-path" : "/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/GeneratedAssetSymbols.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/GeneratedAssetSymbols.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/GeneratedAssetSymbols.o",
+    "swift-dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/GeneratedAssetSymbols.swiftdeps",
+    "swiftmodule" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Debug-iphonesimulator/JogPodWatch.build/Objects-normal/x86_64/GeneratedAssetSymbols~partial.swiftmodule"
+  }
+}

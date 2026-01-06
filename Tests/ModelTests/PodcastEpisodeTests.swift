@@ -5,6 +5,7 @@ import SwiftData
 
 /// Tests for the PodcastEpisode SwiftData model.
 @Suite("PodcastEpisode Model Tests")
+@MainActor
 struct PodcastEpisodeTests {
 
     // MARK: - Setup

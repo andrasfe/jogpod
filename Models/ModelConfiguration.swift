@@ -5,7 +5,7 @@ import SwiftData
 ///
 /// This enum provides centralized schema configuration and factory methods
 /// for creating `ModelContainer` instances.
-enum JogPodSchema {
+public enum JogPodSchema {
 
     /// All model types in the JogPod schema.
     ///

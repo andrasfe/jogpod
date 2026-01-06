@@ -5,6 +5,7 @@ import SwiftData
 
 /// Tests for the WorkoutListeningLog SwiftData model.
 @Suite("WorkoutListeningLog Model Tests")
+@MainActor
 struct WorkoutListeningLogTests {
 
     // MARK: - Setup

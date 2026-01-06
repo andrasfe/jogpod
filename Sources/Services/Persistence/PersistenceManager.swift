@@ -59,6 +59,10 @@ public protocol PersistenceManaging: Sendable {
 
     func deletePodcastEpisode(_ identifier: PersistentIdentifier) async throws
 
+    func saveEpisodePosition(episodeID: PersistentIdentifier, position: TimeInterval) async throws
+
+    func fetchEpisodePosition(episodeID: PersistentIdentifier) async throws -> TimeInterval?
+
     // MARK: Preference Operations
 
     func savePreference<T>(name: String, value: T) async throws where T: Sendable
@@ -507,6 +511,48 @@ public actor PersistenceManager: PersistenceManaging {
                 reason: error.localizedDescription
             )
         }
+    }
+
+    /// Saves the playback position for an episode.
+    ///
+    /// - Parameters:
+    ///   - episodeID: The persistent identifier of the episode.
+    ///   - position: The playback position in seconds.
+    /// - Throws: `PersistenceError.updateFailed` if the update fails.
+    public func saveEpisodePosition(
+        episodeID: PersistentIdentifier,
+        position: TimeInterval
+    ) async throws {
+        guard let episode = modelContext.model(for: episodeID) as? PodcastEpisode else {
+            throw PersistenceError.entityNotFound(
+                entityName: "PodcastEpisode",
+                identifier: episodeID.hashValue.description
+            )
+        }
+
+        episode.savedPlaybackPosition = position
+
+        do {
+            try modelContext.save()
+        } catch {
+            throw PersistenceError.updateFailed(
+                entityName: "PodcastEpisode",
+                reason: error.localizedDescription
+            )
+        }
+    }
+
+    /// Fetches the saved playback position for an episode.
+    ///
+    /// - Parameter episodeID: The persistent identifier of the episode.
+    /// - Returns: The saved position in seconds, or nil if the episode doesn't exist.
+    /// - Throws: `PersistenceError.fetchFailed` if the fetch fails.
+    public func fetchEpisodePosition(episodeID: PersistentIdentifier) async throws -> TimeInterval? {
+        guard let episode = modelContext.model(for: episodeID) as? PodcastEpisode else {
+            return nil
+        }
+
+        return episode.savedPlaybackPosition
     }
 
     // MARK: - Preference Operations

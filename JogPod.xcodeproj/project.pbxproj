@@ -1,0 +1,1853 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		/* App Target Files */
+		A1000001AAAAAAAA00000001 /* JogPodApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000001AAAAAAAA00000001 /* JogPodApp.swift */; };
+		A1000002AAAAAAAA00000001 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000002AAAAAAAA00000001 /* ContentView.swift */; };
+
+		/* App Architecture */
+		A1000003AAAAAAAA00000001 /* AppDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000005AAAAAAAA00000001 /* AppDependencies.swift */; };
+		A1000004AAAAAAAA00000001 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000006AAAAAAAA00000001 /* MainTabView.swift */; };
+
+		/* Views/Dashboard */
+		A1000005AAAAAAAA00000001 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000007AAAAAAAA00000001 /* DashboardView.swift */; };
+
+		/* Views/Podcast */
+		A1000006AAAAAAAA00000001 /* PlaylistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000008AAAAAAAA00000001 /* PlaylistView.swift */; };
+
+		/* Views/Stats */
+		A1000007AAAAAAAA00000001 /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000009AAAAAAAA00000001 /* StatsView.swift */; };
+
+		/* Views/Settings */
+		A1000008AAAAAAAA00000001 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A200000AAAAAAAAA00000001 /* SettingsView.swift */; };
+
+		/* Models */
+		A1000010AAAAAAAA00000001 /* PodcastFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000010AAAAAAAA00000001 /* PodcastFeed.swift */; };
+		A1000011AAAAAAAA00000001 /* PodcastEpisode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000011AAAAAAAA00000001 /* PodcastEpisode.swift */; };
+		A1000012AAAAAAAA00000001 /* Preference.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000012AAAAAAAA00000001 /* Preference.swift */; };
+		A1000013AAAAAAAA00000001 /* WorkoutSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000013AAAAAAAA00000001 /* WorkoutSession.swift */; };
+		A1000014AAAAAAAA00000001 /* WorkoutTrackPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000014AAAAAAAA00000001 /* WorkoutTrackPoint.swift */; };
+		A1000015AAAAAAAA00000001 /* WorkoutListeningLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000015AAAAAAAA00000001 /* WorkoutListeningLog.swift */; };
+		A1000016AAAAAAAA00000001 /* ModelConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000016AAAAAAAA00000001 /* ModelConfiguration.swift */; };
+
+		/* Services/Security */
+		A1000020AAAAAAAA00000001 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000020AAAAAAAA00000001 /* KeychainManager.swift */; };
+		A1000021AAAAAAAA00000001 /* CredentialsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000021AAAAAAAA00000001 /* CredentialsService.swift */; };
+		A1000022AAAAAAAA00000001 /* CredentialsBootstrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000022AAAAAAAA00000001 /* CredentialsBootstrap.swift */; };
+		A1000023AAAAAAAA00000001 /* OAuthTokenMigration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000023AAAAAAAA00000001 /* OAuthTokenMigration.swift */; };
+
+		/* Services/Persistence */
+		A1000030AAAAAAAA00000001 /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000030AAAAAAAA00000001 /* PersistenceManager.swift */; };
+		A1000031AAAAAAAA00000001 /* PersistenceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000031AAAAAAAA00000001 /* PersistenceError.swift */; };
+
+		/* Services/Migration */
+		A1000040AAAAAAAA00000001 /* MigrationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000040AAAAAAAA00000001 /* MigrationError.swift */; };
+		A1000041AAAAAAAA00000001 /* CoreDataImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000041AAAAAAAA00000001 /* CoreDataImporter.swift */; };
+		A1000042AAAAAAAA00000001 /* DataMigrationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000042AAAAAAAA00000001 /* DataMigrationManager.swift */; };
+		A1000043AAAAAAAA00000001 /* MigrationProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000043AAAAAAAA00000001 /* MigrationProgress.swift */; };
+
+		/* Services/Audio */
+		A1000050AAAAAAAA00000001 /* AudioPlayerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000050AAAAAAAA00000001 /* AudioPlayerError.swift */; };
+		A1000051AAAAAAAA00000001 /* AudioPlayerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000051AAAAAAAA00000001 /* AudioPlayerService.swift */; };
+		A1000052AAAAAAAA00000001 /* NowPlayingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000052AAAAAAAA00000001 /* NowPlayingManager.swift */; };
+
+		/* Services/OAuth */
+		A1000060AAAAAAAA00000001 /* OAuthError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000060AAAAAAAA00000001 /* OAuthError.swift */; };
+		A1000061AAAAAAAA00000001 /* OAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000061AAAAAAAA00000001 /* OAuthService.swift */; };
+		A1000062AAAAAAAA00000001 /* FitbitOAuthProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000062AAAAAAAA00000001 /* FitbitOAuthProvider.swift */; };
+
+		/* Services/Workout */
+		A1000070AAAAAAAA00000001 /* WorkoutError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000070AAAAAAAA00000001 /* WorkoutError.swift */; };
+		A1000071AAAAAAAA00000001 /* WorkoutService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000071AAAAAAAA00000001 /* WorkoutService.swift */; };
+		A1000072AAAAAAAA00000001 /* WorkoutMetrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000072AAAAAAAA00000001 /* WorkoutMetrics.swift */; };
+		A1000073AAAAAAAA00000001 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000073AAAAAAAA00000001 /* LocationService.swift */; };
+
+		/* Services/Feed */
+		A1000080AAAAAAAA00000001 /* FeedModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000080AAAAAAAA00000001 /* FeedModels.swift */; };
+		A1000081AAAAAAAA00000001 /* FeedParsingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000081AAAAAAAA00000001 /* FeedParsingError.swift */; };
+		A1000082AAAAAAAA00000001 /* FeedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000082AAAAAAAA00000001 /* FeedService.swift */; };
+
+		/* Services/HealthKit */
+		A1000090AAAAAAAA00000001 /* HealthKitError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000090AAAAAAAA00000001 /* HealthKitError.swift */; };
+		A1000091AAAAAAAA00000001 /* HealthKitService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000091AAAAAAAA00000001 /* HealthKitService.swift */; };
+		A1000092AAAAAAAA00000001 /* HealthKitWorkoutData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000092AAAAAAAA00000001 /* HealthKitWorkoutData.swift */; };
+
+		/* Services/MediaCache */
+		A10000A0AAAAAAAA00000001 /* DownloadProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000A0AAAAAAAA00000001 /* DownloadProgress.swift */; };
+		A10000A1AAAAAAAA00000001 /* MediaCacheError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000A1AAAAAAAA00000001 /* MediaCacheError.swift */; };
+		A10000A2AAAAAAAA00000001 /* MediaCacheService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000A2AAAAAAAA00000001 /* MediaCacheService.swift */; };
+
+		/* Services/Sensors */
+		A10000B0AAAAAAAA00000001 /* DiscoveredHeartRateSensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000B0AAAAAAAA00000001 /* DiscoveredHeartRateSensor.swift */; };
+		A10000B1AAAAAAAA00000001 /* HeartRateMeasurement.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000B1AAAAAAAA00000001 /* HeartRateMeasurement.swift */; };
+		A10000B2AAAAAAAA00000001 /* HeartRateSensorError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000B2AAAAAAAA00000001 /* HeartRateSensorError.swift */; };
+		A10000B3AAAAAAAA00000001 /* HeartRateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000B3AAAAAAAA00000001 /* HeartRateService.swift */; };
+
+		/* Services/Speech */
+		A10000C0AAAAAAAA00000001 /* AnnouncementFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000C0AAAAAAAA00000001 /* AnnouncementFormatter.swift */; };
+		A10000C1AAAAAAAA00000001 /* SpeechConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000C1AAAAAAAA00000001 /* SpeechConfiguration.swift */; };
+		A10000C2AAAAAAAA00000001 /* SpeechError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000C2AAAAAAAA00000001 /* SpeechError.swift */; };
+		A10000C3AAAAAAAA00000001 /* SpeechService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000C3AAAAAAAA00000001 /* SpeechService.swift */; };
+		A10000C4AAAAAAAA00000001 /* WorkoutAnnouncementService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000C4AAAAAAAA00000001 /* WorkoutAnnouncementService.swift */; };
+
+		/* Services/WatchConnectivity */
+		A10000D0AAAAAAAA00000001 /* WatchConnectivityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000D0AAAAAAAA00000001 /* WatchConnectivityService.swift */; };
+		A10000D1AAAAAAAA00000001 /* WatchMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000D1AAAAAAAA00000001 /* WatchMessage.swift */; };
+		A10000D2AAAAAAAA00000001 /* WatchMessageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000D2AAAAAAAA00000001 /* WatchMessageHandler.swift */; };
+
+		/* Test Target Files */
+		A1000100AAAAAAAA00000001 /* JogPodTestsLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000100AAAAAAAA00000001 /* JogPodTestsLauncher.swift */; };
+		A1000101AAAAAAAA00000001 /* PodcastFeedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000101AAAAAAAA00000001 /* PodcastFeedTests.swift */; };
+		A1000102AAAAAAAA00000001 /* PodcastEpisodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000102AAAAAAAA00000001 /* PodcastEpisodeTests.swift */; };
+		A1000103AAAAAAAA00000001 /* PreferenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000103AAAAAAAA00000001 /* PreferenceTests.swift */; };
+		A1000104AAAAAAAA00000001 /* WorkoutSessionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000104AAAAAAAA00000001 /* WorkoutSessionTests.swift */; };
+		A1000105AAAAAAAA00000001 /* WorkoutTrackPointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000105AAAAAAAA00000001 /* WorkoutTrackPointTests.swift */; };
+		A1000106AAAAAAAA00000001 /* WorkoutListeningLogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000106AAAAAAAA00000001 /* WorkoutListeningLogTests.swift */; };
+		A1000107AAAAAAAA00000001 /* JogPodSchemaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000107AAAAAAAA00000001 /* JogPodSchemaTests.swift */; };
+		A1000108AAAAAAAA00000001 /* MigrationErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000108AAAAAAAA00000001 /* MigrationErrorTests.swift */; };
+		A1000109AAAAAAAA00000001 /* CoreDataImporterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000109AAAAAAAA00000001 /* CoreDataImporterTests.swift */; };
+		A1000110AAAAAAAA00000001 /* DataMigrationManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000110AAAAAAAA00000001 /* DataMigrationManagerTests.swift */; };
+		A1000113AAAAAAAA00000001 /* SwiftDataMigrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000113AAAAAAAA00000001 /* SwiftDataMigrationTests.swift */; };
+		A1000114AAAAAAAA00000001 /* MigrationEdgeCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000114AAAAAAAA00000001 /* MigrationEdgeCaseTests.swift */; };
+		A1000115AAAAAAAA00000001 /* MigrationPerformanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000115AAAAAAAA00000001 /* MigrationPerformanceTests.swift */; };
+		A1000111AAAAAAAA00000001 /* PersistenceManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000111AAAAAAAA00000001 /* PersistenceManagerTests.swift */; };
+		A1000112AAAAAAAA00000001 /* PersistenceErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000112AAAAAAAA00000001 /* PersistenceErrorTests.swift */; };
+
+		/* Audio Tests */
+		A1000120AAAAAAAA00000001 /* AudioPlayerErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000120AAAAAAAA00000001 /* AudioPlayerErrorTests.swift */; };
+		A1000121AAAAAAAA00000001 /* AudioPlayerServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000121AAAAAAAA00000001 /* AudioPlayerServiceTests.swift */; };
+		A1000122AAAAAAAA00000001 /* NowPlayingManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000122AAAAAAAA00000001 /* NowPlayingManagerTests.swift */; };
+
+		/* OAuth Tests */
+		A1000130AAAAAAAA00000001 /* OAuthErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000130AAAAAAAA00000001 /* OAuthErrorTests.swift */; };
+		A1000131AAAAAAAA00000001 /* OAuthTokenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000131AAAAAAAA00000001 /* OAuthTokenTests.swift */; };
+		A1000132AAAAAAAA00000001 /* OAuthConfigurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000132AAAAAAAA00000001 /* OAuthConfigurationTests.swift */; };
+		A1000133AAAAAAAA00000001 /* OAuthServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000133AAAAAAAA00000001 /* OAuthServiceTests.swift */; };
+		A1000134AAAAAAAA00000001 /* FitbitOAuthProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000134AAAAAAAA00000001 /* FitbitOAuthProviderTests.swift */; };
+
+		/* Workout Tests */
+		A1000140AAAAAAAA00000001 /* WorkoutErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000140AAAAAAAA00000001 /* WorkoutErrorTests.swift */; };
+		A1000141AAAAAAAA00000001 /* WorkoutMetricsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000141AAAAAAAA00000001 /* WorkoutMetricsTests.swift */; };
+		A1000142AAAAAAAA00000001 /* LocationServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000142AAAAAAAA00000001 /* LocationServiceTests.swift */; };
+		A1000143AAAAAAAA00000001 /* WorkoutServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000143AAAAAAAA00000001 /* WorkoutServiceTests.swift */; };
+
+		/* Security Tests */
+		A1000150AAAAAAAA00000001 /* OAuthTokenMigrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000150AAAAAAAA00000001 /* OAuthTokenMigrationTests.swift */; };
+		A1000151AAAAAAAA00000001 /* CredentialsServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000151AAAAAAAA00000001 /* CredentialsServiceTests.swift */; };
+		A1000152AAAAAAAA00000001 /* KeychainManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000152AAAAAAAA00000001 /* KeychainManagerTests.swift */; };
+		A1000153AAAAAAAA00000001 /* CredentialsBootstrapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000153AAAAAAAA00000001 /* CredentialsBootstrapTests.swift */; };
+
+		/* Equivalence Tests */
+		A1000160AAAAAAAA00000001 /* WorkoutTrackingEquivalenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000160AAAAAAAA00000001 /* WorkoutTrackingEquivalenceTests.swift */; };
+		A1000161AAAAAAAA00000001 /* AudioPlaybackEquivalenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000161AAAAAAAA00000001 /* AudioPlaybackEquivalenceTests.swift */; };
+		A1000162AAAAAAAA00000001 /* DataPersistenceEquivalenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000162AAAAAAAA00000001 /* DataPersistenceEquivalenceTests.swift */; };
+
+		/* Mocks/Audio Tests */
+		A1000170AAAAAAAA00000001 /* MockAudioPlayerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000170AAAAAAAA00000001 /* MockAudioPlayerService.swift */; };
+		A1000171AAAAAAAA00000001 /* MockAVAudioSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000171AAAAAAAA00000001 /* MockAVAudioSession.swift */; };
+		A1000172AAAAAAAA00000001 /* AudioSessionInterruptionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000172AAAAAAAA00000001 /* AudioSessionInterruptionTests.swift */; };
+		A1000173AAAAAAAA00000001 /* BackgroundPlaybackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000173AAAAAAAA00000001 /* BackgroundPlaybackTests.swift */; };
+		A1000174AAAAAAAA00000001 /* RouteChangeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000174AAAAAAAA00000001 /* RouteChangeTests.swift */; };
+		A1000175AAAAAAAA00000001 /* NowPlayingInfoUpdateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000175AAAAAAAA00000001 /* NowPlayingInfoUpdateTests.swift */; };
+
+		/* HealthKit Tests */
+		A1000180AAAAAAAA00000001 /* HealthKitErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000180AAAAAAAA00000001 /* HealthKitErrorTests.swift */; };
+		A1000181AAAAAAAA00000001 /* HealthKitServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000181AAAAAAAA00000001 /* HealthKitServiceTests.swift */; };
+		A1000182AAAAAAAA00000001 /* HealthKitWorkoutDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000182AAAAAAAA00000001 /* HealthKitWorkoutDataTests.swift */; };
+		A1000183AAAAAAAA00000001 /* HealthKitAuthorizationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000183AAAAAAAA00000001 /* HealthKitAuthorizationTests.swift */; };
+		A1000184AAAAAAAA00000001 /* HealthKitWorkoutSaveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000184AAAAAAAA00000001 /* HealthKitWorkoutSaveTests.swift */; };
+		A1000185AAAAAAAA00000001 /* HealthKitQueryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000185AAAAAAAA00000001 /* HealthKitQueryTests.swift */; };
+		A1000186AAAAAAAA00000001 /* HealthKitErrorHandlingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000186AAAAAAAA00000001 /* HealthKitErrorHandlingTests.swift */; };
+
+		/* Mocks/HealthKit */
+		A1000220AAAAAAAA00000001 /* MockHKHealthStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000220AAAAAAAA00000001 /* MockHKHealthStore.swift */; };
+		A1000221AAAAAAAA00000001 /* MockHealthKitService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000221AAAAAAAA00000001 /* MockHealthKitService.swift */; };
+		A1000222AAAAAAAA00000001 /* HealthKitTestFixtures.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000222AAAAAAAA00000001 /* HealthKitTestFixtures.swift */; };
+
+		/* MediaCache Equivalence Tests */
+		A1000190AAAAAAAA00000001 /* MediaCacheEquivalenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000190AAAAAAAA00000001 /* MediaCacheEquivalenceTests.swift */; };
+
+		/* MediaCache Tests */
+		A10001A0AAAAAAAA00000001 /* DownloadProgressTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20001A0AAAAAAAA00000001 /* DownloadProgressTests.swift */; };
+		A10001A1AAAAAAAA00000001 /* MediaCacheErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20001A1AAAAAAAA00000001 /* MediaCacheErrorTests.swift */; };
+		A10001A2AAAAAAAA00000001 /* MediaCacheServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20001A2AAAAAAAA00000001 /* MediaCacheServiceTests.swift */; };
+
+		/* Mocks/Network Tests */
+		A10001B0AAAAAAAA00000001 /* MockCredentialsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20001B0AAAAAAAA00000001 /* MockCredentialsProvider.swift */; };
+		A10001B1AAAAAAAA00000001 /* MockFeedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20001B1AAAAAAAA00000001 /* MockFeedService.swift */; };
+		A10001B2AAAAAAAA00000001 /* MockFitbitOAuthProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20001B2AAAAAAAA00000001 /* MockFitbitOAuthProvider.swift */; };
+		A10001B3AAAAAAAA00000001 /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20001B3AAAAAAAA00000001 /* MockURLProtocol.swift */; };
+		A10001B4AAAAAAAA00000001 /* NetworkErrorSimulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20001B4AAAAAAAA00000001 /* NetworkErrorSimulator.swift */; };
+		A10001B5AAAAAAAA00000001 /* ResponseFixtures.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20001B5AAAAAAAA00000001 /* ResponseFixtures.swift */; };
+
+		/* Mocks/Sensors Tests */
+		A10001C0AAAAAAAA00000001 /* MockHeartRateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20001C0AAAAAAAA00000001 /* MockHeartRateService.swift */; };
+		A10001C1AAAAAAAA00000001 /* SensorMockInfrastructureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20001C1AAAAAAAA00000001 /* SensorMockInfrastructureTests.swift */; };
+		A10001C2AAAAAAAA00000001 /* SensorTestFixtures.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20001C2AAAAAAAA00000001 /* SensorTestFixtures.swift */; };
+		A10001C3AAAAAAAA00000001 /* SimulatedHeartRateSensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20001C3AAAAAAAA00000001 /* SimulatedHeartRateSensor.swift */; };
+		A10001C4AAAAAAAA00000001 /* SimulatedLocationTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20001C4AAAAAAAA00000001 /* SimulatedLocationTrack.swift */; };
+
+		/* Sensor Tests */
+		A10001D0AAAAAAAA00000001 /* DiscoveredHeartRateSensorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20001D0AAAAAAAA00000001 /* DiscoveredHeartRateSensorTests.swift */; };
+		A10001D1AAAAAAAA00000001 /* HeartRateMeasurementTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20001D1AAAAAAAA00000001 /* HeartRateMeasurementTests.swift */; };
+		A10001D2AAAAAAAA00000001 /* HeartRateSensorErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20001D2AAAAAAAA00000001 /* HeartRateSensorErrorTests.swift */; };
+		A10001D3AAAAAAAA00000001 /* HeartRateServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20001D3AAAAAAAA00000001 /* HeartRateServiceTests.swift */; };
+
+		/* Speech Tests */
+		A10001E0AAAAAAAA00000001 /* AnnouncementFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20001E0AAAAAAAA00000001 /* AnnouncementFormatterTests.swift */; };
+		A10001E1AAAAAAAA00000001 /* SpeechConfigurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20001E1AAAAAAAA00000001 /* SpeechConfigurationTests.swift */; };
+		A10001E2AAAAAAAA00000001 /* SpeechErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20001E2AAAAAAAA00000001 /* SpeechErrorTests.swift */; };
+		A10001E3AAAAAAAA00000001 /* SpeechServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20001E3AAAAAAAA00000001 /* SpeechServiceTests.swift */; };
+		A10001E4AAAAAAAA00000001 /* WorkoutAnnouncementServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20001E4AAAAAAAA00000001 /* WorkoutAnnouncementServiceTests.swift */; };
+
+		/* WatchConnectivity Equivalence Tests */
+		A10001F0AAAAAAAA00000001 /* WatchConnectivityEquivalenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20001F0AAAAAAAA00000001 /* WatchConnectivityEquivalenceTests.swift */; };
+
+		/* WatchConnectivity Tests */
+		A1000210AAAAAAAA00000001 /* WatchMessageHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000210AAAAAAAA00000001 /* WatchMessageHandlerTests.swift */; };
+		A1000211AAAAAAAA00000001 /* WatchMessageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000211AAAAAAAA00000001 /* WatchMessageTests.swift */; };
+
+		/* UI Test Target Files */
+		A1000200AAAAAAAA00000001 /* JogPodUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000200AAAAAAAA00000001 /* JogPodUITests.swift */; };
+		A1000201AAAAAAAA00000001 /* JogPodUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000201AAAAAAAA00000001 /* JogPodUITestsLaunchTests.swift */; };
+
+		/* watchOS Target Files */
+		B1000001BBBBBBBB00000001 /* JogPodWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2000001BBBBBBBB00000001 /* JogPodWatchApp.swift */; };
+		B1000002BBBBBBBB00000001 /* WatchState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2000002BBBBBBBB00000001 /* WatchState.swift */; };
+		B1000003BBBBBBBB00000001 /* WatchConnectivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2000003BBBBBBBB00000001 /* WatchConnectivityManager.swift */; };
+		B1000004BBBBBBBB00000001 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2000004BBBBBBBB00000001 /* DashboardView.swift */; };
+		B1000005BBBBBBBB00000001 /* WorkoutMetricsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2000005BBBBBBBB00000001 /* WorkoutMetricsView.swift */; };
+		B1000006BBBBBBBB00000001 /* PodcastPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2000006BBBBBBBB00000001 /* PodcastPlayerView.swift */; };
+		B1000007BBBBBBBB00000001 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2000007BBBBBBBB00000001 /* MapView.swift */; };
+		B1000008BBBBBBBB00000001 /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2000008BBBBBBBB00000001 /* StatsView.swift */; };
+		B1000009BBBBBBBB00000001 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2000009BBBBBBBB00000001 /* SettingsView.swift */; };
+		B100000ABBBBBBBB00000001 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B200000ABBBBBBBB00000001 /* AlertView.swift */; };
+		B100000BBBBBBBBB00000001 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B200000BBBBBBBBB00000001 /* Assets.xcassets */; };
+
+		/* Embed Watch App */
+		B100000CBBBBBBBB00000001 /* JogPodWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = B5000001BBBBBBBB00000001 /* JogPodWatch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A3000001AAAAAAAA00000001 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A4000001AAAAAAAA00000001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A5000001AAAAAAAA00000001;
+			remoteInfo = JogPod;
+		};
+		A3000002AAAAAAAA00000001 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A4000001AAAAAAAA00000001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A5000001AAAAAAAA00000001;
+			remoteInfo = JogPod;
+		};
+		B3000001BBBBBBBB00000001 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A4000001AAAAAAAA00000001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B8000001BBBBBBBB00000001;
+			remoteInfo = JogPodWatch;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B6000001BBBBBBBB00000001 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				B100000CBBBBBBBB00000001 /* JogPodWatch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		/* App Target */
+		A5000001AAAAAAAA00000001 /* JogPod.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JogPod.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2000001AAAAAAAA00000001 /* JogPodApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JogPodApp.swift; sourceTree = "<group>"; };
+		A2000002AAAAAAAA00000001 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A2000003AAAAAAAA00000001 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2000004AAAAAAAA00000001 /* JogPod.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = JogPod.entitlements; sourceTree = "<group>"; };
+
+		/* App Architecture */
+		A2000005AAAAAAAA00000001 /* AppDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependencies.swift; sourceTree = "<group>"; };
+		A2000006AAAAAAAA00000001 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+
+		/* Views/Dashboard */
+		A2000007AAAAAAAA00000001 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+
+		/* Views/Podcast */
+		A2000008AAAAAAAA00000001 /* PlaylistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistView.swift; sourceTree = "<group>"; };
+
+		/* Views/Stats */
+		A2000009AAAAAAAA00000001 /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
+
+		/* Views/Settings */
+		A200000AAAAAAAAA00000001 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+
+		/* Models */
+		A2000010AAAAAAAA00000001 /* PodcastFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastFeed.swift; sourceTree = "<group>"; };
+		A2000011AAAAAAAA00000001 /* PodcastEpisode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastEpisode.swift; sourceTree = "<group>"; };
+		A2000012AAAAAAAA00000001 /* Preference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preference.swift; sourceTree = "<group>"; };
+		A2000013AAAAAAAA00000001 /* WorkoutSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutSession.swift; sourceTree = "<group>"; };
+		A2000014AAAAAAAA00000001 /* WorkoutTrackPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTrackPoint.swift; sourceTree = "<group>"; };
+		A2000015AAAAAAAA00000001 /* WorkoutListeningLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutListeningLog.swift; sourceTree = "<group>"; };
+		A2000016AAAAAAAA00000001 /* ModelConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelConfiguration.swift; sourceTree = "<group>"; };
+
+		/* Services/Security */
+		A2000020AAAAAAAA00000001 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
+		A2000021AAAAAAAA00000001 /* CredentialsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialsService.swift; sourceTree = "<group>"; };
+		A2000022AAAAAAAA00000001 /* CredentialsBootstrap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialsBootstrap.swift; sourceTree = "<group>"; };
+		A2000023AAAAAAAA00000001 /* OAuthTokenMigration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthTokenMigration.swift; sourceTree = "<group>"; };
+
+		/* Services/Persistence */
+		A2000030AAAAAAAA00000001 /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
+		A2000031AAAAAAAA00000001 /* PersistenceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceError.swift; sourceTree = "<group>"; };
+
+		/* Services/Migration */
+		A2000040AAAAAAAA00000001 /* MigrationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MigrationError.swift; sourceTree = "<group>"; };
+		A2000041AAAAAAAA00000001 /* CoreDataImporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataImporter.swift; sourceTree = "<group>"; };
+		A2000042AAAAAAAA00000001 /* DataMigrationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataMigrationManager.swift; sourceTree = "<group>"; };
+		A2000043AAAAAAAA00000001 /* MigrationProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MigrationProgress.swift; sourceTree = "<group>"; };
+
+		/* Services/Audio */
+		A2000050AAAAAAAA00000001 /* AudioPlayerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerError.swift; sourceTree = "<group>"; };
+		A2000051AAAAAAAA00000001 /* AudioPlayerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerService.swift; sourceTree = "<group>"; };
+		A2000052AAAAAAAA00000001 /* NowPlayingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingManager.swift; sourceTree = "<group>"; };
+
+		/* Services/OAuth */
+		A2000060AAAAAAAA00000001 /* OAuthError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthError.swift; sourceTree = "<group>"; };
+		A2000061AAAAAAAA00000001 /* OAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthService.swift; sourceTree = "<group>"; };
+		A2000062AAAAAAAA00000001 /* FitbitOAuthProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitbitOAuthProvider.swift; sourceTree = "<group>"; };
+
+		/* Services/Workout */
+		A2000070AAAAAAAA00000001 /* WorkoutError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutError.swift; sourceTree = "<group>"; };
+		A2000071AAAAAAAA00000001 /* WorkoutService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutService.swift; sourceTree = "<group>"; };
+		A2000072AAAAAAAA00000001 /* WorkoutMetrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutMetrics.swift; sourceTree = "<group>"; };
+		A2000073AAAAAAAA00000001 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+
+		/* Services/Feed */
+		A2000080AAAAAAAA00000001 /* FeedModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedModels.swift; sourceTree = "<group>"; };
+		A2000081AAAAAAAA00000001 /* FeedParsingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedParsingError.swift; sourceTree = "<group>"; };
+		A2000082AAAAAAAA00000001 /* FeedService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedService.swift; sourceTree = "<group>"; };
+
+		/* Services/HealthKit */
+		A2000090AAAAAAAA00000001 /* HealthKitError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitError.swift; sourceTree = "<group>"; };
+		A2000091AAAAAAAA00000001 /* HealthKitService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitService.swift; sourceTree = "<group>"; };
+		A2000092AAAAAAAA00000001 /* HealthKitWorkoutData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitWorkoutData.swift; sourceTree = "<group>"; };
+
+		/* Services/MediaCache */
+		A20000A0AAAAAAAA00000001 /* DownloadProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadProgress.swift; sourceTree = "<group>"; };
+		A20000A1AAAAAAAA00000001 /* MediaCacheError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaCacheError.swift; sourceTree = "<group>"; };
+		A20000A2AAAAAAAA00000001 /* MediaCacheService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaCacheService.swift; sourceTree = "<group>"; };
+
+		/* Services/Sensors */
+		A20000B0AAAAAAAA00000001 /* DiscoveredHeartRateSensor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveredHeartRateSensor.swift; sourceTree = "<group>"; };
+		A20000B1AAAAAAAA00000001 /* HeartRateMeasurement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRateMeasurement.swift; sourceTree = "<group>"; };
+		A20000B2AAAAAAAA00000001 /* HeartRateSensorError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRateSensorError.swift; sourceTree = "<group>"; };
+		A20000B3AAAAAAAA00000001 /* HeartRateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRateService.swift; sourceTree = "<group>"; };
+
+		/* Services/Speech */
+		A20000C0AAAAAAAA00000001 /* AnnouncementFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementFormatter.swift; sourceTree = "<group>"; };
+		A20000C1AAAAAAAA00000001 /* SpeechConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechConfiguration.swift; sourceTree = "<group>"; };
+		A20000C2AAAAAAAA00000001 /* SpeechError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechError.swift; sourceTree = "<group>"; };
+		A20000C3AAAAAAAA00000001 /* SpeechService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechService.swift; sourceTree = "<group>"; };
+		A20000C4AAAAAAAA00000001 /* WorkoutAnnouncementService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutAnnouncementService.swift; sourceTree = "<group>"; };
+
+		/* Services/WatchConnectivity */
+		A20000D0AAAAAAAA00000001 /* WatchConnectivityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchConnectivityService.swift; sourceTree = "<group>"; };
+		A20000D1AAAAAAAA00000001 /* WatchMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchMessage.swift; sourceTree = "<group>"; };
+		A20000D2AAAAAAAA00000001 /* WatchMessageHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchMessageHandler.swift; sourceTree = "<group>"; };
+
+		/* Test Target */
+		A5000002AAAAAAAA00000001 /* JogPodTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JogPodTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2000100AAAAAAAA00000001 /* JogPodTestsLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JogPodTestsLauncher.swift; sourceTree = "<group>"; };
+		A2000101AAAAAAAA00000001 /* PodcastFeedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastFeedTests.swift; sourceTree = "<group>"; };
+		A2000102AAAAAAAA00000001 /* PodcastEpisodeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastEpisodeTests.swift; sourceTree = "<group>"; };
+		A2000103AAAAAAAA00000001 /* PreferenceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceTests.swift; sourceTree = "<group>"; };
+		A2000104AAAAAAAA00000001 /* WorkoutSessionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutSessionTests.swift; sourceTree = "<group>"; };
+		A2000105AAAAAAAA00000001 /* WorkoutTrackPointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTrackPointTests.swift; sourceTree = "<group>"; };
+		A2000106AAAAAAAA00000001 /* WorkoutListeningLogTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutListeningLogTests.swift; sourceTree = "<group>"; };
+		A2000107AAAAAAAA00000001 /* JogPodSchemaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JogPodSchemaTests.swift; sourceTree = "<group>"; };
+		A2000108AAAAAAAA00000001 /* MigrationErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MigrationErrorTests.swift; sourceTree = "<group>"; };
+		A2000109AAAAAAAA00000001 /* CoreDataImporterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataImporterTests.swift; sourceTree = "<group>"; };
+		A2000110AAAAAAAA00000001 /* DataMigrationManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataMigrationManagerTests.swift; sourceTree = "<group>"; };
+		A2000113AAAAAAAA00000001 /* SwiftDataMigrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataMigrationTests.swift; sourceTree = "<group>"; };
+		A2000114AAAAAAAA00000001 /* MigrationEdgeCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MigrationEdgeCaseTests.swift; sourceTree = "<group>"; };
+		A2000115AAAAAAAA00000001 /* MigrationPerformanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MigrationPerformanceTests.swift; sourceTree = "<group>"; };
+		A2000111AAAAAAAA00000001 /* PersistenceManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManagerTests.swift; sourceTree = "<group>"; };
+		A2000112AAAAAAAA00000001 /* PersistenceErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceErrorTests.swift; sourceTree = "<group>"; };
+
+		/* Audio Tests */
+		A2000120AAAAAAAA00000001 /* AudioPlayerErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerErrorTests.swift; sourceTree = "<group>"; };
+		A2000121AAAAAAAA00000001 /* AudioPlayerServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerServiceTests.swift; sourceTree = "<group>"; };
+		A2000122AAAAAAAA00000001 /* NowPlayingManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingManagerTests.swift; sourceTree = "<group>"; };
+
+		/* OAuth Tests */
+		A2000130AAAAAAAA00000001 /* OAuthErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthErrorTests.swift; sourceTree = "<group>"; };
+		A2000131AAAAAAAA00000001 /* OAuthTokenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthTokenTests.swift; sourceTree = "<group>"; };
+		A2000132AAAAAAAA00000001 /* OAuthConfigurationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthConfigurationTests.swift; sourceTree = "<group>"; };
+		A2000133AAAAAAAA00000001 /* OAuthServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthServiceTests.swift; sourceTree = "<group>"; };
+		A2000134AAAAAAAA00000001 /* FitbitOAuthProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitbitOAuthProviderTests.swift; sourceTree = "<group>"; };
+
+		/* Workout Tests */
+		A2000140AAAAAAAA00000001 /* WorkoutErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutErrorTests.swift; sourceTree = "<group>"; };
+		A2000141AAAAAAAA00000001 /* WorkoutMetricsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutMetricsTests.swift; sourceTree = "<group>"; };
+		A2000142AAAAAAAA00000001 /* LocationServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationServiceTests.swift; sourceTree = "<group>"; };
+		A2000143AAAAAAAA00000001 /* WorkoutServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutServiceTests.swift; sourceTree = "<group>"; };
+
+		/* Security Tests */
+		A2000150AAAAAAAA00000001 /* OAuthTokenMigrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthTokenMigrationTests.swift; sourceTree = "<group>"; };
+		A2000151AAAAAAAA00000001 /* CredentialsServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialsServiceTests.swift; sourceTree = "<group>"; };
+		A2000152AAAAAAAA00000001 /* KeychainManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManagerTests.swift; sourceTree = "<group>"; };
+		A2000153AAAAAAAA00000001 /* CredentialsBootstrapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialsBootstrapTests.swift; sourceTree = "<group>"; };
+
+		/* Equivalence Tests */
+		A2000160AAAAAAAA00000001 /* WorkoutTrackingEquivalenceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTrackingEquivalenceTests.swift; sourceTree = "<group>"; };
+		A2000161AAAAAAAA00000001 /* AudioPlaybackEquivalenceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlaybackEquivalenceTests.swift; sourceTree = "<group>"; };
+		A2000162AAAAAAAA00000001 /* DataPersistenceEquivalenceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPersistenceEquivalenceTests.swift; sourceTree = "<group>"; };
+
+		/* Mocks/Audio Tests */
+		A2000170AAAAAAAA00000001 /* MockAudioPlayerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAudioPlayerService.swift; sourceTree = "<group>"; };
+		A2000171AAAAAAAA00000001 /* MockAVAudioSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAVAudioSession.swift; sourceTree = "<group>"; };
+		A2000172AAAAAAAA00000001 /* AudioSessionInterruptionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioSessionInterruptionTests.swift; sourceTree = "<group>"; };
+		A2000173AAAAAAAA00000001 /* BackgroundPlaybackTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundPlaybackTests.swift; sourceTree = "<group>"; };
+		A2000174AAAAAAAA00000001 /* RouteChangeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteChangeTests.swift; sourceTree = "<group>"; };
+		A2000175AAAAAAAA00000001 /* NowPlayingInfoUpdateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingInfoUpdateTests.swift; sourceTree = "<group>"; };
+
+		/* HealthKit Tests */
+		A2000180AAAAAAAA00000001 /* HealthKitErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitErrorTests.swift; sourceTree = "<group>"; };
+		A2000181AAAAAAAA00000001 /* HealthKitServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitServiceTests.swift; sourceTree = "<group>"; };
+		A2000182AAAAAAAA00000001 /* HealthKitWorkoutDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitWorkoutDataTests.swift; sourceTree = "<group>"; };
+		A2000183AAAAAAAA00000001 /* HealthKitAuthorizationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitAuthorizationTests.swift; sourceTree = "<group>"; };
+		A2000184AAAAAAAA00000001 /* HealthKitWorkoutSaveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitWorkoutSaveTests.swift; sourceTree = "<group>"; };
+		A2000185AAAAAAAA00000001 /* HealthKitQueryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitQueryTests.swift; sourceTree = "<group>"; };
+		A2000186AAAAAAAA00000001 /* HealthKitErrorHandlingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitErrorHandlingTests.swift; sourceTree = "<group>"; };
+
+		/* Mocks/HealthKit */
+		A2000220AAAAAAAA00000001 /* MockHKHealthStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHKHealthStore.swift; sourceTree = "<group>"; };
+		A2000221AAAAAAAA00000001 /* MockHealthKitService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHealthKitService.swift; sourceTree = "<group>"; };
+		A2000222AAAAAAAA00000001 /* HealthKitTestFixtures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitTestFixtures.swift; sourceTree = "<group>"; };
+
+		/* MediaCache Equivalence Tests */
+		A2000190AAAAAAAA00000001 /* MediaCacheEquivalenceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaCacheEquivalenceTests.swift; sourceTree = "<group>"; };
+
+		/* MediaCache Tests */
+		A20001A0AAAAAAAA00000001 /* DownloadProgressTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadProgressTests.swift; sourceTree = "<group>"; };
+		A20001A1AAAAAAAA00000001 /* MediaCacheErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaCacheErrorTests.swift; sourceTree = "<group>"; };
+		A20001A2AAAAAAAA00000001 /* MediaCacheServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaCacheServiceTests.swift; sourceTree = "<group>"; };
+
+		/* Mocks/Network */
+		A20001B0AAAAAAAA00000001 /* MockCredentialsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCredentialsProvider.swift; sourceTree = "<group>"; };
+		A20001B1AAAAAAAA00000001 /* MockFeedService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFeedService.swift; sourceTree = "<group>"; };
+		A20001B2AAAAAAAA00000001 /* MockFitbitOAuthProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFitbitOAuthProvider.swift; sourceTree = "<group>"; };
+		A20001B3AAAAAAAA00000001 /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
+		A20001B4AAAAAAAA00000001 /* NetworkErrorSimulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrorSimulator.swift; sourceTree = "<group>"; };
+		A20001B5AAAAAAAA00000001 /* ResponseFixtures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseFixtures.swift; sourceTree = "<group>"; };
+
+		/* Mocks/Sensors */
+		A20001C0AAAAAAAA00000001 /* MockHeartRateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHeartRateService.swift; sourceTree = "<group>"; };
+		A20001C1AAAAAAAA00000001 /* SensorMockInfrastructureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorMockInfrastructureTests.swift; sourceTree = "<group>"; };
+		A20001C2AAAAAAAA00000001 /* SensorTestFixtures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorTestFixtures.swift; sourceTree = "<group>"; };
+		A20001C3AAAAAAAA00000001 /* SimulatedHeartRateSensor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatedHeartRateSensor.swift; sourceTree = "<group>"; };
+		A20001C4AAAAAAAA00000001 /* SimulatedLocationTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatedLocationTrack.swift; sourceTree = "<group>"; };
+
+		/* Sensor Tests */
+		A20001D0AAAAAAAA00000001 /* DiscoveredHeartRateSensorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveredHeartRateSensorTests.swift; sourceTree = "<group>"; };
+		A20001D1AAAAAAAA00000001 /* HeartRateMeasurementTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRateMeasurementTests.swift; sourceTree = "<group>"; };
+		A20001D2AAAAAAAA00000001 /* HeartRateSensorErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRateSensorErrorTests.swift; sourceTree = "<group>"; };
+		A20001D3AAAAAAAA00000001 /* HeartRateServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRateServiceTests.swift; sourceTree = "<group>"; };
+
+		/* Speech Tests */
+		A20001E0AAAAAAAA00000001 /* AnnouncementFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementFormatterTests.swift; sourceTree = "<group>"; };
+		A20001E1AAAAAAAA00000001 /* SpeechConfigurationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechConfigurationTests.swift; sourceTree = "<group>"; };
+		A20001E2AAAAAAAA00000001 /* SpeechErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechErrorTests.swift; sourceTree = "<group>"; };
+		A20001E3AAAAAAAA00000001 /* SpeechServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechServiceTests.swift; sourceTree = "<group>"; };
+		A20001E4AAAAAAAA00000001 /* WorkoutAnnouncementServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutAnnouncementServiceTests.swift; sourceTree = "<group>"; };
+
+		/* WatchConnectivity Equivalence Tests */
+		A20001F0AAAAAAAA00000001 /* WatchConnectivityEquivalenceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchConnectivityEquivalenceTests.swift; sourceTree = "<group>"; };
+
+		/* WatchConnectivity Tests */
+		A2000210AAAAAAAA00000001 /* WatchMessageHandlerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchMessageHandlerTests.swift; sourceTree = "<group>"; };
+		A2000211AAAAAAAA00000001 /* WatchMessageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchMessageTests.swift; sourceTree = "<group>"; };
+
+		/* UI Test Target */
+		A5000003AAAAAAAA00000001 /* JogPodUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JogPodUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2000200AAAAAAAA00000001 /* JogPodUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JogPodUITests.swift; sourceTree = "<group>"; };
+		A2000201AAAAAAAA00000001 /* JogPodUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JogPodUITestsLaunchTests.swift; sourceTree = "<group>"; };
+
+		/* watchOS App Target */
+		B5000001BBBBBBBB00000001 /* JogPodWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JogPodWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2000001BBBBBBBB00000001 /* JogPodWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JogPodWatchApp.swift; sourceTree = "<group>"; };
+		B2000002BBBBBBBB00000001 /* WatchState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchState.swift; sourceTree = "<group>"; };
+		B2000003BBBBBBBB00000001 /* WatchConnectivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchConnectivityManager.swift; sourceTree = "<group>"; };
+		B2000004BBBBBBBB00000001 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		B2000005BBBBBBBB00000001 /* WorkoutMetricsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutMetricsView.swift; sourceTree = "<group>"; };
+		B2000006BBBBBBBB00000001 /* PodcastPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastPlayerView.swift; sourceTree = "<group>"; };
+		B2000007BBBBBBBB00000001 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		B2000008BBBBBBBB00000001 /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
+		B2000009BBBBBBBB00000001 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		B200000ABBBBBBBB00000001 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
+		B200000BBBBBBBBB00000001 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A6000001AAAAAAAA00000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A6000002AAAAAAAA00000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A6000003AAAAAAAA00000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B6000002BBBBBBBB00000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A7000001AAAAAAAA00000001 = {
+			isa = PBXGroup;
+			children = (
+				A7000002AAAAAAAA00000001 /* JogPod */,
+				A7000003AAAAAAAA00000001 /* Models */,
+				A7000004AAAAAAAA00000001 /* Sources */,
+				A7000010AAAAAAAA00000001 /* Tests */,
+				A7000020AAAAAAAA00000001 /* JogPodTests */,
+				A7000030AAAAAAAA00000001 /* JogPodUITests */,
+				B7000001BBBBBBBB00000001 /* JogPodWatch */,
+				A7000100AAAAAAAA00000001 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A7000002AAAAAAAA00000001 /* JogPod */ = {
+			isa = PBXGroup;
+			children = (
+				A7000040AAAAAAAA00000001 /* App */,
+				A7000050AAAAAAAA00000001 /* Views */,
+				A2000001AAAAAAAA00000001 /* JogPodApp.swift */,
+				A2000002AAAAAAAA00000001 /* ContentView.swift */,
+				A2000003AAAAAAAA00000001 /* Info.plist */,
+				A2000004AAAAAAAA00000001 /* JogPod.entitlements */,
+			);
+			path = JogPod;
+			sourceTree = "<group>";
+		};
+		A7000040AAAAAAAA00000001 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A2000005AAAAAAAA00000001 /* AppDependencies.swift */,
+				A2000006AAAAAAAA00000001 /* MainTabView.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		A7000050AAAAAAAA00000001 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A7000051AAAAAAAA00000001 /* Dashboard */,
+				A7000052AAAAAAAA00000001 /* Podcast */,
+				A7000053AAAAAAAA00000001 /* Stats */,
+				A7000054AAAAAAAA00000001 /* Settings */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A7000051AAAAAAAA00000001 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				A2000007AAAAAAAA00000001 /* DashboardView.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		A7000052AAAAAAAA00000001 /* Podcast */ = {
+			isa = PBXGroup;
+			children = (
+				A2000008AAAAAAAA00000001 /* PlaylistView.swift */,
+			);
+			path = Podcast;
+			sourceTree = "<group>";
+		};
+		A7000053AAAAAAAA00000001 /* Stats */ = {
+			isa = PBXGroup;
+			children = (
+				A2000009AAAAAAAA00000001 /* StatsView.swift */,
+			);
+			path = Stats;
+			sourceTree = "<group>";
+		};
+		A7000054AAAAAAAA00000001 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				A200000AAAAAAAAA00000001 /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		A7000003AAAAAAAA00000001 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A2000010AAAAAAAA00000001 /* PodcastFeed.swift */,
+				A2000011AAAAAAAA00000001 /* PodcastEpisode.swift */,
+				A2000012AAAAAAAA00000001 /* Preference.swift */,
+				A2000013AAAAAAAA00000001 /* WorkoutSession.swift */,
+				A2000014AAAAAAAA00000001 /* WorkoutTrackPoint.swift */,
+				A2000015AAAAAAAA00000001 /* WorkoutListeningLog.swift */,
+				A2000016AAAAAAAA00000001 /* ModelConfiguration.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A7000004AAAAAAAA00000001 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				A7000005AAAAAAAA00000001 /* Services */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		A7000005AAAAAAAA00000001 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A7000006AAAAAAAA00000001 /* Security */,
+				A7000007AAAAAAAA00000001 /* Persistence */,
+				A7000008AAAAAAAA00000001 /* Migration */,
+				A7000009AAAAAAAA00000001 /* Audio */,
+				A700000AAAAAAAAA00000001 /* OAuth */,
+				A700000BAAAAAAAA00000001 /* Workout */,
+				A700000CAAAAAAAA00000001 /* Feed */,
+				A700000DAAAAAAAA00000001 /* HealthKit */,
+				A700000EAAAAAAAA00000001 /* MediaCache */,
+				A700000FAAAAAAAA00000001 /* Sensors */,
+				A7000080AAAAAAAA00000001 /* Speech */,
+				A7000081AAAAAAAA00000001 /* WatchConnectivity */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A7000006AAAAAAAA00000001 /* Security */ = {
+			isa = PBXGroup;
+			children = (
+				A2000020AAAAAAAA00000001 /* KeychainManager.swift */,
+				A2000021AAAAAAAA00000001 /* CredentialsService.swift */,
+				A2000022AAAAAAAA00000001 /* CredentialsBootstrap.swift */,
+				A2000023AAAAAAAA00000001 /* OAuthTokenMigration.swift */,
+			);
+			path = Security;
+			sourceTree = "<group>";
+		};
+		A7000007AAAAAAAA00000001 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				A2000030AAAAAAAA00000001 /* PersistenceManager.swift */,
+				A2000031AAAAAAAA00000001 /* PersistenceError.swift */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		A7000008AAAAAAAA00000001 /* Migration */ = {
+			isa = PBXGroup;
+			children = (
+				A2000040AAAAAAAA00000001 /* MigrationError.swift */,
+				A2000041AAAAAAAA00000001 /* CoreDataImporter.swift */,
+				A2000042AAAAAAAA00000001 /* DataMigrationManager.swift */,
+				A2000043AAAAAAAA00000001 /* MigrationProgress.swift */,
+			);
+			path = Migration;
+			sourceTree = "<group>";
+		};
+		A7000009AAAAAAAA00000001 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				A2000050AAAAAAAA00000001 /* AudioPlayerError.swift */,
+				A2000051AAAAAAAA00000001 /* AudioPlayerService.swift */,
+				A2000052AAAAAAAA00000001 /* NowPlayingManager.swift */,
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
+		A700000AAAAAAAAA00000001 /* OAuth */ = {
+			isa = PBXGroup;
+			children = (
+				A2000060AAAAAAAA00000001 /* OAuthError.swift */,
+				A2000061AAAAAAAA00000001 /* OAuthService.swift */,
+				A2000062AAAAAAAA00000001 /* FitbitOAuthProvider.swift */,
+			);
+			path = OAuth;
+			sourceTree = "<group>";
+		};
+		A700000BAAAAAAAA00000001 /* Workout */ = {
+			isa = PBXGroup;
+			children = (
+				A2000070AAAAAAAA00000001 /* WorkoutError.swift */,
+				A2000071AAAAAAAA00000001 /* WorkoutService.swift */,
+				A2000072AAAAAAAA00000001 /* WorkoutMetrics.swift */,
+				A2000073AAAAAAAA00000001 /* LocationService.swift */,
+			);
+			path = Workout;
+			sourceTree = "<group>";
+		};
+		A700000CAAAAAAAA00000001 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				A2000080AAAAAAAA00000001 /* FeedModels.swift */,
+				A2000081AAAAAAAA00000001 /* FeedParsingError.swift */,
+				A2000082AAAAAAAA00000001 /* FeedService.swift */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		A700000DAAAAAAAA00000001 /* HealthKit */ = {
+			isa = PBXGroup;
+			children = (
+				A2000090AAAAAAAA00000001 /* HealthKitError.swift */,
+				A2000091AAAAAAAA00000001 /* HealthKitService.swift */,
+				A2000092AAAAAAAA00000001 /* HealthKitWorkoutData.swift */,
+			);
+			path = HealthKit;
+			sourceTree = "<group>";
+		};
+		A700000EAAAAAAAA00000001 /* MediaCache */ = {
+			isa = PBXGroup;
+			children = (
+				A20000A0AAAAAAAA00000001 /* DownloadProgress.swift */,
+				A20000A1AAAAAAAA00000001 /* MediaCacheError.swift */,
+				A20000A2AAAAAAAA00000001 /* MediaCacheService.swift */,
+			);
+			path = MediaCache;
+			sourceTree = "<group>";
+		};
+		A700000FAAAAAAAA00000001 /* Sensors */ = {
+			isa = PBXGroup;
+			children = (
+				A20000B0AAAAAAAA00000001 /* DiscoveredHeartRateSensor.swift */,
+				A20000B1AAAAAAAA00000001 /* HeartRateMeasurement.swift */,
+				A20000B2AAAAAAAA00000001 /* HeartRateSensorError.swift */,
+				A20000B3AAAAAAAA00000001 /* HeartRateService.swift */,
+			);
+			path = Sensors;
+			sourceTree = "<group>";
+		};
+		A7000080AAAAAAAA00000001 /* Speech */ = {
+			isa = PBXGroup;
+			children = (
+				A20000C0AAAAAAAA00000001 /* AnnouncementFormatter.swift */,
+				A20000C1AAAAAAAA00000001 /* SpeechConfiguration.swift */,
+				A20000C2AAAAAAAA00000001 /* SpeechError.swift */,
+				A20000C3AAAAAAAA00000001 /* SpeechService.swift */,
+				A20000C4AAAAAAAA00000001 /* WorkoutAnnouncementService.swift */,
+			);
+			path = Speech;
+			sourceTree = "<group>";
+		};
+		A7000081AAAAAAAA00000001 /* WatchConnectivity */ = {
+			isa = PBXGroup;
+			children = (
+				A20000D0AAAAAAAA00000001 /* WatchConnectivityService.swift */,
+				A20000D1AAAAAAAA00000001 /* WatchMessage.swift */,
+				A20000D2AAAAAAAA00000001 /* WatchMessageHandler.swift */,
+			);
+			path = WatchConnectivity;
+			sourceTree = "<group>";
+		};
+		A7000010AAAAAAAA00000001 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				A7000011AAAAAAAA00000001 /* ModelTests */,
+				A7000012AAAAAAAA00000001 /* MigrationTests */,
+				A7000013AAAAAAAA00000001 /* PersistenceTests */,
+				A7000014AAAAAAAA00000001 /* AudioTests */,
+				A7000015AAAAAAAA00000001 /* OAuthTests */,
+				A7000016AAAAAAAA00000001 /* WorkoutTests */,
+				A7000017AAAAAAAA00000001 /* SecurityTests */,
+				A7000018AAAAAAAA00000001 /* WorkoutEquivalenceTests */,
+				A7000019AAAAAAAA00000001 /* AudioEquivalenceTests */,
+				A700001AAAAAAAAA00000001 /* PersistenceEquivalenceTests */,
+				A700001BAAAAAAAA00000001 /* Mocks */,
+				A7000082AAAAAAAA00000001 /* HealthKitTests */,
+				A7000083AAAAAAAA00000001 /* MediaCacheEquivalenceTests */,
+				A7000084AAAAAAAA00000001 /* MediaCacheTests */,
+				A7000085AAAAAAAA00000001 /* SensorTests */,
+				A7000086AAAAAAAA00000001 /* SpeechTests */,
+				A7000087AAAAAAAA00000001 /* WatchConnectivityEquivalenceTests */,
+				A7000088AAAAAAAA00000001 /* WatchConnectivityTests */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		A700001BAAAAAAAA00000001 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				A700001CAAAAAAAA00000001 /* Audio */,
+				A700001FAAAAAAAA00000001 /* HealthKit */,
+				A700001DAAAAAAAA00000001 /* Network */,
+				A700001EAAAAAAAA00000001 /* Sensors */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		A700001FAAAAAAAA00000001 /* HealthKit */ = {
+			isa = PBXGroup;
+			children = (
+				A2000220AAAAAAAA00000001 /* MockHKHealthStore.swift */,
+				A2000221AAAAAAAA00000001 /* MockHealthKitService.swift */,
+				A2000222AAAAAAAA00000001 /* HealthKitTestFixtures.swift */,
+			);
+			path = HealthKit;
+			sourceTree = "<group>";
+		};
+		A700001CAAAAAAAA00000001 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				A2000170AAAAAAAA00000001 /* MockAudioPlayerService.swift */,
+				A2000171AAAAAAAA00000001 /* MockAVAudioSession.swift */,
+				A2000172AAAAAAAA00000001 /* AudioSessionInterruptionTests.swift */,
+				A2000173AAAAAAAA00000001 /* BackgroundPlaybackTests.swift */,
+				A2000174AAAAAAAA00000001 /* RouteChangeTests.swift */,
+				A2000175AAAAAAAA00000001 /* NowPlayingInfoUpdateTests.swift */,
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
+		A700001DAAAAAAAA00000001 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				A20001B0AAAAAAAA00000001 /* MockCredentialsProvider.swift */,
+				A20001B1AAAAAAAA00000001 /* MockFeedService.swift */,
+				A20001B2AAAAAAAA00000001 /* MockFitbitOAuthProvider.swift */,
+				A20001B3AAAAAAAA00000001 /* MockURLProtocol.swift */,
+				A20001B4AAAAAAAA00000001 /* NetworkErrorSimulator.swift */,
+				A20001B5AAAAAAAA00000001 /* ResponseFixtures.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		A700001EAAAAAAAA00000001 /* Sensors */ = {
+			isa = PBXGroup;
+			children = (
+				A20001C0AAAAAAAA00000001 /* MockHeartRateService.swift */,
+				A20001C1AAAAAAAA00000001 /* SensorMockInfrastructureTests.swift */,
+				A20001C2AAAAAAAA00000001 /* SensorTestFixtures.swift */,
+				A20001C3AAAAAAAA00000001 /* SimulatedHeartRateSensor.swift */,
+				A20001C4AAAAAAAA00000001 /* SimulatedLocationTrack.swift */,
+			);
+			path = Sensors;
+			sourceTree = "<group>";
+		};
+		A7000082AAAAAAAA00000001 /* HealthKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				A2000180AAAAAAAA00000001 /* HealthKitErrorTests.swift */,
+				A2000181AAAAAAAA00000001 /* HealthKitServiceTests.swift */,
+				A2000182AAAAAAAA00000001 /* HealthKitWorkoutDataTests.swift */,
+				A2000183AAAAAAAA00000001 /* HealthKitAuthorizationTests.swift */,
+				A2000184AAAAAAAA00000001 /* HealthKitWorkoutSaveTests.swift */,
+				A2000185AAAAAAAA00000001 /* HealthKitQueryTests.swift */,
+				A2000186AAAAAAAA00000001 /* HealthKitErrorHandlingTests.swift */,
+			);
+			path = HealthKitTests;
+			sourceTree = "<group>";
+		};
+		A7000083AAAAAAAA00000001 /* MediaCacheEquivalenceTests */ = {
+			isa = PBXGroup;
+			children = (
+				A2000190AAAAAAAA00000001 /* MediaCacheEquivalenceTests.swift */,
+			);
+			path = MediaCacheEquivalenceTests;
+			sourceTree = "<group>";
+		};
+		A7000084AAAAAAAA00000001 /* MediaCacheTests */ = {
+			isa = PBXGroup;
+			children = (
+				A20001A0AAAAAAAA00000001 /* DownloadProgressTests.swift */,
+				A20001A1AAAAAAAA00000001 /* MediaCacheErrorTests.swift */,
+				A20001A2AAAAAAAA00000001 /* MediaCacheServiceTests.swift */,
+			);
+			path = MediaCacheTests;
+			sourceTree = "<group>";
+		};
+		A7000085AAAAAAAA00000001 /* SensorTests */ = {
+			isa = PBXGroup;
+			children = (
+				A20001D0AAAAAAAA00000001 /* DiscoveredHeartRateSensorTests.swift */,
+				A20001D1AAAAAAAA00000001 /* HeartRateMeasurementTests.swift */,
+				A20001D2AAAAAAAA00000001 /* HeartRateSensorErrorTests.swift */,
+				A20001D3AAAAAAAA00000001 /* HeartRateServiceTests.swift */,
+			);
+			path = SensorTests;
+			sourceTree = "<group>";
+		};
+		A7000086AAAAAAAA00000001 /* SpeechTests */ = {
+			isa = PBXGroup;
+			children = (
+				A20001E0AAAAAAAA00000001 /* AnnouncementFormatterTests.swift */,
+				A20001E1AAAAAAAA00000001 /* SpeechConfigurationTests.swift */,
+				A20001E2AAAAAAAA00000001 /* SpeechErrorTests.swift */,
+				A20001E3AAAAAAAA00000001 /* SpeechServiceTests.swift */,
+				A20001E4AAAAAAAA00000001 /* WorkoutAnnouncementServiceTests.swift */,
+			);
+			path = SpeechTests;
+			sourceTree = "<group>";
+		};
+		A7000087AAAAAAAA00000001 /* WatchConnectivityEquivalenceTests */ = {
+			isa = PBXGroup;
+			children = (
+				A20001F0AAAAAAAA00000001 /* WatchConnectivityEquivalenceTests.swift */,
+			);
+			path = WatchConnectivityEquivalenceTests;
+			sourceTree = "<group>";
+		};
+		A7000088AAAAAAAA00000001 /* WatchConnectivityTests */ = {
+			isa = PBXGroup;
+			children = (
+				A2000210AAAAAAAA00000001 /* WatchMessageHandlerTests.swift */,
+				A2000211AAAAAAAA00000001 /* WatchMessageTests.swift */,
+			);
+			path = WatchConnectivityTests;
+			sourceTree = "<group>";
+		};
+		A7000018AAAAAAAA00000001 /* WorkoutEquivalenceTests */ = {
+			isa = PBXGroup;
+			children = (
+				A2000160AAAAAAAA00000001 /* WorkoutTrackingEquivalenceTests.swift */,
+			);
+			path = WorkoutEquivalenceTests;
+			sourceTree = "<group>";
+		};
+		A7000019AAAAAAAA00000001 /* AudioEquivalenceTests */ = {
+			isa = PBXGroup;
+			children = (
+				A2000161AAAAAAAA00000001 /* AudioPlaybackEquivalenceTests.swift */,
+			);
+			path = AudioEquivalenceTests;
+			sourceTree = "<group>";
+		};
+		A700001AAAAAAAAA00000001 /* PersistenceEquivalenceTests */ = {
+			isa = PBXGroup;
+			children = (
+				A2000162AAAAAAAA00000001 /* DataPersistenceEquivalenceTests.swift */,
+			);
+			path = PersistenceEquivalenceTests;
+			sourceTree = "<group>";
+		};
+		A7000011AAAAAAAA00000001 /* ModelTests */ = {
+			isa = PBXGroup;
+			children = (
+				A2000101AAAAAAAA00000001 /* PodcastFeedTests.swift */,
+				A2000102AAAAAAAA00000001 /* PodcastEpisodeTests.swift */,
+				A2000103AAAAAAAA00000001 /* PreferenceTests.swift */,
+				A2000104AAAAAAAA00000001 /* WorkoutSessionTests.swift */,
+				A2000105AAAAAAAA00000001 /* WorkoutTrackPointTests.swift */,
+				A2000106AAAAAAAA00000001 /* WorkoutListeningLogTests.swift */,
+				A2000107AAAAAAAA00000001 /* JogPodSchemaTests.swift */,
+			);
+			path = ModelTests;
+			sourceTree = "<group>";
+		};
+		A7000012AAAAAAAA00000001 /* MigrationTests */ = {
+			isa = PBXGroup;
+			children = (
+				A2000108AAAAAAAA00000001 /* MigrationErrorTests.swift */,
+				A2000109AAAAAAAA00000001 /* CoreDataImporterTests.swift */,
+				A2000110AAAAAAAA00000001 /* DataMigrationManagerTests.swift */,
+				A2000113AAAAAAAA00000001 /* SwiftDataMigrationTests.swift */,
+				A2000114AAAAAAAA00000001 /* MigrationEdgeCaseTests.swift */,
+				A2000115AAAAAAAA00000001 /* MigrationPerformanceTests.swift */,
+			);
+			path = MigrationTests;
+			sourceTree = "<group>";
+		};
+		A7000013AAAAAAAA00000001 /* PersistenceTests */ = {
+			isa = PBXGroup;
+			children = (
+				A2000111AAAAAAAA00000001 /* PersistenceManagerTests.swift */,
+				A2000112AAAAAAAA00000001 /* PersistenceErrorTests.swift */,
+			);
+			path = PersistenceTests;
+			sourceTree = "<group>";
+		};
+		A7000014AAAAAAAA00000001 /* AudioTests */ = {
+			isa = PBXGroup;
+			children = (
+				A2000120AAAAAAAA00000001 /* AudioPlayerErrorTests.swift */,
+				A2000121AAAAAAAA00000001 /* AudioPlayerServiceTests.swift */,
+				A2000122AAAAAAAA00000001 /* NowPlayingManagerTests.swift */,
+			);
+			path = AudioTests;
+			sourceTree = "<group>";
+		};
+		A7000015AAAAAAAA00000001 /* OAuthTests */ = {
+			isa = PBXGroup;
+			children = (
+				A2000130AAAAAAAA00000001 /* OAuthErrorTests.swift */,
+				A2000131AAAAAAAA00000001 /* OAuthTokenTests.swift */,
+				A2000132AAAAAAAA00000001 /* OAuthConfigurationTests.swift */,
+				A2000133AAAAAAAA00000001 /* OAuthServiceTests.swift */,
+				A2000134AAAAAAAA00000001 /* FitbitOAuthProviderTests.swift */,
+			);
+			path = OAuthTests;
+			sourceTree = "<group>";
+		};
+		A7000016AAAAAAAA00000001 /* WorkoutTests */ = {
+			isa = PBXGroup;
+			children = (
+				A2000140AAAAAAAA00000001 /* WorkoutErrorTests.swift */,
+				A2000141AAAAAAAA00000001 /* WorkoutMetricsTests.swift */,
+				A2000142AAAAAAAA00000001 /* LocationServiceTests.swift */,
+				A2000143AAAAAAAA00000001 /* WorkoutServiceTests.swift */,
+			);
+			path = WorkoutTests;
+			sourceTree = "<group>";
+		};
+		A7000017AAAAAAAA00000001 /* SecurityTests */ = {
+			isa = PBXGroup;
+			children = (
+				A2000150AAAAAAAA00000001 /* OAuthTokenMigrationTests.swift */,
+				A2000151AAAAAAAA00000001 /* CredentialsServiceTests.swift */,
+				A2000152AAAAAAAA00000001 /* KeychainManagerTests.swift */,
+				A2000153AAAAAAAA00000001 /* CredentialsBootstrapTests.swift */,
+			);
+			path = SecurityTests;
+			sourceTree = "<group>";
+		};
+		A7000020AAAAAAAA00000001 /* JogPodTests */ = {
+			isa = PBXGroup;
+			children = (
+				A2000100AAAAAAAA00000001 /* JogPodTestsLauncher.swift */,
+			);
+			path = JogPodTests;
+			sourceTree = "<group>";
+		};
+		A7000030AAAAAAAA00000001 /* JogPodUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A2000200AAAAAAAA00000001 /* JogPodUITests.swift */,
+				A2000201AAAAAAAA00000001 /* JogPodUITestsLaunchTests.swift */,
+			);
+			path = JogPodUITests;
+			sourceTree = "<group>";
+		};
+		A7000100AAAAAAAA00000001 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A5000001AAAAAAAA00000001 /* JogPod.app */,
+				A5000002AAAAAAAA00000001 /* JogPodTests.xctest */,
+				A5000003AAAAAAAA00000001 /* JogPodUITests.xctest */,
+				B5000001BBBBBBBB00000001 /* JogPodWatch.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B7000001BBBBBBBB00000001 /* JogPodWatch */ = {
+			isa = PBXGroup;
+			children = (
+				B7000002BBBBBBBB00000001 /* App */,
+				B7000003BBBBBBBB00000001 /* Models */,
+				B7000004BBBBBBBB00000001 /* Services */,
+				B7000005BBBBBBBB00000001 /* Views */,
+				B200000BBBBBBBBB00000001 /* Assets.xcassets */,
+			);
+			path = JogPodWatch;
+			sourceTree = "<group>";
+		};
+		B7000002BBBBBBBB00000001 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				B2000001BBBBBBBB00000001 /* JogPodWatchApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		B7000003BBBBBBBB00000001 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B2000002BBBBBBBB00000001 /* WatchState.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B7000004BBBBBBBB00000001 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B2000003BBBBBBBB00000001 /* WatchConnectivityManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		B7000005BBBBBBBB00000001 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B2000004BBBBBBBB00000001 /* DashboardView.swift */,
+				B2000005BBBBBBBB00000001 /* WorkoutMetricsView.swift */,
+				B2000006BBBBBBBB00000001 /* PodcastPlayerView.swift */,
+				B2000007BBBBBBBB00000001 /* MapView.swift */,
+				B2000008BBBBBBBB00000001 /* StatsView.swift */,
+				B2000009BBBBBBBB00000001 /* SettingsView.swift */,
+				B200000ABBBBBBBB00000001 /* AlertView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A8000001AAAAAAAA00000001 /* JogPod */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A9000001AAAAAAAA00000001 /* Build configuration list for PBXNativeTarget "JogPod" */;
+			buildPhases = (
+				A8000010AAAAAAAA00000001 /* Sources */,
+				A6000001AAAAAAAA00000001 /* Frameworks */,
+				A8000011AAAAAAAA00000001 /* Resources */,
+				B6000001BBBBBBBB00000001 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B8000010BBBBBBBB00000001 /* PBXTargetDependency */,
+			);
+			name = JogPod;
+			productName = JogPod;
+			productReference = A5000001AAAAAAAA00000001 /* JogPod.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A8000002AAAAAAAA00000001 /* JogPodTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A9000002AAAAAAAA00000001 /* Build configuration list for PBXNativeTarget "JogPodTests" */;
+			buildPhases = (
+				A8000020AAAAAAAA00000001 /* Sources */,
+				A6000002AAAAAAAA00000001 /* Frameworks */,
+				A8000021AAAAAAAA00000001 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A8000022AAAAAAAA00000001 /* PBXTargetDependency */,
+			);
+			name = JogPodTests;
+			productName = JogPodTests;
+			productReference = A5000002AAAAAAAA00000001 /* JogPodTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A8000003AAAAAAAA00000001 /* JogPodUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A9000003AAAAAAAA00000001 /* Build configuration list for PBXNativeTarget "JogPodUITests" */;
+			buildPhases = (
+				A8000030AAAAAAAA00000001 /* Sources */,
+				A6000003AAAAAAAA00000001 /* Frameworks */,
+				A8000031AAAAAAAA00000001 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A8000032AAAAAAAA00000001 /* PBXTargetDependency */,
+			);
+			name = JogPodUITests;
+			productName = JogPodUITests;
+			productReference = A5000003AAAAAAAA00000001 /* JogPodUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		B8000001BBBBBBBB00000001 /* JogPodWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B9000001BBBBBBBB00000001 /* Build configuration list for PBXNativeTarget "JogPodWatch" */;
+			buildPhases = (
+				B8000002BBBBBBBB00000001 /* Sources */,
+				B6000002BBBBBBBB00000001 /* Frameworks */,
+				B8000003BBBBBBBB00000001 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JogPodWatch;
+			productName = JogPodWatch;
+			productReference = B5000001BBBBBBBB00000001 /* JogPodWatch.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A4000001AAAAAAAA00000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					A8000001AAAAAAAA00000001 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					A8000002AAAAAAAA00000001 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = A8000001AAAAAAAA00000001;
+					};
+					A8000003AAAAAAAA00000001 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = A8000001AAAAAAAA00000001;
+					};
+					B8000001BBBBBBBB00000001 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+				};
+			};
+			buildConfigurationList = A9000000AAAAAAAA00000001 /* Build configuration list for PBXProject "JogPod" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A7000001AAAAAAAA00000001;
+			productRefGroup = A7000100AAAAAAAA00000001 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A8000001AAAAAAAA00000001 /* JogPod */,
+				A8000002AAAAAAAA00000001 /* JogPodTests */,
+				A8000003AAAAAAAA00000001 /* JogPodUITests */,
+				B8000001BBBBBBBB00000001 /* JogPodWatch */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A8000011AAAAAAAA00000001 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8000021AAAAAAAA00000001 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8000031AAAAAAAA00000001 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8000003BBBBBBBB00000001 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B100000BBBBBBBBB00000001 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A8000010AAAAAAAA00000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1000001AAAAAAAA00000001 /* JogPodApp.swift in Sources */,
+				A1000002AAAAAAAA00000001 /* ContentView.swift in Sources */,
+				A1000003AAAAAAAA00000001 /* AppDependencies.swift in Sources */,
+				A1000004AAAAAAAA00000001 /* MainTabView.swift in Sources */,
+				A1000005AAAAAAAA00000001 /* DashboardView.swift in Sources */,
+				A1000006AAAAAAAA00000001 /* PlaylistView.swift in Sources */,
+				A1000007AAAAAAAA00000001 /* StatsView.swift in Sources */,
+				A1000008AAAAAAAA00000001 /* SettingsView.swift in Sources */,
+				A1000010AAAAAAAA00000001 /* PodcastFeed.swift in Sources */,
+				A1000011AAAAAAAA00000001 /* PodcastEpisode.swift in Sources */,
+				A1000012AAAAAAAA00000001 /* Preference.swift in Sources */,
+				A1000013AAAAAAAA00000001 /* WorkoutSession.swift in Sources */,
+				A1000014AAAAAAAA00000001 /* WorkoutTrackPoint.swift in Sources */,
+				A1000015AAAAAAAA00000001 /* WorkoutListeningLog.swift in Sources */,
+				A1000016AAAAAAAA00000001 /* ModelConfiguration.swift in Sources */,
+				A1000020AAAAAAAA00000001 /* KeychainManager.swift in Sources */,
+				A1000021AAAAAAAA00000001 /* CredentialsService.swift in Sources */,
+				A1000022AAAAAAAA00000001 /* CredentialsBootstrap.swift in Sources */,
+				A1000023AAAAAAAA00000001 /* OAuthTokenMigration.swift in Sources */,
+				A1000030AAAAAAAA00000001 /* PersistenceManager.swift in Sources */,
+				A1000031AAAAAAAA00000001 /* PersistenceError.swift in Sources */,
+				A1000040AAAAAAAA00000001 /* MigrationError.swift in Sources */,
+				A1000041AAAAAAAA00000001 /* CoreDataImporter.swift in Sources */,
+				A1000042AAAAAAAA00000001 /* DataMigrationManager.swift in Sources */,
+				A1000043AAAAAAAA00000001 /* MigrationProgress.swift in Sources */,
+				A1000050AAAAAAAA00000001 /* AudioPlayerError.swift in Sources */,
+				A1000051AAAAAAAA00000001 /* AudioPlayerService.swift in Sources */,
+				A1000052AAAAAAAA00000001 /* NowPlayingManager.swift in Sources */,
+				A1000060AAAAAAAA00000001 /* OAuthError.swift in Sources */,
+				A1000061AAAAAAAA00000001 /* OAuthService.swift in Sources */,
+				A1000062AAAAAAAA00000001 /* FitbitOAuthProvider.swift in Sources */,
+				A1000070AAAAAAAA00000001 /* WorkoutError.swift in Sources */,
+				A1000071AAAAAAAA00000001 /* WorkoutService.swift in Sources */,
+				A1000072AAAAAAAA00000001 /* WorkoutMetrics.swift in Sources */,
+				A1000073AAAAAAAA00000001 /* LocationService.swift in Sources */,
+				A1000080AAAAAAAA00000001 /* FeedModels.swift in Sources */,
+				A1000081AAAAAAAA00000001 /* FeedParsingError.swift in Sources */,
+				A1000082AAAAAAAA00000001 /* FeedService.swift in Sources */,
+				A1000090AAAAAAAA00000001 /* HealthKitError.swift in Sources */,
+				A1000091AAAAAAAA00000001 /* HealthKitService.swift in Sources */,
+				A1000092AAAAAAAA00000001 /* HealthKitWorkoutData.swift in Sources */,
+				A10000A0AAAAAAAA00000001 /* DownloadProgress.swift in Sources */,
+				A10000A1AAAAAAAA00000001 /* MediaCacheError.swift in Sources */,
+				A10000A2AAAAAAAA00000001 /* MediaCacheService.swift in Sources */,
+				A10000B0AAAAAAAA00000001 /* DiscoveredHeartRateSensor.swift in Sources */,
+				A10000B1AAAAAAAA00000001 /* HeartRateMeasurement.swift in Sources */,
+				A10000B2AAAAAAAA00000001 /* HeartRateSensorError.swift in Sources */,
+				A10000B3AAAAAAAA00000001 /* HeartRateService.swift in Sources */,
+				A10000C0AAAAAAAA00000001 /* AnnouncementFormatter.swift in Sources */,
+				A10000C1AAAAAAAA00000001 /* SpeechConfiguration.swift in Sources */,
+				A10000C2AAAAAAAA00000001 /* SpeechError.swift in Sources */,
+				A10000C3AAAAAAAA00000001 /* SpeechService.swift in Sources */,
+				A10000C4AAAAAAAA00000001 /* WorkoutAnnouncementService.swift in Sources */,
+				A10000D0AAAAAAAA00000001 /* WatchConnectivityService.swift in Sources */,
+				A10000D1AAAAAAAA00000001 /* WatchMessage.swift in Sources */,
+				A10000D2AAAAAAAA00000001 /* WatchMessageHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8000020AAAAAAAA00000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1000100AAAAAAAA00000001 /* JogPodTestsLauncher.swift in Sources */,
+				A1000101AAAAAAAA00000001 /* PodcastFeedTests.swift in Sources */,
+				A1000102AAAAAAAA00000001 /* PodcastEpisodeTests.swift in Sources */,
+				A1000103AAAAAAAA00000001 /* PreferenceTests.swift in Sources */,
+				A1000104AAAAAAAA00000001 /* WorkoutSessionTests.swift in Sources */,
+				A1000105AAAAAAAA00000001 /* WorkoutTrackPointTests.swift in Sources */,
+				A1000106AAAAAAAA00000001 /* WorkoutListeningLogTests.swift in Sources */,
+				A1000107AAAAAAAA00000001 /* JogPodSchemaTests.swift in Sources */,
+				A1000108AAAAAAAA00000001 /* MigrationErrorTests.swift in Sources */,
+				A1000109AAAAAAAA00000001 /* CoreDataImporterTests.swift in Sources */,
+				A1000110AAAAAAAA00000001 /* DataMigrationManagerTests.swift in Sources */,
+				A1000113AAAAAAAA00000001 /* SwiftDataMigrationTests.swift in Sources */,
+				A1000114AAAAAAAA00000001 /* MigrationEdgeCaseTests.swift in Sources */,
+				A1000115AAAAAAAA00000001 /* MigrationPerformanceTests.swift in Sources */,
+				A1000111AAAAAAAA00000001 /* PersistenceManagerTests.swift in Sources */,
+				A1000112AAAAAAAA00000001 /* PersistenceErrorTests.swift in Sources */,
+				A1000120AAAAAAAA00000001 /* AudioPlayerErrorTests.swift in Sources */,
+				A1000121AAAAAAAA00000001 /* AudioPlayerServiceTests.swift in Sources */,
+				A1000122AAAAAAAA00000001 /* NowPlayingManagerTests.swift in Sources */,
+				A1000130AAAAAAAA00000001 /* OAuthErrorTests.swift in Sources */,
+				A1000131AAAAAAAA00000001 /* OAuthTokenTests.swift in Sources */,
+				A1000132AAAAAAAA00000001 /* OAuthConfigurationTests.swift in Sources */,
+				A1000133AAAAAAAA00000001 /* OAuthServiceTests.swift in Sources */,
+				A1000134AAAAAAAA00000001 /* FitbitOAuthProviderTests.swift in Sources */,
+				A1000140AAAAAAAA00000001 /* WorkoutErrorTests.swift in Sources */,
+				A1000141AAAAAAAA00000001 /* WorkoutMetricsTests.swift in Sources */,
+				A1000142AAAAAAAA00000001 /* LocationServiceTests.swift in Sources */,
+				A1000143AAAAAAAA00000001 /* WorkoutServiceTests.swift in Sources */,
+				A1000150AAAAAAAA00000001 /* OAuthTokenMigrationTests.swift in Sources */,
+				A1000151AAAAAAAA00000001 /* CredentialsServiceTests.swift in Sources */,
+				A1000152AAAAAAAA00000001 /* KeychainManagerTests.swift in Sources */,
+				A1000153AAAAAAAA00000001 /* CredentialsBootstrapTests.swift in Sources */,
+				A1000160AAAAAAAA00000001 /* WorkoutTrackingEquivalenceTests.swift in Sources */,
+				A1000161AAAAAAAA00000001 /* AudioPlaybackEquivalenceTests.swift in Sources */,
+				A1000162AAAAAAAA00000001 /* DataPersistenceEquivalenceTests.swift in Sources */,
+				A1000170AAAAAAAA00000001 /* MockAudioPlayerService.swift in Sources */,
+				A1000171AAAAAAAA00000001 /* MockAVAudioSession.swift in Sources */,
+				A1000172AAAAAAAA00000001 /* AudioSessionInterruptionTests.swift in Sources */,
+				A1000173AAAAAAAA00000001 /* BackgroundPlaybackTests.swift in Sources */,
+				A1000174AAAAAAAA00000001 /* RouteChangeTests.swift in Sources */,
+				A1000175AAAAAAAA00000001 /* NowPlayingInfoUpdateTests.swift in Sources */,
+				A1000180AAAAAAAA00000001 /* HealthKitErrorTests.swift in Sources */,
+				A1000181AAAAAAAA00000001 /* HealthKitServiceTests.swift in Sources */,
+				A1000182AAAAAAAA00000001 /* HealthKitWorkoutDataTests.swift in Sources */,
+				A1000183AAAAAAAA00000001 /* HealthKitAuthorizationTests.swift in Sources */,
+				A1000184AAAAAAAA00000001 /* HealthKitWorkoutSaveTests.swift in Sources */,
+				A1000185AAAAAAAA00000001 /* HealthKitQueryTests.swift in Sources */,
+				A1000186AAAAAAAA00000001 /* HealthKitErrorHandlingTests.swift in Sources */,
+				A1000220AAAAAAAA00000001 /* MockHKHealthStore.swift in Sources */,
+				A1000221AAAAAAAA00000001 /* MockHealthKitService.swift in Sources */,
+				A1000222AAAAAAAA00000001 /* HealthKitTestFixtures.swift in Sources */,
+				A1000190AAAAAAAA00000001 /* MediaCacheEquivalenceTests.swift in Sources */,
+				A10001A0AAAAAAAA00000001 /* DownloadProgressTests.swift in Sources */,
+				A10001A1AAAAAAAA00000001 /* MediaCacheErrorTests.swift in Sources */,
+				A10001A2AAAAAAAA00000001 /* MediaCacheServiceTests.swift in Sources */,
+				A10001B0AAAAAAAA00000001 /* MockCredentialsProvider.swift in Sources */,
+				A10001B1AAAAAAAA00000001 /* MockFeedService.swift in Sources */,
+				A10001B2AAAAAAAA00000001 /* MockFitbitOAuthProvider.swift in Sources */,
+				A10001B3AAAAAAAA00000001 /* MockURLProtocol.swift in Sources */,
+				A10001B4AAAAAAAA00000001 /* NetworkErrorSimulator.swift in Sources */,
+				A10001B5AAAAAAAA00000001 /* ResponseFixtures.swift in Sources */,
+				A10001C0AAAAAAAA00000001 /* MockHeartRateService.swift in Sources */,
+				A10001C1AAAAAAAA00000001 /* SensorMockInfrastructureTests.swift in Sources */,
+				A10001C2AAAAAAAA00000001 /* SensorTestFixtures.swift in Sources */,
+				A10001C3AAAAAAAA00000001 /* SimulatedHeartRateSensor.swift in Sources */,
+				A10001C4AAAAAAAA00000001 /* SimulatedLocationTrack.swift in Sources */,
+				A10001D0AAAAAAAA00000001 /* DiscoveredHeartRateSensorTests.swift in Sources */,
+				A10001D1AAAAAAAA00000001 /* HeartRateMeasurementTests.swift in Sources */,
+				A10001D2AAAAAAAA00000001 /* HeartRateSensorErrorTests.swift in Sources */,
+				A10001D3AAAAAAAA00000001 /* HeartRateServiceTests.swift in Sources */,
+				A10001E0AAAAAAAA00000001 /* AnnouncementFormatterTests.swift in Sources */,
+				A10001E1AAAAAAAA00000001 /* SpeechConfigurationTests.swift in Sources */,
+				A10001E2AAAAAAAA00000001 /* SpeechErrorTests.swift in Sources */,
+				A10001E3AAAAAAAA00000001 /* SpeechServiceTests.swift in Sources */,
+				A10001E4AAAAAAAA00000001 /* WorkoutAnnouncementServiceTests.swift in Sources */,
+				A10001F0AAAAAAAA00000001 /* WatchConnectivityEquivalenceTests.swift in Sources */,
+				A1000210AAAAAAAA00000001 /* WatchMessageHandlerTests.swift in Sources */,
+				A1000211AAAAAAAA00000001 /* WatchMessageTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8000030AAAAAAAA00000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1000200AAAAAAAA00000001 /* JogPodUITests.swift in Sources */,
+				A1000201AAAAAAAA00000001 /* JogPodUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8000002BBBBBBBB00000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1000001BBBBBBBB00000001 /* JogPodWatchApp.swift in Sources */,
+				B1000002BBBBBBBB00000001 /* WatchState.swift in Sources */,
+				B1000003BBBBBBBB00000001 /* WatchConnectivityManager.swift in Sources */,
+				B1000004BBBBBBBB00000001 /* DashboardView.swift in Sources */,
+				B1000005BBBBBBBB00000001 /* WorkoutMetricsView.swift in Sources */,
+				B1000006BBBBBBBB00000001 /* PodcastPlayerView.swift in Sources */,
+				B1000007BBBBBBBB00000001 /* MapView.swift in Sources */,
+				B1000008BBBBBBBB00000001 /* StatsView.swift in Sources */,
+				B1000009BBBBBBBB00000001 /* SettingsView.swift in Sources */,
+				B100000ABBBBBBBB00000001 /* AlertView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A8000022AAAAAAAA00000001 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A8000001AAAAAAAA00000001 /* JogPod */;
+			targetProxy = A3000001AAAAAAAA00000001 /* PBXContainerItemProxy */;
+		};
+		A8000032AAAAAAAA00000001 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A8000001AAAAAAAA00000001 /* JogPod */;
+			targetProxy = A3000002AAAAAAAA00000001 /* PBXContainerItemProxy */;
+		};
+		B8000010BBBBBBBB00000001 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B8000001BBBBBBBB00000001 /* JogPodWatch */;
+			targetProxy = B3000001BBBBBBBB00000001 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		/* Project Debug */
+		AA000001AAAAAAAA00000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		/* Project Release */
+		AA000002AAAAAAAA00000001 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		/* App Target Debug */
+		AA000011AAAAAAAA00000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = JogPod/JogPod.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = JogPod/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = JogPod;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.motionscapes.jogpod;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		/* App Target Release */
+		AA000012AAAAAAAA00000001 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = JogPod/JogPod.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = JogPod/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = JogPod;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.motionscapes.jogpod;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		/* Test Target Debug */
+		AA000021AAAAAAAA00000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jogpod.app.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JogPod.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/JogPod";
+			};
+			name = Debug;
+		};
+		/* Test Target Release */
+		AA000022AAAAAAAA00000001 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jogpod.app.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JogPod.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/JogPod";
+			};
+			name = Release;
+		};
+		/* UI Test Target Debug */
+		AA000031AAAAAAAA00000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jogpod.app.uitests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = JogPod;
+			};
+			name = Debug;
+		};
+		/* UI Test Target Release */
+		AA000032AAAAAAAA00000001 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jogpod.app.uitests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = JogPod;
+			};
+			name = Release;
+		};
+		/* watchOS Target Debug */
+		BA000011BBBBBBBB00000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = JogPod;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.motionscapes.jogpod;
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = NO;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.motionscapes.jogpod.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Debug;
+		};
+		/* watchOS Target Release */
+		BA000012BBBBBBBB00000001 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = JogPod;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.motionscapes.jogpod;
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = NO;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.motionscapes.jogpod.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A9000000AAAAAAAA00000001 /* Build configuration list for PBXProject "JogPod" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA000001AAAAAAAA00000001 /* Debug */,
+				AA000002AAAAAAAA00000001 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A9000001AAAAAAAA00000001 /* Build configuration list for PBXNativeTarget "JogPod" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA000011AAAAAAAA00000001 /* Debug */,
+				AA000012AAAAAAAA00000001 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A9000002AAAAAAAA00000001 /* Build configuration list for PBXNativeTarget "JogPodTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA000021AAAAAAAA00000001 /* Debug */,
+				AA000022AAAAAAAA00000001 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A9000003AAAAAAAA00000001 /* Build configuration list for PBXNativeTarget "JogPodUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA000031AAAAAAAA00000001 /* Debug */,
+				AA000032AAAAAAAA00000001 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B9000001BBBBBBBB00000001 /* Build configuration list for PBXNativeTarget "JogPodWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA000011BBBBBBBB00000001 /* Debug */,
+				BA000012BBBBBBBB00000001 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A4000001AAAAAAAA00000001 /* Project object */;
+}

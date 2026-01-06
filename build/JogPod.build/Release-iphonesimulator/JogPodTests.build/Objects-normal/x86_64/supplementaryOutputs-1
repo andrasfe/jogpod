@@ -1,0 +1,12 @@
+{
+  "/Users/andraslferenczi/JogPod-revived/JogPodTests/JogPodTestsLauncher.swift" : {
+    "abi-baseline-json" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/JogPodTests.abi.json",
+    "const-values" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/JogPodTests-primary.swiftconstvalues",
+    "dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/JogPodTests-primary.d",
+    "diagnostics" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/JogPodTests-primary.dia",
+    "objc-header" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/JogPodTests-Swift.h",
+    "swiftdoc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/JogPodTests.swiftdoc",
+    "swiftmodule" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/JogPodTests.swiftmodule",
+    "swiftsourceinfo" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release-iphonesimulator/JogPodTests.build/Objects-normal/x86_64/JogPodTests.swiftsourceinfo"
+  }
+}

@@ -11,7 +11,7 @@ import SwiftData
 ///   renamed to `WorkoutSession` for clarity, as it represents a single session rather than
 ///   a historical record.
 @Model
-final class WorkoutSession {
+public final class WorkoutSession {
 
     // MARK: - Attributes
 
@@ -43,18 +43,18 @@ final class WorkoutSession {
 
     // MARK: - Weather Alert Attributes
 
-    /// Weather alert date string.
+    /// Weather alert effective date.
     ///
-    /// - Note: Stored as String in legacy model. Consider parsing to Date in application logic.
-    var alertDate: String?
+    /// The date when the weather alert becomes effective.
+    var alertDate: Date?
 
     /// Weather alert description text.
     var alertDescription: String?
 
-    /// Weather alert expiration string.
+    /// Weather alert expiration date.
     ///
-    /// - Note: Stored as String in legacy model. Consider parsing to Date in application logic.
-    var alertExpires: String?
+    /// The date when the weather alert expires and is no longer valid.
+    var alertExpires: Date?
 
     /// Type of weather alert (e.g., "heat", "storm", "wind").
     var alertType: String?
@@ -93,6 +93,36 @@ extension WorkoutSession {
     var hasWeatherAlert: Bool {
         alertType != nil && alertDescription != nil
     }
+
+    /// Whether the weather alert is currently active (not expired).
+    ///
+    /// Returns `true` if there is an alert with an expiration date that is in the future,
+    /// or if there is an alert without an expiration date specified.
+    var isAlertActive: Bool {
+        guard hasWeatherAlert else { return false }
+        guard let expires = alertExpires else { return true }
+        return expires > Date()
+    }
+
+    /// Formatted alert date string for display.
+    var alertDateDisplay: String? {
+        guard let date = alertDate else { return nil }
+        return Self.alertDateFormatter.string(from: date)
+    }
+
+    /// Formatted alert expiration string for display.
+    var alertExpiresDisplay: String? {
+        guard let date = alertExpires else { return nil }
+        return Self.alertDateFormatter.string(from: date)
+    }
+
+    /// Shared date formatter for alert date display.
+    private static let alertDateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        formatter.timeStyle = .short
+        return formatter
+    }()
 
     /// Temperature formatted for display in Celsius.
     var temperatureDisplay: String? {

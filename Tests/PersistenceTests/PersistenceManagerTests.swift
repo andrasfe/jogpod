@@ -475,8 +475,12 @@ final class PersistenceManagerTests: XCTestCase {
 
         // Then
         XCTAssertNotNil(fetched)
-        XCTAssertEqual(fetched?.latitude, coordinate.latitude, accuracy: 0.0001)
-        XCTAssertEqual(fetched?.longitude, coordinate.longitude, accuracy: 0.0001)
+        if let lat = fetched?.latitude, let lon = fetched?.longitude {
+            XCTAssertEqual(lat, coordinate.latitude, accuracy: 0.0001)
+            XCTAssertEqual(lon, coordinate.longitude, accuracy: 0.0001)
+        } else {
+            XCTFail("Coordinate values should not be nil")
+        }
     }
 
     // MARK: - Workout Session Tests
@@ -631,8 +635,12 @@ final class PersistenceManagerTests: XCTestCase {
         XCTAssertEqual(trackPoints.first?.workoutID, workoutID)
         XCTAssertEqual(trackPoints.first?.heartRate, heartRate)
         XCTAssertEqual(trackPoints.first?.steps, steps)
-        XCTAssertEqual(trackPoints.first?.latitude, location.coordinate.latitude, accuracy: 0.0001)
-        XCTAssertEqual(trackPoints.first?.longitude, location.coordinate.longitude, accuracy: 0.0001)
+        if let lat = trackPoints.first?.latitude, let lon = trackPoints.first?.longitude {
+            XCTAssertEqual(lat, location.coordinate.latitude, accuracy: 0.0001)
+            XCTAssertEqual(lon, location.coordinate.longitude, accuracy: 0.0001)
+        } else {
+            XCTFail("Track point coordinate values should not be nil")
+        }
     }
 
     func testCreateTrackPointWithoutLocation() async throws {

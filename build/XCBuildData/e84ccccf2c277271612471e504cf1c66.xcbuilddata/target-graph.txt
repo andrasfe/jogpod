@@ -1,0 +1,4 @@
+Target dependency graph (2 targets)
+Target 'JogPod' in project 'JogPod'
+➜ Explicit dependency on target 'JogPodWatch' in project 'JogPod'
+Target 'JogPodWatch' in project 'JogPod' (no dependencies)

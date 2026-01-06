@@ -5,6 +5,7 @@ import SwiftData
 
 /// Tests for the JogPodSchema configuration.
 @Suite("JogPod Schema Tests")
+@MainActor
 struct JogPodSchemaTests {
 
     // MARK: - Container Creation Tests

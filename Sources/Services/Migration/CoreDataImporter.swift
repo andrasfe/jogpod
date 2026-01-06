@@ -606,11 +606,15 @@ final class CoreDataImporter: Sendable {
         entity.name = "WorkoutLocation"
         entity.managedObjectClassName = "NSManagedObject"
 
+        // Register custom value transformer for CLLocation that handles legacy data
+        CLLocationValueTransformer.register()
+
         let locationAttr = NSAttributeDescription()
         locationAttr.name = "location"
         locationAttr.attributeType = .transformableAttributeType
         locationAttr.isOptional = true
-        locationAttr.valueTransformerName = NSValueTransformerName.secureUnarchiveFromDataTransformerName.rawValue
+        // Use our custom transformer that handles both secure and legacy unarchiving
+        locationAttr.valueTransformerName = CLLocationValueTransformer.transformerName.rawValue
         locationAttr.attributeValueClassName = "CLLocation"
 
         entity.properties = [

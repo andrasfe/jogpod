@@ -1,0 +1,291 @@
+{
+  "" : {
+    "const-values" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/JogPod-primary.swiftconstvalues",
+    "dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/JogPod-primary.d",
+    "diagnostics" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/JogPod-primary.dia",
+    "emit-module-dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/JogPod-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/JogPod-primary-emit-module.dia",
+    "pch" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/JogPod-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/JogPod-primary.swiftdeps"
+  },
+  "/Users/andraslferenczi/JogPod-revived/JogPod/App/AppDependencies.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/AppDependencies.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/AppDependencies.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/AppDependencies.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/JogPod/App/MainTabView.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/MainTabView.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/MainTabView.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/MainTabView.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/JogPod/ContentView.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/ContentView.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/ContentView.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/ContentView.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/JogPod/JogPodApp.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/JogPodApp.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/JogPodApp.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/JogPodApp.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/JogPod/Views/Dashboard/DashboardView.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/DashboardView.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/DashboardView.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/DashboardView.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/JogPod/Views/Podcast/PlaylistView.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/PlaylistView.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/PlaylistView.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/PlaylistView.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/JogPod/Views/Settings/SettingsView.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/SettingsView.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/SettingsView.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/SettingsView.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/JogPod/Views/Stats/StatsView.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/StatsView.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/StatsView.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/StatsView.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Models/ModelConfiguration.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/ModelConfiguration.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/ModelConfiguration.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/ModelConfiguration.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Models/PodcastEpisode.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/PodcastEpisode.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/PodcastEpisode.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/PodcastEpisode.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Models/PodcastFeed.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/PodcastFeed.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/PodcastFeed.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/PodcastFeed.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Models/Preference.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/Preference.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/Preference.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/Preference.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Models/WorkoutListeningLog.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/WorkoutListeningLog.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/WorkoutListeningLog.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/WorkoutListeningLog.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Models/WorkoutSession.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/WorkoutSession.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/WorkoutSession.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/WorkoutSession.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Models/WorkoutTrackPoint.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/WorkoutTrackPoint.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/WorkoutTrackPoint.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/WorkoutTrackPoint.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Sources/Services/Audio/AudioPlayerError.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/AudioPlayerError.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/AudioPlayerError.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/AudioPlayerError.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Sources/Services/Audio/AudioPlayerService.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/AudioPlayerService.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/AudioPlayerService.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/AudioPlayerService.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Sources/Services/Audio/NowPlayingManager.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/NowPlayingManager.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/NowPlayingManager.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/NowPlayingManager.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Sources/Services/Feed/FeedModels.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/FeedModels.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/FeedModels.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/FeedModels.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Sources/Services/Feed/FeedParsingError.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/FeedParsingError.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/FeedParsingError.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/FeedParsingError.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Sources/Services/Feed/FeedService.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/FeedService.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/FeedService.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/FeedService.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Sources/Services/HealthKit/HealthKitError.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/HealthKitError.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/HealthKitError.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/HealthKitError.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Sources/Services/HealthKit/HealthKitService.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/HealthKitService.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/HealthKitService.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/HealthKitService.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Sources/Services/HealthKit/HealthKitWorkoutData.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/HealthKitWorkoutData.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/HealthKitWorkoutData.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/HealthKitWorkoutData.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Sources/Services/MediaCache/DownloadProgress.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/DownloadProgress.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/DownloadProgress.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/DownloadProgress.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Sources/Services/MediaCache/MediaCacheError.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/MediaCacheError.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/MediaCacheError.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/MediaCacheError.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Sources/Services/MediaCache/MediaCacheService.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/MediaCacheService.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/MediaCacheService.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/MediaCacheService.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Sources/Services/Migration/CoreDataImporter.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/CoreDataImporter.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/CoreDataImporter.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/CoreDataImporter.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Sources/Services/Migration/DataMigrationManager.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/DataMigrationManager.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/DataMigrationManager.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/DataMigrationManager.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Sources/Services/Migration/MigrationError.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/MigrationError.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/MigrationError.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/MigrationError.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Sources/Services/Migration/MigrationProgress.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/MigrationProgress.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/MigrationProgress.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/MigrationProgress.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Sources/Services/OAuth/FitbitOAuthProvider.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/FitbitOAuthProvider.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/FitbitOAuthProvider.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/FitbitOAuthProvider.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Sources/Services/OAuth/OAuthError.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/OAuthError.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/OAuthError.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/OAuthError.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Sources/Services/OAuth/OAuthService.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/OAuthService.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/OAuthService.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/OAuthService.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Sources/Services/Persistence/PersistenceError.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/PersistenceError.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/PersistenceError.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/PersistenceError.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Sources/Services/Persistence/PersistenceManager.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/PersistenceManager.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/PersistenceManager.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/PersistenceManager.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Sources/Services/Security/CredentialsBootstrap.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/CredentialsBootstrap.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/CredentialsBootstrap.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/CredentialsBootstrap.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Sources/Services/Security/CredentialsService.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/CredentialsService.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/CredentialsService.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/CredentialsService.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Sources/Services/Security/KeychainManager.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/KeychainManager.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/KeychainManager.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/KeychainManager.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Sources/Services/Security/OAuthTokenMigration.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/OAuthTokenMigration.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/OAuthTokenMigration.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/OAuthTokenMigration.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Sources/Services/Sensors/DiscoveredHeartRateSensor.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/DiscoveredHeartRateSensor.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/DiscoveredHeartRateSensor.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/DiscoveredHeartRateSensor.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Sources/Services/Sensors/HeartRateMeasurement.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/HeartRateMeasurement.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/HeartRateMeasurement.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/HeartRateMeasurement.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Sources/Services/Sensors/HeartRateSensorError.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/HeartRateSensorError.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/HeartRateSensorError.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/HeartRateSensorError.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Sources/Services/Sensors/HeartRateService.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/HeartRateService.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/HeartRateService.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/HeartRateService.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Sources/Services/Speech/AnnouncementFormatter.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/AnnouncementFormatter.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/AnnouncementFormatter.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/AnnouncementFormatter.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Sources/Services/Speech/SpeechConfiguration.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/SpeechConfiguration.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/SpeechConfiguration.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/SpeechConfiguration.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Sources/Services/Speech/SpeechError.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/SpeechError.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/SpeechError.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/SpeechError.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Sources/Services/Speech/SpeechService.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/SpeechService.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/SpeechService.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/SpeechService.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Sources/Services/Speech/WorkoutAnnouncementService.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/WorkoutAnnouncementService.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/WorkoutAnnouncementService.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/WorkoutAnnouncementService.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Sources/Services/WatchConnectivity/WatchConnectivityService.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/WatchConnectivityService.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/WatchConnectivityService.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/WatchConnectivityService.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Sources/Services/WatchConnectivity/WatchMessage.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/WatchMessage.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/WatchMessage.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/WatchMessage.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Sources/Services/WatchConnectivity/WatchMessageHandler.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/WatchMessageHandler.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/WatchMessageHandler.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/WatchMessageHandler.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Sources/Services/Workout/LocationService.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/LocationService.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/LocationService.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/LocationService.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Sources/Services/Workout/WorkoutError.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/WorkoutError.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/WorkoutError.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/WorkoutError.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Sources/Services/Workout/WorkoutMetrics.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/WorkoutMetrics.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/WorkoutMetrics.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/WorkoutMetrics.o"
+  },
+  "/Users/andraslferenczi/JogPod-revived/Sources/Services/Workout/WorkoutService.swift" : {
+    "index-unit-output-path" : "/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/WorkoutService.o",
+    "llvm-bc" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/WorkoutService.bc",
+    "object" : "/Users/andraslferenczi/JogPod-revived/build/JogPod.build/Release/JogPod.build/Objects-normal/x86_64/WorkoutService.o"
+  }
+}

@@ -15,7 +15,7 @@ import CoreLocation
 /// - Important: The `time` attribute should be used for chronological ordering of track points.
 ///   Points are typically recorded at regular intervals (e.g., every second or every few meters).
 @Model
-final class WorkoutTrackPoint {
+public final class WorkoutTrackPoint {
 
     // MARK: - Attributes
 

@@ -9,7 +9,7 @@ import SwiftData
 /// - Note: The original Core Data model used `RSSEntry` as the class name. This has been
 ///   renamed to `PodcastEpisode` for clarity and Swift naming conventions.
 @Model
-final class PodcastEpisode {
+public final class PodcastEpisode {
 
     // MARK: - Type Definitions
 
@@ -71,6 +71,11 @@ final class PodcastEpisode {
 
     /// Alternative URL string (purpose unclear from legacy code).
     var url: String?
+
+    /// Saved playback position in seconds.
+    ///
+    /// This is used to resume playback from where the user left off.
+    var savedPlaybackPosition: Double = 0
 
     // MARK: - Relationships
 

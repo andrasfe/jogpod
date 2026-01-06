@@ -5,6 +5,7 @@ import SwiftData
 
 /// Tests for the Preference SwiftData model.
 @Suite("Preference Model Tests")
+@MainActor
 struct PreferenceTests {
 
     // MARK: - Setup

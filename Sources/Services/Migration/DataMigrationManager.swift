@@ -573,9 +573,9 @@ final class DataMigrationManager {
             session.temperatureInCelsius = legacySession.temperatureInCelsius
             session.windSpeedInKmh = legacySession.windSpeedInKmh
             session.weatherIconUrl = legacySession.weatherIconUrl
-            session.alertDate = legacySession.alertDate
+            session.alertDate = LegacyDateParser.parse(legacySession.alertDate)
             session.alertDescription = legacySession.alertDescription
-            session.alertExpires = legacySession.alertExpires
+            session.alertExpires = LegacyDateParser.parse(legacySession.alertExpires)
             session.alertType = legacySession.alertType
 
             context.insert(session)
@@ -888,5 +888,91 @@ extension DataMigrationManager.MigrationResult: CustomStringConvertible {
         }
 
         return lines.joined(separator: "\n")
+    }
+}
+
+// MARK: - Legacy Date Parsing
+
+/// Parses date strings from the legacy weather alert API.
+///
+/// The legacy app received weather alert dates as strings from the weather API.
+/// This utility attempts to parse them using common date formats.
+enum LegacyDateParser {
+
+    /// ISO 8601 formatter with full date and time.
+    private static let iso8601Full: ISO8601DateFormatter = {
+        let formatter = ISO8601DateFormatter()
+        formatter.formatOptions = [.withInternetDateTime, .withFractionalSeconds]
+        return formatter
+    }()
+
+    /// ISO 8601 formatter without fractional seconds.
+    private static let iso8601: ISO8601DateFormatter = {
+        let formatter = ISO8601DateFormatter()
+        formatter.formatOptions = [.withInternetDateTime]
+        return formatter
+    }()
+
+    /// Common date formats used by weather APIs.
+    private static let dateFormatters: [DateFormatter] = {
+        let formats = [
+            "yyyy-MM-dd'T'HH:mm:ssZ",        // ISO with timezone
+            "yyyy-MM-dd'T'HH:mm:ss",          // ISO without timezone
+            "yyyy-MM-dd HH:mm:ss",            // Standard datetime
+            "yyyy-MM-dd",                      // Date only
+            "MM/dd/yyyy HH:mm:ss",            // US format with time
+            "MM/dd/yyyy",                      // US format date only
+            "EEE, dd MMM yyyy HH:mm:ss zzz",  // RFC 2822
+            "EEEE, MMMM d, yyyy h:mm a"       // Verbose format
+        ]
+
+        return formats.map { format in
+            let formatter = DateFormatter()
+            formatter.dateFormat = format
+            formatter.locale = Locale(identifier: "en_US_POSIX")
+            formatter.timeZone = TimeZone(secondsFromGMT: 0)
+            return formatter
+        }
+    }()
+
+    /// Parses a legacy date string into a Date.
+    ///
+    /// Attempts multiple common date formats used by weather APIs.
+    ///
+    /// - Parameter string: The date string to parse.
+    /// - Returns: A Date if parsing succeeds, or nil if the string cannot be parsed.
+    static func parse(_ string: String?) -> Date? {
+        guard let string = string, !string.isEmpty else {
+            return nil
+        }
+
+        // Try ISO 8601 first (most common for modern APIs)
+        if let date = iso8601Full.date(from: string) {
+            return date
+        }
+
+        if let date = iso8601.date(from: string) {
+            return date
+        }
+
+        // Try other common formats
+        for formatter in dateFormatters {
+            if let date = formatter.date(from: string) {
+                return date
+            }
+        }
+
+        // If all else fails, try Unix timestamp
+        if let timestamp = Double(string) {
+            // Could be seconds or milliseconds
+            if timestamp > 1_000_000_000_000 {
+                // Likely milliseconds
+                return Date(timeIntervalSince1970: timestamp / 1000)
+            } else {
+                return Date(timeIntervalSince1970: timestamp)
+            }
+        }
+
+        return nil
     }
 }

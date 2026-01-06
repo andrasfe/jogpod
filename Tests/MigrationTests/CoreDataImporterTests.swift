@@ -422,15 +422,20 @@ extension CoreDataImporterTests {
             createAttribute("startTime", .dateAttributeType, optional: true)
         ]
 
-        // WorkoutLocation
+        // WorkoutLocation with CLLocation transformable
         let workoutLocation = NSEntityDescription()
         workoutLocation.name = "WorkoutLocation"
         workoutLocation.managedObjectClassName = "NSManagedObject"
+
+        // Register the CLLocation value transformer
+        CLLocationValueTransformer.register()
 
         let locationAttr = NSAttributeDescription()
         locationAttr.name = "location"
         locationAttr.attributeType = .transformableAttributeType
         locationAttr.isOptional = true
+        locationAttr.valueTransformerName = CLLocationValueTransformer.transformerName.rawValue
+        locationAttr.attributeValueClassName = "CLLocation"
 
         workoutLocation.properties = [
             createAttribute("workoutID", .stringAttributeType, optional: false),
@@ -586,5 +591,57 @@ extension CoreDataImporterTests {
         XCTAssertFalse(data.isEmpty)
         XCTAssertFalse(progressMessages.isEmpty)
         XCTAssertTrue(progressMessages.contains { $0.contains("podcast") || $0.contains("feed") })
+    }
+
+    func testImportWorkoutLocationWithCLLocation() async throws {
+        let context = try createTestCoreDataStore()
+
+        // Create workout history
+        let session = NSEntityDescription.insertNewObject(forEntityName: "WorkoutHistory", into: context)
+        session.setValue("workout-clocation-test", forKey: "workoutID")
+        session.setValue(Date(), forKey: "startTime")
+
+        // Create workout location with CLLocation
+        let trackPoint = NSEntityDescription.insertNewObject(forEntityName: "WorkoutLocation", into: context)
+        trackPoint.setValue("workout-clocation-test", forKey: "workoutID")
+        trackPoint.setValue(Date(), forKey: "time")
+        trackPoint.setValue(Int16(145), forKey: "heartRate")
+        trackPoint.setValue(Int16(500), forKey: "steps")
+
+        // Set CLLocation with full data
+        let location = CLLocation(
+            coordinate: CLLocationCoordinate2D(latitude: 37.7749, longitude: -122.4194),
+            altitude: 15.0,
+            horizontalAccuracy: 5.0,
+            verticalAccuracy: 10.0,
+            course: 45.0,
+            speed: 3.5,
+            timestamp: Date()
+        )
+        trackPoint.setValue(location, forKey: "location")
+
+        try context.save()
+
+        // Import and verify
+        let importer = CoreDataImporter(storeURL: testStoreURL)
+        let data = try await importer.importAllData()
+
+        XCTAssertEqual(data.workoutSessions.count, 1)
+        XCTAssertEqual(data.trackPoints.count, 1)
+
+        let importedPoint = data.trackPoints.first!
+        XCTAssertEqual(importedPoint.workoutID, "workout-clocation-test")
+        XCTAssertEqual(importedPoint.heartRate, 145)
+        XCTAssertEqual(importedPoint.steps, 500)
+
+        // Verify CLLocation data was extracted
+        XCTAssertNotNil(importedPoint.latitude)
+        XCTAssertNotNil(importedPoint.longitude)
+        XCTAssertEqual(importedPoint.latitude!, 37.7749, accuracy: 0.0001)
+        XCTAssertEqual(importedPoint.longitude!, -122.4194, accuracy: 0.0001)
+        XCTAssertEqual(importedPoint.altitude!, 15.0, accuracy: 0.1)
+        XCTAssertEqual(importedPoint.horizontalAccuracy!, 5.0, accuracy: 0.1)
+        XCTAssertEqual(importedPoint.speed!, 3.5, accuracy: 0.1)
+        XCTAssertEqual(importedPoint.course!, 45.0, accuracy: 0.1)
     }
 }
