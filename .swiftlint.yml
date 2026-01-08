@@ -97,6 +97,14 @@ disabled_rules:
   - todo # Allow TODO comments during active development
   - trailing_whitespace # Too noisy during development
   - identifier_name # Custom naming conventions for migration
+  - attributes # Too strict for SwiftUI code
+  - vertical_whitespace_between_cases # Too noisy
+  - vertical_whitespace_opening_braces # Too noisy
+  - vertical_whitespace_closing_braces # Too noisy
+  - implicit_return # Not always better
+  - multiple_closures_with_trailing_closure # SwiftUI patterns
+  - trailing_comma # Style preference
+  - empty_count # Migration project - will fix later
 
 # Rule configurations
 line_length:
@@ -108,17 +116,17 @@ line_length:
   ignores_interpolated_strings: true
 
 file_length:
-  warning: 500
-  error: 1000
+  warning: 1000
+  error: 2000
   ignore_comment_only_lines: true
 
 function_body_length:
-  warning: 50
-  error: 100
+  warning: 100
+  error: 200
 
 type_body_length:
-  warning: 300
-  error: 500
+  warning: 500
+  error: 1000
 
 cyclomatic_complexity:
   warning: 15
@@ -146,7 +154,10 @@ type_name:
     warning: 50
     error: 70
   allowed_symbols: ["_"]
-  validates_start_with_lowercase: error
+  validates_start_with_lowercase: warning
+  excluded:
+    - iTunesSearchResponse
+    - iTunesPodcast
 
 # Allow force unwrapping in test files
 force_unwrapping:

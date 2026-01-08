@@ -1772,7 +1772,12 @@ struct CreditsView: View {
                     Text("About")
                         .font(.headline)
 
-                    Text("JogPod combines fitness tracking with podcast listening, making your workouts more enjoyable and productive. Track your runs, monitor your heart rate, and listen to your favorite podcasts all in one app.")
+                    Text("""
+                        JogPod combines fitness tracking with podcast listening, \
+                        making your workouts more enjoyable and productive. \
+                        Track your runs, monitor your heart rate, and listen to \
+                        your favorite podcasts all in one app.
+                        """)
                         .font(.body)
                         .foregroundStyle(.secondary)
 
