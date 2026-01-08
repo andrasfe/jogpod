@@ -44,3 +44,7 @@ In no event shall the authors or copyright holders be liable for any claim, dama
 ## License
 
 All rights reserved.
+
+---
+
+<sub>This is a personal project developed in my own time. It is not affiliated with, endorsed by, or related to my employer or any company I work for. All views and code are my own.</sub>
