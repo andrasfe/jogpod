@@ -156,14 +156,19 @@ extension DownloadProgress: CustomStringConvertible {
 extension DownloadProgress: CustomDebugStringConvertible {
 
     public var debugDescription: String {
-        """
+        let totalBytesStr = totalBytes.map { "\($0)" } ?? "nil"
+        let fractionStr = fractionCompleted.map { "\($0)" } ?? "nil"
+        let speedStr = bytesPerSecond.map { "\($0)" } ?? "nil"
+        let etaStr = estimatedTimeRemaining.map { "\($0)" } ?? "nil"
+
+        return """
         DownloadProgress(
             url: \(url.absoluteString),
             bytesDownloaded: \(bytesDownloaded),
-            totalBytes: \(totalBytes.map(String.init) ?? "nil"),
-            fractionCompleted: \(fractionCompleted.map(String.init) ?? "nil"),
-            bytesPerSecond: \(bytesPerSecond.map(String.init) ?? "nil"),
-            estimatedTimeRemaining: \(estimatedTimeRemaining.map(String.init) ?? "nil")
+            totalBytes: \(totalBytesStr),
+            fractionCompleted: \(fractionStr),
+            bytesPerSecond: \(speedStr),
+            estimatedTimeRemaining: \(etaStr)
         )
         """
     }

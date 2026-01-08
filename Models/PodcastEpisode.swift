@@ -27,6 +27,10 @@ public final class PodcastEpisode {
     /// Whether this episode is currently loaded in the player.
     var isCurrentInPlayer: Bool = false
 
+    /// Whether this episode has been added to the playback queue.
+    /// Episodes only appear in "Up Next" when this is true.
+    var isInQueue: Bool = false
+
     /// Generic date field (purpose unclear from legacy code; may be download date).
     var date: Date?
 

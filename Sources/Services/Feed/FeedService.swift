@@ -206,12 +206,18 @@ public actor FeedService: FeedServiceProtocol {
         guard url.scheme == "feed" else { return url }
 
         // Convert feed:// to http:// or https://
-        var resourceSpecifier = url.resourceSpecifier ?? ""
-        if resourceSpecifier.hasPrefix("//") {
-            resourceSpecifier = "http:" + resourceSpecifier
+        // The feed: scheme format is typically feed://host/path or feed:http://host/path
+        var urlString = url.absoluteString
+
+        if urlString.hasPrefix("feed://") {
+            // feed://host/path -> http://host/path
+            urlString = "http://" + urlString.dropFirst("feed://".count)
+        } else if urlString.hasPrefix("feed:") {
+            // feed:http://... -> http://...
+            urlString = String(urlString.dropFirst("feed:".count))
         }
 
-        return URL(string: resourceSpecifier) ?? url
+        return URL(string: urlString) ?? url
     }
 
     /// Maps URLError to FeedParsingError.

@@ -73,8 +73,12 @@ public struct PlaylistView: View {
     )
     private var currentEpisodes: [PodcastEpisode]
 
-    @Query(sort: \PodcastEpisode.index, order: .forward)
-    private var allEpisodes: [PodcastEpisode]
+    @Query(
+        filter: #Predicate<PodcastEpisode> { $0.isInQueue == true },
+        sort: \PodcastEpisode.index,
+        order: .forward
+    )
+    private var queuedEpisodes: [PodcastEpisode]
 
     // MARK: - State
 
@@ -100,8 +104,8 @@ public struct PlaylistView: View {
     }
 
     private var upNextEpisodes: [PodcastEpisode] {
-        // Filter out the current episode and show episodes in queue order
-        allEpisodes.filter { !$0.isCurrentInPlayer }
+        // Filter out the current episode and show only queued episodes
+        queuedEpisodes.filter { !$0.isCurrentInPlayer }
     }
 
     private var filteredEpisodes: [PodcastEpisode] {
@@ -118,7 +122,7 @@ public struct PlaylistView: View {
 
     public var body: some View {
         Group {
-            if podcasts.isEmpty && allEpisodes.isEmpty {
+            if podcasts.isEmpty && queuedEpisodes.isEmpty {
                 emptyStateView
             } else {
                 playlistContent
@@ -183,9 +187,23 @@ public struct PlaylistView: View {
                         NavigationLink(value: episode) {
                             EpisodeRowView(episode: episode)
                         }
+                        .swipeActions(edge: .trailing, allowsFullSwipe: true) {
+                            Button(role: .destructive) {
+                                removeFromUpNext(episode)
+                            } label: {
+                                Label("Remove", systemImage: "trash")
+                            }
+                        }
+                        .swipeActions(edge: .leading, allowsFullSwipe: true) {
+                            Button {
+                                playEpisodeFromUpNext(episode)
+                            } label: {
+                                Label("Play", systemImage: "play.fill")
+                            }
+                            .tint(.green)
+                        }
                     }
                     .onMove(perform: moveEpisodes)
-                    .onDelete(perform: deleteEpisodes)
                 } header: {
                     HStack {
                         Text("Up Next")
@@ -284,6 +302,33 @@ public struct PlaylistView: View {
 
             // Refresh playlist after deletion
             try? await dependencies.audioPlayerService?.loadPlaylist()
+        }
+    }
+
+    private func removeFromUpNext(_ episode: PodcastEpisode) {
+        Task {
+            do {
+                // Remove from queue (sets isInQueue = false) without deleting the episode
+                try await dependencies.persistenceManager.removeEpisodeFromQueue(
+                    episode.persistentModelID
+                )
+                try await dependencies.audioPlayerService?.loadPlaylist()
+            } catch {
+                errorMessage = "Failed to remove episode: \(error.localizedDescription)"
+                showingError = true
+            }
+        }
+    }
+
+    private func playEpisodeFromUpNext(_ episode: PodcastEpisode) {
+        Task {
+            do {
+                try await dependencies.audioPlayerService?.goToEpisode(episode.persistentModelID)
+                try dependencies.audioPlayerService?.play()
+            } catch {
+                errorMessage = "Failed to play episode: \(error.localizedDescription)"
+                showingError = true
+            }
         }
     }
 
@@ -400,7 +445,7 @@ public struct EpisodeRowView: View {
             Button(action: playEpisode) {
                 Image(systemName: "play.circle.fill")
                     .font(.title2)
-                    .foregroundStyle(.accentColor)
+                    .foregroundStyle(Color.accentColor)
             }
             .buttonStyle(.plain)
             .frame(width: 32, height: 32)
@@ -434,11 +479,12 @@ public struct EpisodeRowView: View {
 
             // Status indicators
             VStack(alignment: .trailing, spacing: 4) {
-                // Duration
-                if let duration = formattedDuration {
-                    Text(duration)
-                        .font(.caption.monospacedDigit())
-                        .foregroundStyle(.tertiary)
+                // In Queue indicator
+                if episode.isInQueue {
+                    Label("In Queue", systemImage: "text.badge.checkmark")
+                        .font(.caption2)
+                        .foregroundStyle(.blue)
+                        .labelStyle(.titleAndIcon)
                 }
 
                 // Download status
@@ -486,6 +532,47 @@ public struct EpisodeRowView: View {
     private func checkCacheStatus() async {
         if let mediaLink = episode.enclosureMediaLink {
             isCached = await MediaCacheService.shared.isCached(mediaLink)
+        }
+    }
+}
+
+// MARK: - EpisodeRowWithActions
+
+/// Episode row with swipe actions and context menu for playlist management.
+struct EpisodeRowWithActions: View {
+    let episode: PodcastEpisode
+    let onPlayNow: () -> Void
+    let onAddToUpNext: () -> Void
+    let onPlayNext: () -> Void
+
+    var body: some View {
+        NavigationLink(value: episode) {
+            EpisodeRowView(episode: episode)
+        }
+        .swipeActions(edge: .trailing, allowsFullSwipe: true) {
+            Button(action: onAddToUpNext) {
+                Label("Up Next", systemImage: "text.badge.plus")
+            }
+            .tint(.blue)
+        }
+        .swipeActions(edge: .leading, allowsFullSwipe: true) {
+            Button(action: onPlayNow) {
+                Label("Play", systemImage: "play.fill")
+            }
+            .tint(.green)
+        }
+        .contextMenu {
+            Button(action: onPlayNow) {
+                Label("Play Now", systemImage: "play.fill")
+            }
+
+            Button(action: onAddToUpNext) {
+                Label("Add to Up Next", systemImage: "text.badge.plus")
+            }
+
+            Button(action: onPlayNext) {
+                Label("Play Next", systemImage: "text.insert")
+            }
         }
     }
 }
@@ -698,38 +785,40 @@ struct AddPodcastView: View {
     }
 
     private var searchResultsList: some View {
-        List(searchResults) { podcast in
-            Button(action: { Task { await subscribeToPodcast(podcast) } }) {
-                HStack(spacing: 12) {
-                    AsyncArtworkView(urlString: podcast.artworkUrl100, size: 60)
+        List {
+            ForEach(searchResults) { podcast in
+                Button(action: { Task { await subscribeToPodcast(podcast) } }) {
+                    HStack(spacing: 12) {
+                        AsyncArtworkView(urlString: podcast.artworkUrl100, size: 60)
 
-                    VStack(alignment: .leading, spacing: 4) {
-                        Text(podcast.collectionName)
-                            .font(.headline)
-                            .lineLimit(2)
-                            .foregroundStyle(.primary)
+                        VStack(alignment: .leading, spacing: 4) {
+                            Text(podcast.collectionName)
+                                .font(.headline)
+                                .lineLimit(2)
+                                .foregroundStyle(.primary)
 
-                        Text(podcast.artistName)
-                            .font(.subheadline)
-                            .foregroundStyle(.secondary)
+                            Text(podcast.artistName)
+                                .font(.subheadline)
+                                .foregroundStyle(.secondary)
 
-                        if let genres = podcast.genres?.joined(separator: ", ") {
-                            Text(genres)
-                                .font(.caption)
-                                .foregroundStyle(.tertiary)
+                            if let genres = podcast.genres?.joined(separator: ", ") {
+                                Text(genres)
+                                    .font(.caption)
+                                    .foregroundStyle(.tertiary)
+                            }
                         }
+
+                        Spacer()
+
+                        Image(systemName: "plus.circle.fill")
+                            .font(.title2)
+                            .foregroundStyle(Color.accentColor)
                     }
-
-                    Spacer()
-
-                    Image(systemName: "plus.circle.fill")
-                        .font(.title2)
-                        .foregroundStyle(.accentColor)
+                    .contentShape(Rectangle())
                 }
-                .contentShape(Rectangle())
+                .buttonStyle(.plain)
+                .disabled(isAddingFeed)
             }
-            .buttonStyle(.plain)
-            .disabled(isAddingFeed)
         }
         .listStyle(.plain)
     }
@@ -842,6 +931,10 @@ struct AddPodcastView: View {
         let feedService = FeedService()
         let parsedFeed = try await feedService.fetchFeed(from: url)
 
+        // Debug: Log parsed feed info
+        print("[AddPodcast] Feed title: \(parsedFeed.info.title ?? "nil")")
+        print("[AddPodcast] Total items parsed: \(parsedFeed.items.count)")
+
         // Create podcast feed in persistence
         let feedID = try await dependencies.persistenceManager.createPodcastFeed(
             title: parsedFeed.info.title,
@@ -850,20 +943,30 @@ struct AddPodcastView: View {
             imageUrl: parsedFeed.info.imageUrl
         )
 
+        print("[AddPodcast] Created feed with ID: \(feedID)")
+
         // Create episodes from the parsed feed (limit to most recent)
         let maxEpisodes = 10
+        var createdCount = 0
         for (index, item) in parsedFeed.items.prefix(maxEpisodes).enumerated() {
+            let mediaUrl = item.enclosures.first?.url
+            print("[AddPodcast] Episode \(index): '\(item.title ?? "nil")' - enclosure: \(mediaUrl ?? "nil")")
+
             _ = try await dependencies.persistenceManager.createPodcastEpisode(
                 title: item.title,
                 identifier: item.identifier,
-                enclosureMediaLink: item.enclosures.first?.url,
+                enclosureMediaLink: mediaUrl,
                 releaseDate: item.date,
                 feedIdentifier: feedID
             )
+            createdCount += 1
         }
+
+        print("[AddPodcast] Created \(createdCount) episodes for feed")
 
         // Refresh the audio player's playlist
         try await dependencies.audioPlayerService?.loadPlaylist()
+        print("[AddPodcast] Playlist refreshed")
     }
 
     // MARK: - iTunes Search
@@ -966,9 +1069,12 @@ struct PodcastDetailView: View {
                     )
                 } else {
                     ForEach(podcast.sortedEpisodes) { episode in
-                        NavigationLink(value: episode) {
-                            EpisodeRowView(episode: episode)
-                        }
+                        EpisodeRowWithActions(
+                            episode: episode,
+                            onPlayNow: { playEpisodeNow(episode) },
+                            onAddToUpNext: { addToUpNext(episode) },
+                            onPlayNext: { playEpisodeNext(episode) }
+                        )
                     }
                 }
             } header: {
@@ -1103,6 +1209,51 @@ struct PodcastDetailView: View {
         } catch {
             errorMessage = "Failed to unsubscribe: \(error.localizedDescription)"
             showingError = true
+        }
+    }
+
+    // MARK: - Playlist Actions
+
+    private func playEpisodeNow(_ episode: PodcastEpisode) {
+        print("[PodcastDetailView] playEpisodeNow called for: \(episode.displayTitle)")
+        Task {
+            do {
+                try await dependencies.audioPlayerService?.goToEpisode(episode.persistentModelID)
+                try dependencies.audioPlayerService?.play()
+                print("[PodcastDetailView] playEpisodeNow succeeded")
+            } catch {
+                print("[PodcastDetailView] playEpisodeNow failed: \(error)")
+                errorMessage = "Failed to play episode: \(error.localizedDescription)"
+                showingError = true
+            }
+        }
+    }
+
+    private func addToUpNext(_ episode: PodcastEpisode) {
+        print("[PodcastDetailView] addToUpNext called for: \(episode.displayTitle)")
+        Task {
+            do {
+                try await dependencies.audioPlayerService?.addToEndOfQueue(episode.persistentModelID)
+                print("[PodcastDetailView] addToUpNext succeeded")
+            } catch {
+                print("[PodcastDetailView] addToUpNext failed: \(error)")
+                errorMessage = "Failed to add to queue: \(error.localizedDescription)"
+                showingError = true
+            }
+        }
+    }
+
+    private func playEpisodeNext(_ episode: PodcastEpisode) {
+        print("[PodcastDetailView] playEpisodeNext called for: \(episode.displayTitle)")
+        Task {
+            do {
+                try await dependencies.audioPlayerService?.addToPlayNext(episode.persistentModelID)
+                print("[PodcastDetailView] playEpisodeNext succeeded")
+            } catch {
+                print("[PodcastDetailView] playEpisodeNext failed: \(error)")
+                errorMessage = "Failed to add to queue: \(error.localizedDescription)"
+                showingError = true
+            }
         }
     }
 }

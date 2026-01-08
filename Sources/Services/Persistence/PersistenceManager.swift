@@ -15,7 +15,7 @@ import CoreLocation
 ///
 /// This protocol enables dependency injection and facilitates testing
 /// by allowing mock implementations.
-public protocol PersistenceManaging: Sendable {
+public protocol PersistenceManaging: AnyObject, Sendable {
 
     // MARK: Container Access
 
@@ -62,6 +62,12 @@ public protocol PersistenceManaging: Sendable {
     func saveEpisodePosition(episodeID: PersistentIdentifier, position: TimeInterval) async throws
 
     func fetchEpisodePosition(episodeID: PersistentIdentifier) async throws -> TimeInterval?
+
+    func fetchQueuedEpisodes(sortedByIndex: Bool) async throws -> [PodcastEpisode]
+
+    func addEpisodeToQueue(_ identifier: PersistentIdentifier) async throws
+
+    func removeEpisodeFromQueue(_ identifier: PersistentIdentifier) async throws
 
     // MARK: Preference Operations
 
@@ -328,6 +334,9 @@ public actor PersistenceManager: PersistenceManaging {
         var feed: PodcastFeed?
         if let feedId = feedIdentifier {
             feed = modelContext.model(for: feedId) as? PodcastFeed
+            print("[PersistenceManager] Found feed: \(feed?.title ?? "nil") for feedId")
+        } else {
+            print("[PersistenceManager] No feedIdentifier provided")
         }
 
         let episode = PodcastEpisode(
@@ -338,14 +347,23 @@ public actor PersistenceManager: PersistenceManaging {
             feed: feed
         )
 
+        print("[PersistenceManager] Created episode: '\(title ?? "nil")' with mediaLink: \(enclosureMediaLink ?? "nil")")
+
         // Generate index based on current timestamp for ordering
         let currentCount = try await episodeCount()
         episode.index = Int32(currentCount)
 
         modelContext.insert(episode)
 
+        // Explicitly add to feed's episodes array to ensure inverse relationship
+        if let feed = feed {
+            feed.episodes.append(episode)
+            print("[PersistenceManager] Added episode to feed.episodes. Feed now has \(feed.episodes.count) episodes")
+        }
+
         do {
             try modelContext.save()
+            print("[PersistenceManager] Episode saved successfully")
             return episode.persistentModelID
         } catch {
             throw PersistenceError.insertFailed(
@@ -373,6 +391,86 @@ public actor PersistenceManager: PersistenceManaging {
             return try modelContext.fetch(descriptor)
         } catch {
             throw PersistenceError.fetchFailed(
+                entityName: "PodcastEpisode",
+                reason: error.localizedDescription
+            )
+        }
+    }
+
+    /// Fetches only episodes that have been added to the playback queue.
+    ///
+    /// - Parameter sortedByIndex: If true, sorts by index ascending; otherwise by release date descending.
+    /// - Returns: Array of queued podcast episodes.
+    /// - Throws: `PersistenceError.fetchFailed` if the fetch fails.
+    public func fetchQueuedEpisodes(sortedByIndex: Bool = true) async throws -> [PodcastEpisode] {
+        let sortDescriptor: SortDescriptor<PodcastEpisode> = sortedByIndex
+            ? SortDescriptor(\.index, order: .forward)
+            : SortDescriptor(\.releaseDate, order: .reverse)
+
+        let descriptor = FetchDescriptor<PodcastEpisode>(
+            predicate: #Predicate<PodcastEpisode> { $0.isInQueue == true },
+            sortBy: [sortDescriptor]
+        )
+
+        do {
+            return try modelContext.fetch(descriptor)
+        } catch {
+            throw PersistenceError.fetchFailed(
+                entityName: "PodcastEpisode",
+                reason: error.localizedDescription
+            )
+        }
+    }
+
+    /// Adds an episode to the playback queue.
+    ///
+    /// - Parameter identifier: The persistent identifier of the episode to add.
+    /// - Throws: `PersistenceError.updateFailed` if the update fails.
+    public func addEpisodeToQueue(_ identifier: PersistentIdentifier) async throws {
+        guard let episode = modelContext.model(for: identifier) as? PodcastEpisode else {
+            throw PersistenceError.entityNotFound(
+                entityName: "PodcastEpisode",
+                identifier: identifier.hashValue.description
+            )
+        }
+
+        episode.isInQueue = true
+
+        // Set index to end of queue
+        let queuedEpisodes = try await fetchQueuedEpisodes(sortedByIndex: true)
+        episode.index = Int32(queuedEpisodes.count)
+
+        do {
+            try modelContext.save()
+            print("[PersistenceManager] Added episode to queue: \(episode.displayTitle)")
+        } catch {
+            throw PersistenceError.updateFailed(
+                entityName: "PodcastEpisode",
+                reason: error.localizedDescription
+            )
+        }
+    }
+
+    /// Removes an episode from the playback queue.
+    ///
+    /// - Parameter identifier: The persistent identifier of the episode to remove.
+    /// - Throws: `PersistenceError.updateFailed` if the update fails.
+    public func removeEpisodeFromQueue(_ identifier: PersistentIdentifier) async throws {
+        guard let episode = modelContext.model(for: identifier) as? PodcastEpisode else {
+            throw PersistenceError.entityNotFound(
+                entityName: "PodcastEpisode",
+                identifier: identifier.hashValue.description
+            )
+        }
+
+        episode.isInQueue = false
+        episode.isCurrentInPlayer = false
+
+        do {
+            try modelContext.save()
+            print("[PersistenceManager] Removed episode from queue: \(episode.displayTitle)")
+        } catch {
+            throw PersistenceError.updateFailed(
                 entityName: "PodcastEpisode",
                 reason: error.localizedDescription
             )

@@ -177,13 +177,13 @@ extension DiscoveredHeartRateSensor {
 
         init(rssi: Int) {
             switch rssi {
-            case -50...:
+            case (-50)...:
                 self = .excellent
-            case -70 ..< -50:
+            case (-70) ..< (-50):
                 self = .good
-            case -80 ..< -70:
+            case (-80) ..< (-70):
                 self = .fair
-            case -90 ..< -80:
+            case (-90) ..< (-80):
                 self = .weak
             default:
                 self = .veryWeak

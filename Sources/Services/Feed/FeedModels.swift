@@ -12,7 +12,7 @@ import Foundation
 /// The type of feed being parsed.
 ///
 /// Corresponds to the legacy MWFeedParser's FeedType enum.
-public enum FeedType: String, Sendable, Equatable {
+public enum FeedType: String, Sendable, Equatable, Codable {
     /// RSS 2.0 feed format.
     case rss = "RSS"
 

@@ -83,13 +83,17 @@ public actor WorkoutAnnouncementService {
         self.formatter = AnnouncementFormatter(unitSystem: unitSystem)
 
         // Use provided types or defaults
-        if let types = enabledTypes {
-            self.enabledTypes = types
+        let types: Set<AnnouncementType>
+        if let provided = enabledTypes {
+            types = provided
         } else {
-            self.enabledTypes = Set(AnnouncementType.allCases.filter { $0.isEnabledByDefault })
+            types = Set(AnnouncementType.allCases.filter { $0.isEnabledByDefault })
         }
+        self.enabledTypes = types
 
-        self.rebuildRotation()
+        // Build initial rotation inline (actor init can access own state synchronously)
+        self.announcementRotation = AnnouncementType.allCases.filter { types.contains($0) }
+        self.currentRotationIndex = 0
     }
 
     // MARK: - Configuration
@@ -183,7 +187,6 @@ public actor WorkoutAnnouncementService {
         guard !announcementRotation.isEmpty else { return nil }
 
         // Try each announcement type until we find one with data
-        let startIndex = currentRotationIndex
         var attempts = 0
 
         while attempts < announcementRotation.count {

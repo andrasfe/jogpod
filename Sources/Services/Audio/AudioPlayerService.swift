@@ -10,6 +10,9 @@ import AVFoundation
 import Combine
 import MediaPlayer
 import SwiftData
+import os.log
+
+private let audioLogger = Logger(subsystem: "com.motionscapes.jogpod", category: "AudioPlayer")
 
 // MARK: - Playback State
 
@@ -340,19 +343,31 @@ public final class AudioPlayerService: NSObject, Sendable {
     ///
     /// - Throws: Error if loading fails.
     public func loadPlaylist() async throws {
-        let episodes = try await persistenceManager.fetchAllPodcastEpisodes(sortedByIndex: true)
+        // Only load episodes that have been explicitly added to the queue
+        let episodes = try await persistenceManager.fetchQueuedEpisodes(sortedByIndex: true)
+
+        print("[AudioPlayer] loadPlaylist: fetched \(episodes.count) queued episodes")
 
         playlist = episodes.compactMap { episode in
             // TODO: Check media cache for cached URL
             PlayableItem.from(episode: episode, cachedURL: nil)
         }
 
-        // Find and restore current episode
-        if let currentEpisode = try await persistenceManager.fetchCurrentEpisode() {
-            if let index = playlist.firstIndex(where: { $0.episodeID == currentEpisode.persistentModelID }) {
-                currentIndex = index
-                await loadItem(at: index)
-            }
+        print("[AudioPlayer] loadPlaylist: \(playlist.count) playable items in queue")
+
+        // Find and restore current episode, or load first item
+        if let currentEpisode = try await persistenceManager.fetchCurrentEpisode(),
+           let index = playlist.firstIndex(where: { $0.episodeID == currentEpisode.persistentModelID }) {
+            currentIndex = index
+            await loadItem(at: index)
+            print("[AudioPlayer] Restored current episode at index \(index)")
+        } else if !playlist.isEmpty {
+            // No saved episode - load the first item by default
+            await loadItem(at: 0)
+            print("[AudioPlayer] Loaded first item by default")
+        } else {
+            currentItem = nil
+            print("[AudioPlayer] Queue is empty - no items to load")
         }
 
         NotificationCenter.default.post(name: .playlistRefreshed, object: self)
@@ -425,7 +440,11 @@ public final class AudioPlayerService: NSObject, Sendable {
             throw AudioPlayerError.noCurrentItem
         }
 
+        audioLogger.info("play() called, setting rate to \(self.playbackRate)")
+        print("[AudioPlayer] play() - playbackRate: \(playbackRate)")
         player.rate = playbackRate
+        print("[AudioPlayer] play() - player.rate after set: \(player.rate)")
+        audioLogger.info("player.rate is now \(player.rate)")
         state = .playing
 
         updateNowPlayingInfo()
@@ -528,6 +547,110 @@ public final class AudioPlayerService: NSObject, Sendable {
         try await goToItem(at: index)
     }
 
+    // MARK: - Queue Management
+
+    /// Adds an episode to the end of the playlist queue.
+    ///
+    /// - Parameter episodeID: The persistent identifier of the episode to add.
+    /// - Throws: Error if the episode cannot be found or added.
+    public func addToEndOfQueue(_ episodeID: PersistentIdentifier) async throws {
+        // First, ensure the episode is marked as in queue
+        try await persistenceManager.addEpisodeToQueue(episodeID)
+
+        // Check if it's already in our local playlist
+        if let existingIndex = playlist.firstIndex(where: { $0.episodeID == episodeID }) {
+            // If it's already the last item, nothing more to do
+            if existingIndex == playlist.count - 1 {
+                return
+            }
+
+            // Move the item to the end
+            let item = playlist.remove(at: existingIndex)
+            playlist.append(item)
+
+            // Adjust currentIndex if needed
+            if existingIndex < currentIndex {
+                currentIndex -= 1
+            } else if existingIndex == currentIndex {
+                currentIndex = playlist.count - 1
+            }
+
+            // Update indices in persistence
+            await updatePlaylistIndices()
+        } else {
+            // Episode wasn't in playlist - reload to pick it up
+            try await loadPlaylist()
+        }
+
+        NotificationCenter.default.post(name: .playlistRefreshed, object: self)
+    }
+
+    /// Adds an episode to play immediately after the current item.
+    ///
+    /// - Parameter episodeID: The persistent identifier of the episode to add.
+    /// - Throws: Error if the episode cannot be found or added.
+    public func addToPlayNext(_ episodeID: PersistentIdentifier) async throws {
+        // First, ensure the episode is marked as in queue
+        try await persistenceManager.addEpisodeToQueue(episodeID)
+
+        // Check if it's already in our local playlist
+        if let existingIndex = playlist.firstIndex(where: { $0.episodeID == episodeID }) {
+            let targetIndex = currentIndex + 1
+
+            // If it's already in the target position, nothing to do
+            if existingIndex == targetIndex {
+                return
+            }
+
+            // Remove from current position
+            let item = playlist.remove(at: existingIndex)
+
+            // Calculate the adjusted target index after removal
+            let adjustedTargetIndex: Int
+            if existingIndex < targetIndex {
+                adjustedTargetIndex = min(targetIndex - 1, playlist.count)
+            } else {
+                adjustedTargetIndex = min(targetIndex, playlist.count)
+            }
+
+            // Insert at the adjusted position
+            playlist.insert(item, at: adjustedTargetIndex)
+
+            // Adjust currentIndex if needed
+            if existingIndex < currentIndex && adjustedTargetIndex >= currentIndex {
+                currentIndex -= 1
+            } else if existingIndex > currentIndex && adjustedTargetIndex <= currentIndex {
+                currentIndex += 1
+            }
+
+            // Update indices in persistence
+            await updatePlaylistIndices()
+        } else {
+            // Episode wasn't in playlist - reload to pick it up, then reposition
+            try await loadPlaylist()
+
+            // Now find and reposition the newly added episode
+            if let newIndex = playlist.firstIndex(where: { $0.episodeID == episodeID }) {
+                let targetIndex = min(currentIndex + 1, playlist.count - 1)
+
+                if newIndex != targetIndex && newIndex < playlist.count {
+                    let item = playlist.remove(at: newIndex)
+                    playlist.insert(item, at: min(targetIndex, playlist.count))
+                    await updatePlaylistIndices()
+                }
+            }
+        }
+
+        NotificationCenter.default.post(name: .playlistRefreshed, object: self)
+    }
+
+    /// Updates the index values in persistence to match the current playlist order.
+    private func updatePlaylistIndices() async {
+        for (index, item) in playlist.enumerated() {
+            try? await persistenceManager.updateEpisodeIndex(item.episodeID, newIndex: Int32(index))
+        }
+    }
+
     // MARK: - Seeking
 
     /// Seeks to a specific position.
@@ -610,7 +733,10 @@ public final class AudioPlayerService: NSObject, Sendable {
     /// - Parameter rate: The new playback rate (0.5 to 2.0).
     /// - Throws: `AudioPlayerError` if the rate is outside the valid range.
     public func setRate(_ rate: Float) throws {
+        print("[AudioPlayer] setRate() called with rate: \(rate)")
+        audioLogger.info("setRate() called with rate: \(rate)")
         guard Self.validPlaybackRateRange.contains(rate) else {
+            audioLogger.error("Invalid rate: \(rate)")
             throw AudioPlayerError.invalidPlaybackRate(
                 rate: rate,
                 validRange: Self.validPlaybackRateRange
@@ -618,9 +744,13 @@ public final class AudioPlayerService: NSObject, Sendable {
         }
 
         playbackRate = rate
+        audioLogger.info("playbackRate property set to: \(self.playbackRate)")
 
         if state == .playing {
             queuePlayer?.rate = rate
+            audioLogger.info("Applied rate to playing player: \(rate)")
+        } else {
+            audioLogger.info("Player not playing (state: \(String(describing: self.state))), rate will apply on next play()")
         }
 
         updateNowPlayingInfo()

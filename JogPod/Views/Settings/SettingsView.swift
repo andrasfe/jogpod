@@ -8,6 +8,7 @@
 import SwiftUI
 import SwiftData
 import HealthKit
+import CoreLocation
 
 // MARK: - Preference Keys
 
@@ -657,6 +658,29 @@ struct AnnouncementsSettingsView: View {
     @State private var announceWindSpeed: Bool = false
 
     var body: some View {
+        announcementForm
+            .navigationTitle("Announcements")
+            .navigationBarTitleDisplayMode(.inline)
+            .task { await loadPreferences() }
+            .modifier(AnnouncementChangeHandlers(
+                announceVoice: $announceVoice,
+                announceDistance: $announceDistance,
+                announceDuration: $announceDuration,
+                announceCurrentSpeed: $announceCurrentSpeed,
+                announceAvgSpeed: $announceAvgSpeed,
+                announceCurrentHeartRate: $announceCurrentHeartRate,
+                announceAvgHeartRate: $announceAvgHeartRate,
+                announceCaloriesBurned: $announceCaloriesBurned,
+                announceTotalAscent: $announceTotalAscent,
+                announceTotalDescent: $announceTotalDescent,
+                announceTemperature: $announceTemperature,
+                announceHumidity: $announceHumidity,
+                announceWindSpeed: $announceWindSpeed,
+                viewModel: viewModel
+            ))
+    }
+
+    private var announcementForm: some View {
         Form {
             Section {
                 Toggle("Enable Voice Announcements", isOn: $announceVoice)
@@ -703,50 +727,6 @@ struct AnnouncementsSettingsView: View {
                 Toggle("Wind Speed", isOn: $announceWindSpeed)
                     .disabled(!announceVoice)
             }
-        }
-        .navigationTitle("Announcements")
-        .navigationBarTitleDisplayMode(.inline)
-        .task {
-            await loadPreferences()
-        }
-        .onChange(of: announceVoice) { _, newValue in
-            Task { await viewModel?.saveBool(key: PreferenceKey.announceVoice, value: newValue) }
-        }
-        .onChange(of: announceDistance) { _, newValue in
-            Task { await viewModel?.saveBool(key: PreferenceKey.announceDistance, value: newValue) }
-        }
-        .onChange(of: announceDuration) { _, newValue in
-            Task { await viewModel?.saveBool(key: PreferenceKey.announceDuration, value: newValue) }
-        }
-        .onChange(of: announceCurrentSpeed) { _, newValue in
-            Task { await viewModel?.saveBool(key: PreferenceKey.announceCurrentSpeed, value: newValue) }
-        }
-        .onChange(of: announceAvgSpeed) { _, newValue in
-            Task { await viewModel?.saveBool(key: PreferenceKey.announceAvgSpeed, value: newValue) }
-        }
-        .onChange(of: announceCurrentHeartRate) { _, newValue in
-            Task { await viewModel?.saveBool(key: PreferenceKey.announceCurrentHeartRate, value: newValue) }
-        }
-        .onChange(of: announceAvgHeartRate) { _, newValue in
-            Task { await viewModel?.saveBool(key: PreferenceKey.announceAvgHeartRate, value: newValue) }
-        }
-        .onChange(of: announceCaloriesBurned) { _, newValue in
-            Task { await viewModel?.saveBool(key: PreferenceKey.announceCaloriesBurned, value: newValue) }
-        }
-        .onChange(of: announceTotalAscent) { _, newValue in
-            Task { await viewModel?.saveBool(key: PreferenceKey.announceTotalAscent, value: newValue) }
-        }
-        .onChange(of: announceTotalDescent) { _, newValue in
-            Task { await viewModel?.saveBool(key: PreferenceKey.announceTotalDescent, value: newValue) }
-        }
-        .onChange(of: announceTemperature) { _, newValue in
-            Task { await viewModel?.saveBool(key: PreferenceKey.announceTemperature, value: newValue) }
-        }
-        .onChange(of: announceHumidity) { _, newValue in
-            Task { await viewModel?.saveBool(key: PreferenceKey.announceHumidity, value: newValue) }
-        }
-        .onChange(of: announceWindSpeed) { _, newValue in
-            Task { await viewModel?.saveBool(key: PreferenceKey.announceWindSpeed, value: newValue) }
         }
     }
 
@@ -942,6 +922,15 @@ struct PlayerSettingsView: View {
             // Store as int percentage (100 = 1.0x)
             let intValue = Int(newValue * 100)
             Task { await viewModel?.saveInt(key: PreferenceKey.playerRate, value: intValue) }
+
+            // Apply to audio player immediately
+            if let audioPlayer = dependencies.audioPlayerService {
+                do {
+                    try audioPlayer.setRate(Float(newValue))
+                } catch {
+                    print("[PlayerSettingsView] Failed to set playback rate: \(error)")
+                }
+            }
         }
     }
 
@@ -1765,7 +1754,7 @@ struct CreditsView: View {
                     .overlay {
                         Image(systemName: "figure.run.circle.fill")
                             .font(.system(size: 50))
-                            .foregroundStyle(.accentColor)
+                            .foregroundStyle(Color.accentColor)
                     }
                     .accessibilityHidden(true)
 
@@ -1898,6 +1887,151 @@ struct SupportView: View {
         }
         .navigationTitle("Support")
         .navigationBarTitleDisplayMode(.inline)
+    }
+}
+
+// MARK: - Announcement Change Handlers
+
+/// ViewModifier to handle onChange events for announcement settings.
+/// This breaks up the complex expression into manageable pieces.
+private struct AnnouncementChangeHandlers: ViewModifier {
+    @Binding var announceVoice: Bool
+    @Binding var announceDistance: Bool
+    @Binding var announceDuration: Bool
+    @Binding var announceCurrentSpeed: Bool
+    @Binding var announceAvgSpeed: Bool
+    @Binding var announceCurrentHeartRate: Bool
+    @Binding var announceAvgHeartRate: Bool
+    @Binding var announceCaloriesBurned: Bool
+    @Binding var announceTotalAscent: Bool
+    @Binding var announceTotalDescent: Bool
+    @Binding var announceTemperature: Bool
+    @Binding var announceHumidity: Bool
+    @Binding var announceWindSpeed: Bool
+    var viewModel: SettingsViewModel?
+
+    func body(content: Content) -> some View {
+        content
+            .modifier(WorkoutMetricsHandlers(
+                announceVoice: $announceVoice,
+                announceDistance: $announceDistance,
+                announceDuration: $announceDuration,
+                announceCaloriesBurned: $announceCaloriesBurned,
+                viewModel: viewModel
+            ))
+            .modifier(SpeedHandlers(
+                announceCurrentSpeed: $announceCurrentSpeed,
+                announceAvgSpeed: $announceAvgSpeed,
+                viewModel: viewModel
+            ))
+            .modifier(HeartRateHandlers(
+                announceCurrentHeartRate: $announceCurrentHeartRate,
+                announceAvgHeartRate: $announceAvgHeartRate,
+                viewModel: viewModel
+            ))
+            .modifier(ElevationHandlers(
+                announceTotalAscent: $announceTotalAscent,
+                announceTotalDescent: $announceTotalDescent,
+                viewModel: viewModel
+            ))
+            .modifier(WeatherHandlers(
+                announceTemperature: $announceTemperature,
+                announceHumidity: $announceHumidity,
+                announceWindSpeed: $announceWindSpeed,
+                viewModel: viewModel
+            ))
+    }
+}
+
+private struct WorkoutMetricsHandlers: ViewModifier {
+    @Binding var announceVoice: Bool
+    @Binding var announceDistance: Bool
+    @Binding var announceDuration: Bool
+    @Binding var announceCaloriesBurned: Bool
+    var viewModel: SettingsViewModel?
+
+    func body(content: Content) -> some View {
+        content
+            .onChange(of: announceVoice) { _, newValue in
+                Task { await viewModel?.saveBool(key: PreferenceKey.announceVoice, value: newValue) }
+            }
+            .onChange(of: announceDistance) { _, newValue in
+                Task { await viewModel?.saveBool(key: PreferenceKey.announceDistance, value: newValue) }
+            }
+            .onChange(of: announceDuration) { _, newValue in
+                Task { await viewModel?.saveBool(key: PreferenceKey.announceDuration, value: newValue) }
+            }
+            .onChange(of: announceCaloriesBurned) { _, newValue in
+                Task { await viewModel?.saveBool(key: PreferenceKey.announceCaloriesBurned, value: newValue) }
+            }
+    }
+}
+
+private struct SpeedHandlers: ViewModifier {
+    @Binding var announceCurrentSpeed: Bool
+    @Binding var announceAvgSpeed: Bool
+    var viewModel: SettingsViewModel?
+
+    func body(content: Content) -> some View {
+        content
+            .onChange(of: announceCurrentSpeed) { _, newValue in
+                Task { await viewModel?.saveBool(key: PreferenceKey.announceCurrentSpeed, value: newValue) }
+            }
+            .onChange(of: announceAvgSpeed) { _, newValue in
+                Task { await viewModel?.saveBool(key: PreferenceKey.announceAvgSpeed, value: newValue) }
+            }
+    }
+}
+
+private struct HeartRateHandlers: ViewModifier {
+    @Binding var announceCurrentHeartRate: Bool
+    @Binding var announceAvgHeartRate: Bool
+    var viewModel: SettingsViewModel?
+
+    func body(content: Content) -> some View {
+        content
+            .onChange(of: announceCurrentHeartRate) { _, newValue in
+                Task { await viewModel?.saveBool(key: PreferenceKey.announceCurrentHeartRate, value: newValue) }
+            }
+            .onChange(of: announceAvgHeartRate) { _, newValue in
+                Task { await viewModel?.saveBool(key: PreferenceKey.announceAvgHeartRate, value: newValue) }
+            }
+    }
+}
+
+private struct ElevationHandlers: ViewModifier {
+    @Binding var announceTotalAscent: Bool
+    @Binding var announceTotalDescent: Bool
+    var viewModel: SettingsViewModel?
+
+    func body(content: Content) -> some View {
+        content
+            .onChange(of: announceTotalAscent) { _, newValue in
+                Task { await viewModel?.saveBool(key: PreferenceKey.announceTotalAscent, value: newValue) }
+            }
+            .onChange(of: announceTotalDescent) { _, newValue in
+                Task { await viewModel?.saveBool(key: PreferenceKey.announceTotalDescent, value: newValue) }
+            }
+    }
+}
+
+private struct WeatherHandlers: ViewModifier {
+    @Binding var announceTemperature: Bool
+    @Binding var announceHumidity: Bool
+    @Binding var announceWindSpeed: Bool
+    var viewModel: SettingsViewModel?
+
+    func body(content: Content) -> some View {
+        content
+            .onChange(of: announceTemperature) { _, newValue in
+                Task { await viewModel?.saveBool(key: PreferenceKey.announceTemperature, value: newValue) }
+            }
+            .onChange(of: announceHumidity) { _, newValue in
+                Task { await viewModel?.saveBool(key: PreferenceKey.announceHumidity, value: newValue) }
+            }
+            .onChange(of: announceWindSpeed) { _, newValue in
+                Task { await viewModel?.saveBool(key: PreferenceKey.announceWindSpeed, value: newValue) }
+            }
     }
 }
 

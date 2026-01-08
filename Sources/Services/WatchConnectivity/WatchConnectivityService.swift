@@ -9,6 +9,7 @@
 import Foundation
 import WatchConnectivity
 import Combine
+import UIKit
 
 // MARK: - WatchConnectivityServiceProtocol
 
@@ -496,7 +497,7 @@ public final class WatchConnectivityService: NSObject, WatchConnectivityServiceP
     // MARK: - Background Task Management
 
     private func beginBackgroundTask() {
-        guard backgroundTaskID == .invalid else { return }
+        guard backgroundTaskID == UIBackgroundTaskIdentifier.invalid else { return }
 
         backgroundTaskID = UIApplication.shared.beginBackgroundTask(withName: "WatchConnectivity") { [weak self] in
             self?.endBackgroundTask()
@@ -504,10 +505,10 @@ public final class WatchConnectivityService: NSObject, WatchConnectivityServiceP
     }
 
     private func endBackgroundTask() {
-        guard backgroundTaskID != .invalid else { return }
+        guard backgroundTaskID != UIBackgroundTaskIdentifier.invalid else { return }
 
         UIApplication.shared.endBackgroundTask(backgroundTaskID)
-        backgroundTaskID = .invalid
+        backgroundTaskID = UIBackgroundTaskIdentifier.invalid
     }
 
     // MARK: - View State Management

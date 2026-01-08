@@ -7,6 +7,9 @@
 
 import SwiftUI
 import Combine
+import os.log
+
+private let logger = Logger(subsystem: "com.motionscapes.jogpod", category: "DashboardView")
 
 // MARK: - DashboardView
 
@@ -89,22 +92,26 @@ public struct DashboardView: View {
     // MARK: - Body
 
     public var body: some View {
-        ScrollView {
-            VStack(spacing: 20) {
-                statusBar
-                    .padding(.horizontal)
+        VStack(spacing: 0) {
+            ScrollView {
+                VStack(spacing: 20) {
+                    statusBar
+                        .padding(.horizontal)
 
-                metricsGrid
-                    .padding(.horizontal)
+                    metricsGrid
+                        .padding(.horizontal)
 
-                mediaCenter
-                    .padding(.horizontal)
-
-                workoutButton
-                    .padding(.horizontal)
-                    .padding(.bottom, 24)
+                    mediaCenter
+                        .padding(.horizontal)
+                }
+                .padding(.top)
+                .padding(.bottom, 16)
             }
-            .padding(.top)
+            .scrollContentBackground(.hidden)
+
+            workoutButton
+                .padding(.horizontal)
+                .padding(.bottom, 16)
         }
         .background(Color(.systemGroupedBackground))
         .navigationTitle("Dashboard")
@@ -273,7 +280,7 @@ public struct DashboardView: View {
 
                 if hasPlaylistItems && isPlaying {
                     Image(systemName: "waveform")
-                        .foregroundStyle(.accent)
+                        .foregroundStyle(Color.accentColor)
                         .symbolEffect(.variableColor.iterative, options: .repeating)
                 }
             }
@@ -308,7 +315,7 @@ public struct DashboardView: View {
                 .overlay(
                     Image(systemName: "music.mic")
                         .font(.title2)
-                        .foregroundStyle(.accent)
+                        .foregroundStyle(Color.accentColor)
                 )
 
             VStack(alignment: .leading, spacing: 4) {
@@ -325,14 +332,29 @@ public struct DashboardView: View {
 
             Spacer()
         }
+        .contentShape(Rectangle())
+        .gesture(
+            DragGesture(minimumDistance: 50)
+                .onEnded { value in
+                    let horizontalDistance = value.translation.width
+                    if horizontalDistance < -50 {
+                        // Swipe left → next track
+                        nextTrack()
+                    } else if horizontalDistance > 50 {
+                        // Swipe right → previous track
+                        previousTrack()
+                    }
+                }
+        )
         .accessibilityElement(children: .combine)
         .accessibilityLabel("Now playing: \(currentEpisodeTitle ?? "No episode") from \(currentPodcastTitle ?? "Unknown podcast")")
+        .accessibilityHint("Swipe left for next, right for previous")
     }
 
     private var playbackProgressView: some View {
         VStack(spacing: 4) {
             ProgressView(value: playbackProgress)
-                .tint(.accent)
+                .tint(Color.accentColor)
 
             HStack {
                 Text(formatTime(playbackCurrentTime))
@@ -453,15 +475,54 @@ public struct DashboardView: View {
     // MARK: - Actions
 
     private func toggleWorkout() {
+        logger.info("toggleWorkout called, isWorkoutActive: \(self.isWorkoutActive)")
+        logger.info("dependencies.isInitialized: \(self.dependencies.isInitialized)")
+        logger.info("workoutService exists: \(self.dependencies.workoutService != nil)")
+
         Task {
+            guard let workoutService = dependencies.workoutService else {
+                logger.error("WorkoutService is nil - services not initialized")
+                return
+            }
+
             do {
                 if isWorkoutActive {
-                    try await dependencies.workoutService?.stopWorkout()
+                    logger.info("Stopping workout...")
+                    try await workoutService.stopWorkout()
+                    await MainActor.run {
+                        withAnimation(.easeInOut(duration: 0.3)) {
+                            isWorkoutActive = false
+                        }
+                    }
+                    logger.info("Workout stopped")
+
+                    // Auto-pause podcast playback when workout ends
+                    if let audioPlayer = dependencies.audioPlayerService {
+                        audioPlayer.pause()
+                        logger.info("Audio playback paused automatically")
+                    }
                 } else {
-                    _ = try await dependencies.workoutService?.startWorkout()
+                    logger.info("Starting workout...")
+                    _ = try await workoutService.startWorkout()
+                    await MainActor.run {
+                        withAnimation(.easeInOut(duration: 0.3)) {
+                            isWorkoutActive = true
+                        }
+                    }
+                    logger.info("Workout started")
+
+                    // Auto-start podcast playback when workout begins
+                    if let audioPlayer = dependencies.audioPlayerService {
+                        do {
+                            try audioPlayer.play()
+                            logger.info("Audio playback started automatically")
+                        } catch {
+                            logger.warning("Could not auto-start audio: \(error.localizedDescription)")
+                        }
+                    }
                 }
             } catch {
-                print("[DashboardView] Workout toggle failed: \(error)")
+                logger.error("Workout toggle failed: \(error.localizedDescription)")
             }
         }
     }

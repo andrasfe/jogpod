@@ -104,7 +104,7 @@ public actor SpeechService: NSObject {
     public weak var delegate: SpeechServiceDelegate?
 
     /// The synthesizer delegate wrapper (required because AVSpeechSynthesizerDelegate is not Sendable).
-    private var synthesizerDelegate: SynthesizerDelegate?
+    private var synthesizerDelegate: SynthesizerDelegateWrapper?
 
     // MARK: - Initialization
 
@@ -120,15 +120,16 @@ public actor SpeechService: NSObject {
         self.configuration = configuration
         self.synthesizer = AVSpeechSynthesizer()
         self.audioSession = audioSession
+        self.synthesizerDelegate = nil
 
         super.init()
+    }
 
-        // Set up delegate on MainActor to avoid Sendable issues
-        Task { @MainActor in
-            let delegate = SynthesizerDelegate(service: self)
-            self.synthesizerDelegate = delegate
-            self.synthesizer.delegate = delegate
-        }
+    /// Sets up the delegate. Call this after initialization.
+    public func setupDelegate() {
+        let wrapper = SynthesizerDelegateWrapper(service: self)
+        self.synthesizerDelegate = wrapper
+        wrapper.installDelegate(on: synthesizer)
     }
 
     // MARK: - Configuration
@@ -406,17 +407,36 @@ public actor SpeechService: NSObject {
     }
 }
 
-// MARK: - SynthesizerDelegate
+// MARK: - SynthesizerDelegateWrapper
 
 /// Internal delegate wrapper for AVSpeechSynthesizerDelegate.
 ///
 /// This class bridges AVSpeechSynthesizerDelegate callbacks to the SpeechService actor.
+/// Uses @unchecked Sendable because the delegate is only accessed from MainActor.
+private final class SynthesizerDelegateWrapper: @unchecked Sendable {
+
+    private weak var service: SpeechService?
+    private var delegate: SynthesizerDelegate?
+
+    init(service: SpeechService) {
+        self.service = service
+    }
+
+    func installDelegate(on synthesizer: AVSpeechSynthesizer) {
+        Task { @MainActor in
+            let del = SynthesizerDelegate(service: self.service)
+            self.delegate = del
+            synthesizer.delegate = del
+        }
+    }
+}
+
 @MainActor
 private final class SynthesizerDelegate: NSObject, AVSpeechSynthesizerDelegate {
 
     private weak var service: SpeechService?
 
-    init(service: SpeechService) {
+    init(service: SpeechService?) {
         self.service = service
         super.init()
     }

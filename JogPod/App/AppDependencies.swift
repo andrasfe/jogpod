@@ -73,11 +73,7 @@ public final class AppDependencies {
     // MARK: - Core Services
 
     /// The persistence manager for database operations.
-    ///
-    /// This is lazily initialized on first access.
-    public private(set) lazy var persistenceManager: PersistenceManager = {
-        PersistenceManager(modelContainer: modelContainer)
-    }()
+    public private(set) var persistenceManager: PersistenceManager!
 
     // MARK: - Feature Services
 
@@ -98,9 +94,7 @@ public final class AppDependencies {
     /// Observable wrapper for workout state updates.
     ///
     /// Publishes changes to workout status, metrics, and location for UI binding.
-    public private(set) lazy var workoutObserver: WorkoutServiceObserver = {
-        WorkoutServiceObserver()
-    }()
+    public private(set) var workoutObserver: WorkoutServiceObserver!
 
     // MARK: - State
 
@@ -118,6 +112,8 @@ public final class AppDependencies {
     public init() {
         do {
             self.modelContainer = try JogPodSchema.makeContainer()
+            self.persistenceManager = PersistenceManager(modelContainer: modelContainer)
+            self.workoutObserver = WorkoutServiceObserver()
         } catch {
             fatalError("Failed to create model container: \(error)")
         }
@@ -168,6 +164,13 @@ public final class AppDependencies {
 
             // Load playlist
             try await audioPlayerService?.loadPlaylist()
+
+            // Apply saved playback rate from SwiftData
+            if let savedRateInt = try? await persistenceManager.fetchPreference(name: "playerRate", as: Int.self),
+               savedRateInt > 0 {
+                let rate = Float(savedRateInt) / 100.0
+                try? audioPlayerService?.setRate(rate)
+            }
 
             isInitialized = true
 

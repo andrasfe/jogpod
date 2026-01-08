@@ -26,7 +26,7 @@ extension Notification.Name {
 // MARK: - WorkoutServiceProtocol
 
 /// Protocol defining the workout service interface for dependency injection.
-public protocol WorkoutServiceProtocol: Sendable {
+public protocol WorkoutServiceProtocol: AnyObject, Sendable {
 
     /// The current workout state.
     var state: WorkoutState { get async }
@@ -251,6 +251,9 @@ public actor WorkoutService: WorkoutServiceProtocol {
             // Initialize metrics
             await initializeMetrics()
 
+            // Request location authorization first
+            try await locationService.requestAuthorization()
+
             // Start location updates
             try await startLocationUpdates()
 
@@ -391,12 +394,14 @@ public actor WorkoutService: WorkoutServiceProtocol {
         currentSteps = 0
     }
 
-    @MainActor
-    private func initializeMetrics() {
-        metrics = WorkoutMetrics(
-            startTime: startTime ?? Date(),
-            userWeight: 70.0 // TODO: Get from user preferences
-        )
+    private func initializeMetrics() async {
+        let start = startTime ?? Date()
+        metrics = await MainActor.run {
+            WorkoutMetrics(
+                startTime: start,
+                userWeight: 70.0 // TODO: Get from user preferences
+            )
+        }
     }
 
     private func startLocationUpdates() async throws {
@@ -619,10 +624,11 @@ public actor WorkoutService: WorkoutServiceProtocol {
         )
     }
 
-    @MainActor
-    private func postPeakSpeedNotification() {
+    private func postPeakSpeedNotification() async {
         // Only post if workout has been running for a minimum duration
-        let duration = metrics?.duration ?? 0
+        // Access metrics on self (actor-isolated), then access duration on MainActor
+        guard let m = metrics else { return }
+        let duration = await m.duration
         guard duration > Self.minimumSummaryDuration else { return }
 
         // This could trigger a haptic/audio feedback for peak speed

@@ -274,7 +274,7 @@ public final class WatchMessageHandler: WatchMessageHandlerProtocol {
            let snapshot = await workoutService.currentMetrics() {
             distanceKm = snapshot.distanceInKilometers
             durationSeconds = snapshot.duration
-            averagePace = snapshot.paceMinutesPerKilometer
+            averagePace = snapshot.pacePerKilometer ?? 0
             calories = snapshot.caloriesBurned
         }
 
@@ -362,17 +362,17 @@ public struct WorkoutMetricsFormatter: Sendable {
         fields[FieldTag.duration.rawValue] = snapshot.formattedDuration
 
         // Pace (min/km)
-        fields[FieldTag.pace.rawValue] = formatPace(snapshot.paceMinutesPerKilometer)
+        fields[FieldTag.pace.rawValue] = formatPace(snapshot.pacePerKilometer ?? 0)
 
         // Speed (km/h with 1 decimal)
-        fields[FieldTag.speed.rawValue] = String(format: "%.1f km/h", snapshot.speedKilometersPerHour)
+        fields[FieldTag.speed.rawValue] = String(format: "%.1f km/h", snapshot.currentSpeedKmh)
 
         // Calories
         fields[FieldTag.calories.rawValue] = "\(snapshot.caloriesBurned) kcal"
 
         // Heart rate
-        if snapshot.heartRate > 0 {
-            fields[FieldTag.heartRate.rawValue] = "\(snapshot.heartRate) bpm"
+        if snapshot.currentHeartRate > 0 {
+            fields[FieldTag.heartRate.rawValue] = "\(snapshot.currentHeartRate) bpm"
         }
 
         // Podcast title
