@@ -432,11 +432,15 @@ public final class AudioPlayerService: NSObject, Sendable {
     ///
     /// - Throws: `AudioPlayerError` if playback cannot start.
     public func play() throws {
+        print("[AudioPlayer] play() called - queuePlayer: \(queuePlayer != nil), currentItem: \(currentItem != nil), playlist.count: \(playlist.count)")
+
         guard let player = queuePlayer else {
+            print("[AudioPlayer] ERROR: queuePlayer is nil")
             throw AudioPlayerError.playerUnavailable
         }
 
         guard currentItem != nil else {
+            print("[AudioPlayer] ERROR: currentItem is nil")
             throw AudioPlayerError.noCurrentItem
         }
 

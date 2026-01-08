@@ -77,6 +77,10 @@ public struct DashboardView: View {
     /// Whether heart rate monitor is connected.
     @State private var isHeartRateMonitorConnected: Bool = false
 
+    /// Alert state for errors.
+    @State private var showingAudioError: Bool = false
+    @State private var audioErrorMessage: String = ""
+
     /// Audio player state bindings.
     @State private var isPlaying: Bool = false
     @State private var currentPodcastTitle: String?
@@ -138,6 +142,11 @@ public struct DashboardView: View {
                     isHeartRateMonitorConnected = metrics.currentHeartRate > 0
                 }
             }
+        }
+        .alert("Audio Error", isPresented: $showingAudioError) {
+            Button("OK", role: .cancel) { }
+        } message: {
+            Text(audioErrorMessage)
         }
     }
 
@@ -514,11 +523,28 @@ public struct DashboardView: View {
                     // Auto-start podcast playback when workout begins
                     if let audioPlayer = dependencies.audioPlayerService {
                         do {
+                            print("[Dashboard] Attempting to auto-start audio playback...")
                             try audioPlayer.play()
+                            print("[Dashboard] Audio playback started successfully")
                             logger.info("Audio playback started automatically")
+                        } catch AudioPlayerError.noCurrentItem {
+                            print("[Dashboard] No episodes in queue")
+                            await MainActor.run {
+                                audioErrorMessage = "No episodes in your queue. Go to Playlist and add episodes to Up Next."
+                                showingAudioError = true
+                            }
+                        } catch AudioPlayerError.playerUnavailable {
+                            print("[Dashboard] Player not ready")
+                            await MainActor.run {
+                                audioErrorMessage = "Audio player not ready. Please try again."
+                                showingAudioError = true
+                            }
                         } catch {
+                            print("[Dashboard] ERROR: Could not auto-start audio: \(error)")
                             logger.warning("Could not auto-start audio: \(error.localizedDescription)")
                         }
+                    } else {
+                        print("[Dashboard] ERROR: audioPlayerService is nil")
                     }
                 }
             } catch {
