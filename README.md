@@ -1,5 +1,7 @@
 # JogPod
 
+> **Migration Story**: This app was resurrected from an abandoned iOS 9 Objective-C codebase and migrated to iOS 26 with modern Swift, SwiftUI, and SwiftData — in a matter of hours. A proof of the power of agentic coding with [Claude Code](https://claude.com/claude-code).
+
 A podcast player for runners. Listen to your favorite podcasts while tracking your workouts.
 
 ## Features
