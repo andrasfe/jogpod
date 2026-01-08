@@ -15,12 +15,14 @@ excluded:
   - Pods
   - Carthage
   - .build
+  - build
   - DerivedData
   - vendor
   - Package.swift
   - "*/Generated/*"
   - "*/Snapshots/*"
   - "**/*generated*"
+  - .claude
 
 # Enabled rules not included in the default set
 opt_in_rules:
